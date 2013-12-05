@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0685358C-33EF-4F72-9BA1-535F17CAF00A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.Logic.DAL</RootNamespace>
+    <AssemblyName>Library.Logic.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\LogicArticle.cs" />
+    <Compile Include="Classes\LogicCategory.cs" />
+    <Compile Include="Classes\LogicOrganization.cs" />
+    <Compile Include="Classes\LogicPictures.cs" />
+    <Compile Include="Criteria\CriteriaArticle.cs" />
+    <Compile Include="Criteria\CriteriaCategory.cs" />
+    <Compile Include="Criteria\CriteriaOrganization.cs" />
+    <Compile Include="Criteria\CriteriaPictures.cs" />
+    <Compile Include="Criteria\CriteriaUser.cs" />
+    <Compile Include="Classes\LogicUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Library.Common\Library.Common.csproj">
+      <Project>{c4d6899e-8134-4136-9b12-0e0fa2315c9f}</Project>
+      <Name>Library.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Library.StringItemDict\Library.StringItemDict.csproj">
+      <Project>{a920a461-fe3f-49bb-9c03-9ee54114aedb}</Project>
+      <Name>Library.StringItemDict</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Kernel\Library.Kernel.DataBaseHelper\Library.Kernel.DataBaseHelper.csproj">
+      <Project>{e4fd7fe4-49f4-4364-bc5a-7692b93c1380}</Project>
+      <Name>Library.Kernel.DataBaseHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Library.Models\Library.Models.csproj">
+      <Project>{cea87f81-1719-45ca-945d-f9fee2346e62}</Project>
+      <Name>Library.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="interface\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
