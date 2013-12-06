@@ -144,13 +144,13 @@ namespace Library.Models
         /// <summary> 
         /// 主要产品涉及的应用领域 
         /// </summary>
-        [Display(Name = "主要产品涉及的应用领域")]
+        [Display(Name = "产品涉及的应用领域")]
         public String Productapplications { get;set;} 
 
         /// <summary> 
         /// 主要非织造布生产工艺类别 
         /// </summary>
-        [Display(Name = "主要非织造布生产工艺类别")]
+        [Display(Name = "非织造布生产工艺类别")]
         public String Processcategory { get;set;} 
 
         /// <summary> 
@@ -166,10 +166,16 @@ namespace Library.Models
         public String Introduction { get;set;} 
 
         /// <summary> 
-        ///  
+        ///  创建时间
         /// </summary>
-        [Display(Name = "")]
-        public DateTime Createdate { get;set;} 
+        [Display(Name = "创建时间")]
+        public DateTime Createdate { get;set;}
+
+        /// <summary> 
+        ///  状态
+        /// </summary>
+        [Display(Name = "状态")]
+        public string Status { get; set; } 
 
     }
 }

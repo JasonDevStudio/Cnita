@@ -92,6 +92,15 @@
           </div>
         </div>
         
+        @*是否需要登录*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.IsPermission)</label>
+          <div class="controls">
+              @Html.CheckBoxFor(model => model.IsPermission, new {@class="input-xlarge span6" }) 
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.IsPermission)</i></p>
+          </div>
+        </div> 
+
         @*关键字*@
         <div class="control-group">          
           <label class="control-label" for="input01">@Html.LabelFor(model => model.Keyword)</label>

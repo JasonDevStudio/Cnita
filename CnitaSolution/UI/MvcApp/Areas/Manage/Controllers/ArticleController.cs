@@ -66,6 +66,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 LogicArticle artDal = new LogicArticle();
                 var resultMsg = string.Empty;
                 model = artDal.ArticleDetail(out resultMsg, idx);
+                model.IsPermission = model.Isrecommend == 1 ? true : false;
                 ViewBag.Categorys = QueryCategoryAll(model.Id.ToString());
                 ViewBag.CustomScript = string.Empty;
             }
@@ -87,7 +88,7 @@ namespace MvcApp.Areas.Manage.Controllers
         public ActionResult Create(ModelArticle model, FormCollection fc)
         {
             ViewBag.Categorys = QueryCategoryAll(model.Categoryid.ToString());
-            ViewBag.CategorysTwo = QueryCategoryAll(model.CategoryTwo.ToString());
+            ViewBag.CategorysTwo = QueryCategoryAll(model.CategoryTwo);
             var result = new ResultBase();
             var resultMsg = string.Empty;
             var fileName = CommonMethod.ImageUpload(out result, this.HttpContext);
@@ -99,7 +100,7 @@ namespace MvcApp.Areas.Manage.Controllers
 
             model.Context = fc["editorValue"];
             model.Thumbnails = fileName;
-
+            model.Isrecommend = Convert.ToInt32(model.IsPermission);
             LogicArticle artDal = new LogicArticle();
             var res = artDal.ArticleInsertUpdate(out resultMsg, model);
             if (res > 0)

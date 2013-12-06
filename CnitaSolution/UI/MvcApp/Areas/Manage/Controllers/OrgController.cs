@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace MvcApp.Areas.Manage.Controllers
 {
-    public class OrgController : Controller
+    public class OrgController : BaseController
     { 
         public ActionResult Index()
         {
@@ -51,12 +51,14 @@ namespace MvcApp.Areas.Manage.Controllers
             return View(model);
         }
 
+        [HttpPost]
         public ActionResult Create(ModelOrganization model)
         {
             var resultMsg = string.Empty; 
             var result = new ResultBase();
 
             var logic = new LogicOrganization();
+            model.Status = "1";
             var res = logic.OrganizationInsertUpdate(out resultMsg, model);
             if (res > 0)
             {
@@ -94,6 +96,9 @@ namespace MvcApp.Areas.Manage.Controllers
             return Json(result);
         }
 
-
+        private IDictionary<string, string> GetUnittype(string selected)
+        {
+            return null;
+        }
     }
 }

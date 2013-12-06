@@ -10,6 +10,17 @@ namespace Library.Logic.DAL
     {
         public class Pager
         {
+            /// <summary>
+            /// 关键字
+            /// </summary>
+            [Display(Name = "关键字")]
+            public string KeyWord { get; set; }
+
+            /// <summary>
+            /// 组织机构
+            /// </summary>
+            [Display(Name = "组织机构")]
+            public string Organization { get; set; }
         }
     }
 }

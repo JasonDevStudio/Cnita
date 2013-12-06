@@ -113,7 +113,7 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = "USP_ORGANIZATION_SELECT_SEARCH_PAGER";
+                string sql = "usp_organization_select_pager";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
@@ -144,8 +144,7 @@ namespace Library.Logic.DAL
             }
             return list;
         }
-
-
+        
         /// <summary>
         ///  查询实体
         /// </summary>
@@ -158,7 +157,7 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = "USP_ORGANIZATION_SELECT_DETAIL_BY_ORGID";
+                string sql = "usp_organization_select_detail_by_orgid";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
@@ -218,7 +217,8 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "PRODUCTAPPLICATIONS", ParameterValue = organization.Productapplications, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PROCESSCATEGORY", ParameterValue = organization.Processcategory, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "MEMBERSHIPLEVEL", ParameterValue = organization.Membershiplevel, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "INTRODUCTION", ParameterValue = organization.Introduction, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
+                parm.Add(new DBParameter() { ParameterName = "INTRODUCTION", ParameterValue = organization.Introduction, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "STATUS", ParameterValue = organization.Status, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
 
                 //新增/更新执行
                 res = DBHelper.ExecuteNonQuery(sql, true, parm, tran);
@@ -291,7 +291,7 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = " USP_ORGANIZATION_DELETE ";
+                string sql = "usp_organization_delete";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
@@ -318,6 +318,30 @@ namespace Library.Logic.DAL
             return res;
         }
 
+        /// <summary>
+        ///  查询所有实体
+        /// </summary>  
+        public IList<ModelOrganization> OrganizationAll(out string resultMsg)
+        {
+            resultMsg = string.Empty;
+            IList<ModelOrganization> list = new List<ModelOrganization>(); 
+            try
+            {
+                //存储过程名称
+                string sql = "SELECT * FROM  Organization";
+                 
 
+                //查询执行
+                using (IDataReader dr = DBHelper.ExecuteReader(sql))
+                {
+                   list = GetModel(dr); 
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return list;
+        }
     }
 }

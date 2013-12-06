@@ -22,21 +22,21 @@
     }}    <li class="@className">    <a href="@Url.Action("Index", "Article")">        <i class="icon-file"></i>        <span class="title">&nbsp;&nbsp;文章管理</span>        <span class="@classNameOne"></span>    </a>      </li> @{
     className = string.Empty;
     classNameOne = "arrow";
-    if (HttpContext.Current.Request.Path.Contains("Organization"))
+    if (HttpContext.Current.Request.Path.Contains("Org"))
     {
         className = "active";
         classNameOne = "selected";
-    }}    <li class="@className">    <a href="@Url.Action("Index", "Org")">        <i class="icon-group"></i>        <span class="title">&nbsp;组织机构管理</span>        <span class="@classNameOne"></span>    </a> </li> @{
+    }}    <li class="@className">    <a href="@Url.Action("Index", "Org")">        <i class="icon-group"></i>        <span class="title">&nbsp;会员管理</span>        <span class="@classNameOne"></span>    </a> </li> @{
     className = string.Empty;
     classNameOne = "arrow";
-    if (HttpContext.Current.Request.Path.Contains("Account"))
+    if (HttpContext.Current.Request.Path.Contains("Acc"))
     {
         className = "active";
         classNameOne = "selected";
-    }}    <li class="@className">    <a href="@Url.Action("Index", "Account")">        <i class="icon-user"></i>        <span class="title">&nbsp;&nbsp;账号管理</span>        <span class="@classNameOne"></span>    </a> </li> @{
+    }}    <li class="@className">    <a href="@Url.Action("Index", "Acc")">        <i class="icon-user"></i>        <span class="title">&nbsp;&nbsp;账号管理</span>        <span class="@classNameOne"></span>    </a> </li> @{
     className = string.Empty;
     classNameOne = "arrow";
-    if (HttpContext.Current.Request.Path.Contains("Pictures"))
+    if (HttpContext.Current.Request.Path.Contains("Ads"))
     {
         className = "active";
         classNameOne = "selected";

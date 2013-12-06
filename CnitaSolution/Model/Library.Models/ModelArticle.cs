@@ -82,7 +82,13 @@ namespace Library.Models
         /// </summary>
         [Display(Name = "推荐")]
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "推荐输入错误！")]
-        public Int32 Isrecommend { get;set;} 
+        public Int32 Isrecommend { get;set;}
+
+        /// <summary> 
+        /// 是否登录查看 
+        /// </summary>
+        [Display(Name = "是否登录查看")]
+        public bool IsPermission { get; set; }
 
         /// <summary> 
         /// 颜色 

@@ -199,12 +199,14 @@
     <Compile Include="Areas\Manage\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Manage\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manage\Controllers\OrgController.cs" />
+    <Compile Include="Areas\Manage\Controllers\AccController.cs" />
     <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerAds.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerArticle.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerBase.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerOrg.cs" />
     <Compile Include="Areas\Manage\Models\ModelTree.cs" />
+    <Compile Include="Areas\Manage\Models\ModelPagerAccount.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -487,6 +489,8 @@
     <Content Include="Areas\Manage\Views\Category\Edit.cshtml" />
     <Content Include="Areas\Manage\Views\Ads\Index.cshtml" />
     <Content Include="Areas\Manage\Views\Ads\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Org\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Org\Create.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap\additional-methods.min.js" />
     <Content Include="Scripts\bootstrap\app.js" />

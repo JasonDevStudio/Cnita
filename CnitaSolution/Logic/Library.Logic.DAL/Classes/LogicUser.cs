@@ -67,7 +67,7 @@ namespace Library.Logic.DAL
         /// <param name="pageSize">每页显示数量</param>
         /// <param name="pageIndex">当前页索引</param>
         /// <returns>结果集 泛型</returns>
-        public IList<ModelUser> QueryUserListPager(out string resultMsg, out decimal recordCount, CriteriaUser.Pager criteria, int pageSize = 10, int pageIndex = 1)
+        public IList<ModelUser> QueryUserListPager(out string resultMsg, out decimal recordCount, CriteriaUser.Pager criteria, decimal pageSize = 10, decimal pageIndex = 1)
         {
             recordCount = decimal.Zero;
             resultMsg = string.Empty;
@@ -75,12 +75,14 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = "USP_USER_SELECT_SEARCH_PAGER";
+                string sql = "usp_user_select_pager";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
-                parm.Add(new DBParameter() { ParameterName = "PageSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "PageIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "@Organization", ParameterValue = criteria.Organization, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "@KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
 
                 //查询执行
@@ -118,7 +120,7 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = "USP_USER_SELECT_DETAIL_BY_ID";
+                string sql = "usp_user_select_detail_by_id";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
@@ -159,9 +161,7 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "PASSWORD", ParameterValue = user.Password, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "ORGANIZATION", ParameterValue = user.Organization, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
                 parm.Add(new DBParameter() { ParameterName = "STATUS", ParameterValue = user.Status, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
-                parm.Add(new DBParameter() { ParameterName = "PERMISSIONS", ParameterValue = user.Permissions, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "CREATEDATE", ParameterValue = user.Createdate, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.DateTime });
-                parm.Add(new DBParameter() { ParameterName = "resultMsg", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PERMISSIONS", ParameterValue = user.Permissions, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
 
                 //新增/更新执行
                 res = DBHelper.ExecuteNonQuery(sql, true, parm, tran);
@@ -236,7 +236,7 @@ namespace Library.Logic.DAL
             try
             {
                 //存储过程名称
-                string sql = "USP_{0}_Detele";
+                string sql = "usp_user_delete";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
