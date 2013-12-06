@@ -81,11 +81,11 @@ namespace Library.Logic.DAL
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
-                parm.Add(new DBParameter() { ParameterName = "@KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "@Category", ParameterValue = criteria.Category, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "@OwnerCode", ParameterValue = null, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
-                parm.Add(new DBParameter() { ParameterName = "PageSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "PageIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "Category", ParameterValue = criteria.Category, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "OwnerCode", ParameterValue = null, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
 
                 //查询执行

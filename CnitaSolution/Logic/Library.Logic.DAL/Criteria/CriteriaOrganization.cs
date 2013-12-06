@@ -10,6 +10,7 @@ namespace Library.Logic.DAL
     {
         public class Pager
         {
+            public string KeyWord { get; set; }
         }
     }
 }

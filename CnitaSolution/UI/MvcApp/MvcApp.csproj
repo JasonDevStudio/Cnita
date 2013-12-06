@@ -198,10 +198,12 @@
     <Compile Include="Areas\Manage\Controllers\BaseController.cs" />
     <Compile Include="Areas\Manage\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Manage\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Manage\Controllers\OrgController.cs" />
     <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerAds.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerArticle.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerBase.cs" />
+    <Compile Include="Areas\Manage\Models\ModelPagerOrg.cs" />
     <Compile Include="Areas\Manage\Models\ModelTree.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

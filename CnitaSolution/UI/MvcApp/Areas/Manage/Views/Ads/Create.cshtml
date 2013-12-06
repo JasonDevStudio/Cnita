@@ -17,7 +17,7 @@
             <ul class="breadcrumb">
                 <li><i class="icon-home"></i><a href="index.html">后台管理</a>                <i class="icon-angle-right"></i></li>
                 <li><a href="@Url.Action("Index","Ads")">广告管理</a><i class="icon-angle-right"></i></li>
-                <li><a href="@Url.Action("Create","Ads")">新增/编辑文章</a></li>
+                <li><a href="@Url.Action("Create","Ads")">编辑/新增 广告信息</a></li>
                 <li class="pull-right no-text-shadow">
                     <div id="dashboard-report-range"
                         class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
@@ -67,13 +67,13 @@
         </div> 
 
         @*归属*@
-        <div class="control-group">          
+        @*<div class="control-group">          
           <label class="control-label" for="input01">@Html.LabelFor(model => model.Owner)</label>
           <div class="controls">
-              @Html.DropDownListFor(model=>model.Owner,(IEnumerable<SelectListItem>)ViewBag.Categorys,"请选择",new{@class="input-xlarge span6"}) 
+              @Html.TextBoxFor(model => model.Owner, new {@class="input-xlarge span6" }) 
             <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Owner)</i></p>
           </div>
-        </div> 
+        </div> *@
 
         @*广告链接*@
         <div class="control-group">          
@@ -141,97 +141,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>ModelPictures</legend>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Categoryid)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Categoryid)
-            @Html.ValidationMessageFor(model => model.Categoryid)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CategoryName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CategoryName)
-            @Html.ValidationMessageFor(model => model.CategoryName)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Owner)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Owner)
-            @Html.ValidationMessageFor(model => model.Owner)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Picuri)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Picuri)
-            @Html.ValidationMessageFor(model => model.Picuri)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Piclink)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Piclink)
-            @Html.ValidationMessageFor(model => model.Piclink)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Status)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Status)
-            @Html.ValidationMessageFor(model => model.Status)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Createdate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Createdate)
-            @Html.ValidationMessageFor(model => model.Createdate)
-        </div>
-
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

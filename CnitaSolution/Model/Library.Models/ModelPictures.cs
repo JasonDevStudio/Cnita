@@ -45,13 +45,13 @@ namespace Library.Models
         /// 地址 
         /// </summary>
         [Required]
-        [Display(Name = "地址")]
+        [Display(Name = "广告图片")]
         public String Picuri { get;set;} 
 
         /// <summary> 
         /// 图片链接 
         /// </summary>
-        [Display(Name = "图片链接")]
+        [Display(Name = "广告链接")]
         public String Piclink { get;set;} 
 
         /// <summary> 

@@ -105,7 +105,7 @@ namespace Library.Logic.DAL
         /// <param name="pageSize">每页显示数量</param>
         /// <param name="pageIndex">当前页索引</param>
         /// <returns>结果集 泛型</returns>
-        public IList<ModelOrganization> QueryOrganizationListPager(out string resultMsg, out decimal recordCount, CriteriaOrganization.Pager criteria, int pageSize = 10, int pageIndex = 1)
+        public IList<ModelOrganization> QueryOrganizationListPager(out string resultMsg, out decimal recordCount, CriteriaOrganization.Pager criteria, decimal pageSize = 10, decimal pageIndex = 1)
         {
             recordCount = decimal.Zero;
             resultMsg = string.Empty;
@@ -117,8 +117,9 @@ namespace Library.Logic.DAL
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
-                parm.Add(new DBParameter() { ParameterName = "PageSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "PageIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "PagerIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
 
                 //查询执行
@@ -217,9 +218,7 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "PRODUCTAPPLICATIONS", ParameterValue = organization.Productapplications, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PROCESSCATEGORY", ParameterValue = organization.Processcategory, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "MEMBERSHIPLEVEL", ParameterValue = organization.Membershiplevel, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "INTRODUCTION", ParameterValue = organization.Introduction, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "CREATEDATE", ParameterValue = organization.Createdate, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.DateTime });
-                parm.Add(new DBParameter() { ParameterName = "resultMsg", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "INTRODUCTION", ParameterValue = organization.Introduction, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
 
                 //新增/更新执行
                 res = DBHelper.ExecuteNonQuery(sql, true, parm, tran);
@@ -285,18 +284,18 @@ namespace Library.Logic.DAL
         /// </summary>
         /// <param name="orgid">Orgid 编号</param>
         /// <returns>执行结果</returns>
-        public int OrganizationDelete(out string resultMsg,Int32 orgid ,DbTransaction tran=null)
+        public int OrganizationDelete(out string resultMsg, Int32 orgid, DbTransaction tran = null)
         {
             resultMsg = string.Empty;
             int res = 0;
             try
             {
                 //存储过程名称
-                string sql = "USP_{0}_Detele";
+                string sql = " USP_ORGANIZATION_DELETE ";
 
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
-                parm.Add(new DBParameter() { ParameterName = "ORGID", ParameterValue = orgid, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
+                parm.Add(new DBParameter() { ParameterName = "Id", ParameterValue = orgid, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
                 parm.Add(new DBParameter() { ParameterName = "resultMsg", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
                 //更新执行
                 res = DBHelper.ExecuteNonQuery(sql, true, parm, tran);
@@ -318,6 +317,7 @@ namespace Library.Logic.DAL
             }
             return res;
         }
+
 
     }
 }
