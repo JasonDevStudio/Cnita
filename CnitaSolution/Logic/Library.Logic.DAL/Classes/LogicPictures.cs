@@ -69,7 +69,7 @@ namespace Library.Logic.DAL
         /// <param name="pageSize">每页显示数量</param>
         /// <param name="pageIndex">当前页索引</param>
         /// <returns>结果集 泛型</returns>
-        public IList<ModelPictures> QueryPicturesListPager(out string resultMsg, out decimal recordCount, CriteriaPictures.Pager criteria, int pageSize = 10, int pageIndex = 1)
+        public IList<ModelPictures> QueryPicturesListPager(out string resultMsg, out decimal recordCount, CriteriaPictures.Pager criteria, decimal pageSize = 10, decimal pageIndex = 1)
         {
             recordCount = decimal.Zero;
             resultMsg = string.Empty;

@@ -132,7 +132,7 @@
                                         else
                                         { 
                                             <tr class="gradeX even">
-                                                <td class="center hidden-480 " colspan="4">未查询到数据</td>
+                                                <td class="center hidden-480 " colspan="4" style="text-align:center">未查询到数据</td>
                                             </tr>
                                         }
 
@@ -221,6 +221,8 @@
                      success: function (data, status) {
                          if (data.result == 1) {
                              Boxy.alert(data.resultMsg, Search, { title: "系统提示" });
+                         }else{
+                             Boxy.alert(data.resultMsg, null, { title: "系统提示" });        
                          }
                      },
                  });

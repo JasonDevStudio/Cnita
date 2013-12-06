@@ -22,7 +22,7 @@ namespace MvcApp.Areas.Manage.Controllers
             ViewBag.Categorys = base.QueryCategoryAll();
             ModelPagerArticle model = new ModelPagerArticle();
             model.PagerCount = 0;
-            model.PagerShowCount = 5;
+            model.PagerShowCount = 10;
             model.PagerIndex = 1;
             model.PagerSize = 10;
             return View(model);

@@ -8,3 +8,9 @@ D:\All Project\CnitaProject\CnitaSolution\Common\Library.Common\bin\Debug\Librar
 D:\All Project\CnitaProject\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.pdb
 D:\All Project\CnitaProject\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.dll
 D:\All Project\CnitaProject\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.pdb
+D:\GitHub\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.dll.config
+D:\GitHub\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.dll
+D:\GitHub\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.pdb
+D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.dll
+D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.pdb
+D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.csprojResolveAssemblyReference.cache

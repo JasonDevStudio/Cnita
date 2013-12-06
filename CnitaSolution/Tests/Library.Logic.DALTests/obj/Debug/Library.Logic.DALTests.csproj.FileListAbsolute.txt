@@ -50,3 +50,29 @@ D:\All Project\CnitaProject\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug
 D:\All Project\CnitaProject\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.csprojResolveAssemblyReference.cache
 D:\All Project\CnitaProject\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.dll
 D:\All Project\CnitaProject\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Logic.DALTests.dll.config
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Logic.DALTests.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Logic.DALTests.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Common.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Logic.DAL.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Models.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.StringItemDict.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.DataBaseHelper.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.Unity.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Common.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.StringItemDict.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Logic.DAL.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.Models.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Library.DataBaseHelper.pdb
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.csprojResolveAssemblyReference.cache
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.dll
+D:\GitHub\CnitaSolution\Tests\Library.Logic.DALTests\obj\Debug\Library.Logic.DALTests.pdb

@@ -40,21 +40,35 @@
                     <div class="portlet-body">
                         <div class="row-fluid">
                             <!--磁贴 开始-->
-                            <div class="tiles" style="text-align: center;">
+                            <div class="tiles" style="text-align: center;" onclick="Goto('@Url.Action("Index", "Category")')" >
                                 <div class="tile bg-blue">
+                                    <div class="tile-body">
+                                        <i class="icon-picture"></i>
+                                    </div>
+                                    <div class="tile-object">
+                                        <div class="name">
+                                            分类管理 
+                                        </div>
+                                        <div class="number">
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tile bg-purple" onclick="Goto('@Url.Action("Index", "Article")')" >
                                     <div class="tile-body">
                                         <i class="icon-file"></i>
                                     </div>
+
                                     <div class="tile-object">
                                         <div class="name">
                                             文章管理 
                                         </div>
                                         <div class="number">
-                                            12 
+                                      
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tile bg-red">
+                                <div class="tile bg-red" onclick="Goto('@Url.Action("Index", "Org")')">
                                     <div class="tile-body">
                                         <i class="icon-user"></i>
                                     </div>
@@ -63,11 +77,11 @@
                                             会员管理 
                                         </div>
                                         <div class="number">
-                                            121 
+                                
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tile bg-purple">
+                                <div class="tile bg-green" onclick="Goto('@Url.Action("Index", "Account")')">
                                     <div class="tile-body">
                                         <i class="icon-key"></i>
                                     </div>
@@ -76,37 +90,11 @@
                                             账号管理 
                                         </div>
                                         <div class="number">
-                                            124 
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tile bg-green">
-                                    <div class="tile-body">
-                                        <i class="icon-picture"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            图片管理 
-                                        </div>
-                                        <div class="number">
-                                            12 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tile bg-lb">
-                                    <div class="tile-body">
-                                        <i class="icon-link"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            友情链接管理 
-                                        </div>
-                                        <div class="number">
-                                            1 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tile bg-yellow">
+                                 <div class="tile bg-yellow" onclick="Goto('@Url.Action("Index", "Ads")')">
                                     <div class="corner"></div>
                                     <div class="check"></div>
                                     <div class="tile-body">
@@ -116,8 +104,25 @@
                                         <div class="name">
                                             广告管理 
                                         </div>
+                                        <div class="number">
+                                          
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="tile bg-lb">
+                                    <div class="tile-body">
+                                        <i class="icon-link"></i>
+                                    </div>
+                                    <div class="tile-object">
+                                        <div class="name">
+                                            友情链接管理 
+                                        </div>
+                                        <div class="number">
+                                  
+                                        </div>
                                     </div>
                                 </div>
+                               
                                 <div class="tile bg-grey">
                                     <div class="tile-body">
                                         <i class="icon-cogs"></i>
@@ -126,8 +131,7 @@
                                         <div class="name">
                                             网站设置 
                                         </div>
-                                        <div class="number">
-                                            34                               
+                                        <div class="number">                                                                            
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +144,7 @@
         </div>
         <div class="row-fluid">
             <div class="span12">
-                <div class="portlet box green">
+                <div class="portlet box red">
                     <div class="portlet-title">
                         <div class="caption"><i class="icon-cogs"></i>Server Stats</div>
                         <div class="tools">
@@ -195,3 +199,10 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    <script type="text/javascript">
+        function Goto(url) {
+            window.location = url;
+        }
+    </script>
+}

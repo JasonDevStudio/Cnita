@@ -44,3 +44,26 @@ D:\All Project\CnitaProject\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Micr
 D:\All Project\CnitaProject\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.csprojResolveAssemblyReference.cache
 D:\All Project\CnitaProject\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.dll
 D:\All Project\CnitaProject\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Logic.DAL.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Logic.DAL.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Common.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.DataBaseHelper.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Models.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.StringItemDict.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.Unity.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Common.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.StringItemDict.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.DataBaseHelper.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Library.Models.pdb
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.Unity.xml
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.csprojResolveAssemblyReference.cache
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.dll
+D:\GitHub\CnitaSolution\Logic\Library.Logic.DAL\obj\Debug\Library.Logic.DAL.pdb

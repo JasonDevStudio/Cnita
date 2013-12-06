@@ -1,4 +1,4 @@
-﻿@model MvcApp.Areas.Manage.Models.ModelAds
+﻿@model MvcApp.Areas.Manage.Models.ModelPagerAds
 @{
     ViewBag.Title = "广告管理";
     Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml";
@@ -45,7 +45,12 @@
                             <!--搜索条件 开始-->
                             <div class="row-fluid">
                                 <div class="container-fluid">
-                                    <form method="post" action="@Url.Action("index", "article")"  id="mainForm">
+                                    <form method="post" action="@Url.Action("index", "Ads")"  id="mainForm">
+                                        @Html.HiddenFor(model => model.PagerIndex)
+                                        @Html.HiddenFor(model => model.PagerCount)
+                                        @Html.HiddenFor(model => model.PagerRowCount)
+                                        @Html.HiddenFor(model => model.PagerShowCount)
+                                        @Html.HiddenFor(model => model.PagerSize)
                                         <div class="row-fluid">
                                             <div class="span3">
                                                 @*分类*@
@@ -128,7 +133,7 @@
                                         else
                                         { 
                                             <tr class="gradeX even">
-                                                <td class="center hidden-480 " colspan="4">未查询到数据</td>
+                                                <td class="center hidden-480 " colspan="5" style="text-align:center">未查询到数据</td>
                                             </tr>
                                         }
 
@@ -143,11 +148,7 @@
                                 </div>
                                 <!--分页 结束-->
 
-                                @Html.HiddenFor(model => model.PagerIndex)
-                                @Html.HiddenFor(model => model.PagerCount)
-                                @Html.HiddenFor(model => model.PagerRowCount)
-                                @Html.HiddenFor(model => model.PagerShowCount)
-                                @Html.HiddenFor(model => model.PagerSize)
+                                
                             </div>
                             <!--列表 结束-->
 
@@ -184,21 +185,7 @@
             $(".boxy").boxy();
         });
         function Search() {
-            $("#mainForm").submit();
-           @* $.ajax(
-                {
-                    url:"@Url.Action("Index", "Article")",
-                    data: {
-                        Category: $("#Category").val(),
-                        KeyWord: $("#KeyWord").val()
-                    },
-                    type: "post", 
-                    success: function (data, status) {
-                        $("#divPagerContainer").show();
-                        $("#MainContainer").html($(data).find("#MainContainer").html());
-                        
-                    }, 
-                });*@
+            $("#mainForm").submit(); 
         }
 
         function Add() {
@@ -217,6 +204,8 @@
                      success: function (data, status) {
                          if (data.result == 1) {
                              Boxy.alert(data.resultMsg, Search, { title: "系统提示" });
+                         }else{
+                             Boxy.alert(data.resultMsg, null, { title: "系统提示" });        
                          }
                      },
                  });

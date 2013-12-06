@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MvcApp.Areas.Manage.Models
 {
-    public class ModelAds : ModelPagerBase
+    public class ModelPagerAds : ModelPagerBase
     {
         /// <summary>
         /// 关键字

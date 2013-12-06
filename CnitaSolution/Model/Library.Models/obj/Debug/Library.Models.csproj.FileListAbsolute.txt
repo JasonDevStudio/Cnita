@@ -7,3 +7,8 @@ D:\All Project\CnitaProject\CnitaSolution\Model\Library.Models\bin\Debug\Library
 D:\All Project\CnitaProject\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.pdb
 D:\All Project\CnitaProject\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.dll
 D:\All Project\CnitaProject\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.pdb
+D:\GitHub\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.dll
+D:\GitHub\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.pdb
+D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.dll
+D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.pdb
+D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.csprojResolveAssemblyReference.cache
