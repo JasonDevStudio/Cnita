@@ -491,6 +491,10 @@
     <Content Include="Areas\Manage\Views\Ads\Create.cshtml" />
     <Content Include="Areas\Manage\Views\Org\Index.cshtml" />
     <Content Include="Areas\Manage\Views\Org\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Acc\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Acc\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Manage\Views\Home\LogFail.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap\additional-methods.min.js" />
     <Content Include="Scripts\bootstrap\app.js" />
@@ -601,6 +605,7 @@
     <Content Include="Scripts\bootstrap\ui-tree.js" />
     <Content Include="Scripts\bootstrap\wysihtml5-0.3.0.js" />
     <Content Include="Scripts\boxy\css\boxy.css" />
+    <Content Include="Scripts\boxy\css\Button.css" />
     <Content Include="Scripts\boxy\css\common.css" />
     <Content Include="Scripts\boxy\image\boxy\boxy-ne.png" />
     <Content Include="Scripts\boxy\image\boxy\boxy-nw.png" />

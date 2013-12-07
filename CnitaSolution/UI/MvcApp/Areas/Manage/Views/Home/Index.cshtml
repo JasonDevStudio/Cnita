@@ -13,7 +13,7 @@
             </h3>
             <ul class="breadcrumb">
                 <li><i class="icon-home"></i><a href="index.html">后台管理</a>                <i class="icon-angle-right"></i></li>
-                <li><a href="@Url.Action("Index","Home")">首页</a></li>
+                <li><a href="@Url.Action("Index", "Home")">首页</a></li>
                 <li class="pull-right no-text-shadow">
                     <div id="dashboard-report-range"
                         class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
@@ -40,7 +40,7 @@
                     <div class="portlet-body">
                         <div class="row-fluid">
                             <!--磁贴 开始-->
-                            <div class="tiles" style="text-align: center;" onclick="Goto('@Url.Action("Index", "Category")')" >
+                            <div class="tiles" style="text-align: center;" onclick="MagnetGoto('@Url.Action("Index", "Category")')" >
                                 <div class="tile bg-blue">
                                     <div class="tile-body">
                                         <i class="icon-picture"></i>
@@ -50,92 +50,87 @@
                                             分类管理 
                                         </div>
                                         <div class="number">
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tile bg-purple" onclick="Goto('@Url.Action("Index", "Article")')" >
-                                    <div class="tile-body">
-                                        <i class="icon-file"></i>
-                                    </div>
-
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            文章管理 
-                                        </div>
-                                        <div class="number">
-                                      
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tile bg-red" onclick="Goto('@Url.Action("Index", "Org")')">
-                                    <div class="tile-body">
-                                        <i class="icon-user"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            会员管理 
-                                        </div>
-                                        <div class="number">
-                                
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tile bg-green" onclick="Goto('@Url.Action("Index", "Acc")')">
-                                    <div class="tile-body">
-                                        <i class="icon-key"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            账号管理 
-                                        </div>
-                                        <div class="number">
-
-                                        </div>
-                                    </div>
-                                </div>
-                                 <div class="tile bg-yellow" onclick="Goto('@Url.Action("Index", "Ads")')">
-                                    <div class="corner"></div>
-                                    <div class="check"></div>
-                                    <div class="tile-body">
-                                        <i class="icon-volume-up"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            广告管理 
-                                        </div>
-                                        <div class="number">
-                                          
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="tile bg-lb">
-                                    <div class="tile-body">
-                                        <i class="icon-link"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            友情链接管理 
-                                        </div>
-                                        <div class="number">
-                                  
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="tile bg-grey">
-                                    <div class="tile-body">
-                                        <i class="icon-cogs"></i>
-                                    </div>
-                                    <div class="tile-object">
-                                        <div class="name">
-                                            网站设置 
-                                        </div>
-                                        <div class="number">                                                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="tile bg-purple" onclick="window.location = '@Url.Action("Index", "Article")'" >
+                                <div class="tile-body">
+                                    <i class="icon-file"></i>
+                                </div>
+
+                                <div class="tile-object">
+                                    <div class="name">
+                                        文章管理 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile bg-red" onclick="MagnetGoto('@Url.Action("Index", "Org")')">
+                                <div class="tile-body">
+                                    <i class="icon-user"></i>
+                                </div>
+                                <div class="tile-object">
+                                    <div class="name">
+                                        会员管理 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile bg-green" onclick="MagnetGoto('@Url.Action("Index", "Acc")')">
+                                <div class="tile-body">
+                                    <i class="icon-key"></i>
+                                </div>
+                                <div class="tile-object">
+                                    <div class="name">
+                                        账号管理 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile bg-yellow" onclick="MagnetGoto('@Url.Action("Index", "Ads")')">
+                                <div class="corner"></div>
+                                <div class="check"></div>
+                                <div class="tile-body">
+                                    <i class="icon-volume-up"></i>
+                                </div>
+                                <div class="tile-object">
+                                    <div class="name">
+                                        广告管理 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="tile bg-lb">
+                                <div class="tile-body">
+                                    <i class="icon-link"></i>
+                                </div>
+                                <div class="tile-object">
+                                    <div class="name">
+                                        友情链接管理 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>*@
+
+                            <div class="tile bg-grey">
+                                <div class="tile-body">
+                                    <i class="icon-cogs"></i>
+                                </div>
+                                <div class="tile-object">
+                                    <div class="name">
+                                        网站设置 
+                                    </div>
+                                    <div class="number">
+                                    </div>
+                                </div>
+                            </div>
+
                             <!--磁贴 结束-->
                         </div>
                     </div>
@@ -201,7 +196,7 @@
 </div>
 @section Scripts{
     <script type="text/javascript">
-        function Goto(url) {
+        function MagnetGoto(url) {
             window.location = url;
         }
     </script>

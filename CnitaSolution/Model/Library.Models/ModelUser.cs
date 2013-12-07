@@ -24,6 +24,7 @@ namespace Library.Models
         /// <summary> 
         /// 账号 
         /// </summary>
+        [Required]
         [Display(Name = "账号")]
         public String Account { get;set;} 
 
@@ -31,8 +32,17 @@ namespace Library.Models
         /// 密码 
         /// </summary>
         [Required]
+        [StringLength(20,MinimumLength=6,ErrorMessage="密码长度不符")]
         [Display(Name = "密码")]
-        public String Password { get;set;} 
+        public String Password { get;set;}
+
+        /// <summary> 
+        /// 确认密码 
+        /// </summary>
+        [Required]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "确认密码长度不符")]
+        [Display(Name = "确认密码")]
+        public String ConfirmPassword { get; set; } 
 
         /// <summary> 
         /// 组织机构 
@@ -41,6 +51,11 @@ namespace Library.Models
         [Display(Name = "组织机构")]
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "组织机构输入错误！")]
         public Int32 Organization { get;set;} 
+
+        /// <summary>
+        /// 组织机构名称
+        /// </summary>
+        public string OrganizationName { get;set;} 
 
         /// <summary> 
         /// 状态 

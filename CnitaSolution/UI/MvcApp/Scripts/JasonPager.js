@@ -16,7 +16,7 @@
             pagerSize: 10,                                    //每页显示数量
             pagerCount: 0,                                    //总页数
             pagerRowCount: 10,                               //数据总数量
-            pagerShowCount: 5,                               //分页控件显示页数
+            pagerShowCount: 10,                               //分页控件显示页数
             pagerContainer: "divPagerContainer",          //分页控件容器
             pagerContContainer: "divMainContainer",       //分页控件容器
             pagerFormId: "mainForm",                        //分页控件表单容器
@@ -110,27 +110,34 @@
                 $("#" + this.defaults.pagerContainer + " a").each(function () {
                     $(this).click(function () {
                         var pageCode = $(this).attr("pagecode");
-                        if ($.JasonPager.defaults.pagerIsAjaxSubmit) {
-                            $.JasonPager.defaults.pagerParameter.PagerIndex = pageCode;
-                            $.ajax(
-                                {
-                                    url: $.JasonPager.defaults.pagerActionUrl,
-                                    data: $.JasonPager.defaults.pagerParameter,
-                                    type: "post",
-                                    beforeSend: $.JasonPager.defaults.pagerOnBeforeSend(),
-                                    success: function (data, status) {
-                                        $.JasonPager.defaults.pagerOnSuccess(data, status);
-                                        $.JasonPager.Load({ pagerIndex: pageCode });
-                                    },
-                                    complete: $.JasonPager.defaults.pagerOnComplete()
-                                });
-                        } else {
-                            document.forms[$.JasonPager.defaults.pagerFormId].action = $.JasonPager.defaults.pagerActionUrl + "?pagerIndex=" + pageCode;
-                            document.forms[$.JasonPager.defaults.pagerFormId].submit();
-                        }
-
+                        $.JasonPager.Submit(pageCode);
                     });
                 });
+            }
+        },
+        Submit: function (pageIndex) {
+            var pagerIndex = 1;
+            if (parseInt(pageIndex) > 1) {
+                pagerIndex = parseInt(pageIndex);
+            }
+
+            if ($.JasonPager.defaults.pagerIsAjaxSubmit) {
+                $.JasonPager.defaults.pagerParameter.PagerIndex = pagerIndex;
+                $.ajax(
+                    {
+                        url: $.JasonPager.defaults.pagerActionUrl,
+                        data: $.JasonPager.defaults.pagerParameter,
+                        type: "post",
+                        beforeSend: $.JasonPager.defaults.pagerOnBeforeSend(),
+                        success: function (data, status) {
+                            $.JasonPager.defaults.pagerOnSuccess(data, status);
+                            $.JasonPager.Load({ pagerIndex: pagerIndex });
+                        },
+                        complete: $.JasonPager.defaults.pagerOnComplete()
+                    });
+            } else {
+                document.forms[$.JasonPager.defaults.pagerFormId].action = $.JasonPager.defaults.pagerActionUrl + "?pagerIndex=" + pagerIndex + "&&pagerSize=" + $.JasonPager.defaults.pagerSize;
+                document.forms[$.JasonPager.defaults.pagerFormId].submit();
             }
         }
     });

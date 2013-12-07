@@ -17,14 +17,12 @@ namespace MvcApp.Areas.Manage.Controllers
             ViewBag.Categorys = base.QueryCategoryAll();
             ModelPagerAds model = new ModelPagerAds();
             model.PagerCount = 0;
-            model.PagerShowCount = 10;
             model.PagerIndex = 1;
-            model.PagerSize = 10;
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(ModelPagerAds model, string PagerIndex)
+        public ActionResult Index(ModelPagerAds model, string PagerIndex, string PagerSize)
         {
             ViewBag.Categorys = base.QueryCategoryAll(model.Category);  
 
@@ -33,13 +31,17 @@ namespace MvcApp.Areas.Manage.Controllers
             var criteria = new CriteriaPictures.Pager();
             criteria.Category = model.Category;
             criteria.KeyWord = model.KeyWord;
-            var index = decimal.Zero;
-            decimal.TryParse(PagerIndex, out index);
+            
+            var pageIndex = 0;
+            var pageSize = 0;
+            int.TryParse(PagerIndex, out pageIndex);
+            int.TryParse(PagerSize, out pageSize);
 
             LogicPictures logic = new LogicPictures();
-            var list = logic.QueryPicturesListPager(out resultMsg, out recordCount, criteria, pageSize: model.PagerSize, pageIndex: index);
+            var list = logic.QueryPicturesListPager(out resultMsg, out recordCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
             model.PagerRowCount = recordCount;
-            model.PagerCount = Math.Ceiling(recordCount/model.PagerSize);
+            model.PagerCount = Math.Ceiling(recordCount / pageSize);
+            model.PagerIndex = pageIndex;
             model.AdsList = list;
             return View(model);
         }

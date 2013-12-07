@@ -83,17 +83,17 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "@KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PagerSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PagerIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "RowsCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
 
                 //查询执行
-                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                using (DataSet ds = DBHelper.ExecuteDataSet(sql, true, parm))
                 {
                     //DataReader 转换成 List
-                    list = GetModel(dr);
+                    list = GetModel(ds);
                     foreach (var item in parm)
                     {
                         //获取输出参数值
-                        if (item.ParameterName == "RowCount")
+                        if (item.ParameterName == "RowsCount")
                         {
                             decimal.TryParse(item.ParameterValue.ToString(), out recordCount);
                             break;
@@ -141,6 +141,38 @@ namespace Library.Logic.DAL
         }
 
         /// <summary>
+        ///  查询实体
+        /// </summary>
+        /// <param name="id">ModelId 编号</param>
+        /// <returns>ModelUser</returns>
+        public ModelUser UserDetail(out string resultMsg, string account)
+        {
+            resultMsg = string.Empty;
+            ModelUser model = null;
+            try
+            {
+                //存储过程名称
+                string sql = "usp_user_select_detail_by_account";
+
+                //参数添加
+                IList<DBParameter> parm = new List<DBParameter>();
+                parm.Add(new DBParameter() { ParameterName = "@Account", ParameterValue = account, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+
+                //查询执行
+                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                {
+                    IList<ModelUser> list = GetModel(dr);
+                    model = list.First();
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return model;
+        }
+
+        /// <summary>
         /// 数据 添加/更新
         /// </summary>
         /// <param name="user">实体</param>
@@ -161,7 +193,8 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "PASSWORD", ParameterValue = user.Password, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "ORGANIZATION", ParameterValue = user.Organization, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
                 parm.Add(new DBParameter() { ParameterName = "STATUS", ParameterValue = user.Status, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
-                parm.Add(new DBParameter() { ParameterName = "PERMISSIONS", ParameterValue = user.Permissions, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
+                parm.Add(new DBParameter() { ParameterName = "PERMISSIONS", ParameterValue = user.Permissions, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "resultMsg",  ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String }); 
 
                 //新增/更新执行
                 res = DBHelper.ExecuteNonQuery(sql, true, parm, tran);
@@ -171,6 +204,8 @@ namespace Library.Logic.DAL
                     if (item.ParameterName == "resultMsg")
                     {
                         resultMsg = item.ParameterValue.ToString();
+                        if (resultMsg.Contains(BaseDict.ErrorPrefix)) 
+                            res = -1; 
                         break;
                     }
                 }

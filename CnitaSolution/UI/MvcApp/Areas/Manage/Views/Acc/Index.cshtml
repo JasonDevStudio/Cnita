@@ -1,0 +1,211 @@
+﻿@model MvcApp.Areas.Manage.Models.ModelPagerAccount
+@{
+    ViewBag.Title = "账号管理";
+    Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml";
+}
+ 
+
+
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                <!--Jason.Yao <small>后台管理系统</small>-->
+            </h3>
+            <ul class="breadcrumb">
+                <li><i class="icon-home"></i><a href="@Url.Action("Index","Home")">后台管理</a>                <i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Index", "Acc")">账号管理</a></li>
+                <li class="pull-right no-text-shadow">
+                    <div id="dashboard-report-range"
+                        class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
+                        data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+                        <i class="icon-calendar"></i><span></span><i class="icon-angle-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-cogs"></i>账号管理</div>
+                        <div class="tools">
+                            <a href="" class="collapse"></a><a href="" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row-fluid">
+                            <!--搜索条件 开始-->
+                            <div class="row-fluid">
+                                <div class="container-fluid">
+                                    <form method="post" action="@Url.Action("index", "Acc")"  id="mainForm">
+                                        
+                                        <div class="row-fluid">
+                                            <div class="span3">
+                                                @*分类*@
+                                                <div class="control-group">
+                                                    <!-- Select Basic -->
+                                                    <label class="control-label">@Html.DisplayNameFor(model=>model.Organization)</label>
+                                                    <div class="controls">
+                                                        @Html.DropDownListFor(model => model.Organization, (IEnumerable<SelectListItem>)ViewBag.Orgs, "请选择", new {@class = "input-xlarge span11" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="span3">
+                                                @*关键字*@
+                                                <div class="control-group">
+                                                    <!-- Text input-->
+                                                    <label class="control-label" for="input01">@Html.DisplayNameFor(model=>model.KeyWord)</label>
+                                                    <div class="controls">
+                                                        @Html.TextBoxFor(model => model.KeyWord, new { @class = "input-xlarge span11 " })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="span2">
+                                                <div class="control-group">
+                                                    <label class="control-label">&nbsp;</label>
+                                                    <!-- Button -->
+                                                    <div class="controls">
+                                                        <button type="button" id="btnSearch" onclick="Search()" class="bg-red"><i style="color: white;">搜索</i> <i class="m-icon-swapright m-icon-white"></i></button>
+                                                        &nbsp;
+                                                          <button type="button" onclick="Add()" class="bg-red"><i style="color: white;">新增</i> <i class="m-icon-swapright m-icon-white"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="span1">
+                                            </div>
+                                            <div class="span3">
+                                                 
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--搜索条件 结束-->
+                            <div class="row-fluid">
+                                <hr />
+                            </div>
+                            <!--列表 开始-->
+                            <div id="MainContainer" class="row-fluid">
+                                <table class="table table-striped table-bordered table-hover dataTable" id="sample_1" aria-describedby="sample_1_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="hidden-480"  rowspan="1" colspan="1">名称</th>
+                                            <th class="hidden-480"  rowspan="1" colspan="1">账号</th> 
+                                            <th class="hidden-480"  rowspan="1" colspan="1">组织机构</th> 
+                                            <th class="hidden-480"  rowspan="1" colspan="1">创建时间</th>
+                                            <th class="hidden-480" style="width: 406px;" rowspan="1" colspan="1">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                        @if (Model.AccList != null && Model.AccList.Count() > 0)
+                                        {
+                                            foreach (var item in Model.AccList)
+                                            {
+                                            <tr class="gradeX even">
+
+                                                <td class="hidden-480 "><a href="@Url.Action("Create", "Ads")\@item.Id">@item.Name</a></td>
+
+                                                <td class="hidden-480 ">@item.Account</td>
+
+                                                <td class="hidden-480 ">@item.OrganizationName</td>
+
+                                                <td class="hidden-480 ">@string.Format("{0:yyyy-MM-dd}", item.Createdate)</td>
+
+                                                <td class=" "> 
+                                                    <a href="@Url.Action("Create", "Acc")\@item.Id" class="btn purple mini"><i class="icon-edit m-icon-white"></i>&nbsp;编辑</a>&nbsp;
+                                                    <a href="javascript:void(0);" onclick="Delete(@item.Id)" class="btn red mini" ><i class="icon-trash m-icon-white"></i>&nbsp;删除</a></td>
+
+                                            </tr>
+                                            }
+
+                                        }
+                                        else
+                                        { 
+                                            <tr class="gradeX even">
+                                                <td class="center hidden-480 " colspan="5" style="text-align:center">未查询到数据</td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                                <!--分页 开始-->
+                                <div class="row-fluid">
+                                    <div id="divPagerContainer" class="JasonPager">
+                                    </div>
+                                    <br />
+                                </div>
+                                <!--分页 结束-->
+
+                                
+                            </div>
+                            <!--列表 结束-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Styles{
+    <link href="@Url.Content("~/Content/themes/JasonPager.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/msgbox/msgbox.css")" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="@Url.Content("~/Scripts/JasonPager.js")"></script>
+    <script src="@Url.Content("~/Scripts/msgbox/msgbox.js")"></script>
+    <script type="text/javascript">
+        var htmlMyPagination = null;
+        $(document).ready(function () {
+
+            $.JasonPager.Load({
+                pagerIndex: @Model.PagerIndex,                                   //当前页码 
+                pagerCount: @Model.PagerCount,                                   //总页数  $(data).find("#PagerCount").val()
+                pagerSize: 10,      
+                pagerShowCount: 10,                                //分页控件显示页数
+                pagerActionUrl: $("#mainForm").action,
+                pagerActiveStyle: "active"
+            }); 
+            
+        });
+        function Search() {
+            $.JasonPager.Submit();
+        }
+
+        function Add() {
+            window.location = "@Url.Action("Create")";
+        }
+
+        function Delete(Id) {
+            Boxy.confirm("是否删除该数据 ？", function () {
+                $.ajax(
+                 {
+                     url: "@Url.Action("Delete", "Acc")",
+                     data: {
+                         Id: Id
+                     },
+                     type: "post",
+                     success: function (data, status) {
+                         if (data.result == 1) {
+                             Boxy.alert(data.resultMsg, Search, { title: "系统提示" });
+                         }else{
+                             Boxy.alert(data.resultMsg, null, { title: "系统提示" });        
+                         }
+                     },
+                 });
+            });
+        }
+    </script>
+}

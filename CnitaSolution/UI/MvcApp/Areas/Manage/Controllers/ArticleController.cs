@@ -21,34 +21,33 @@ namespace MvcApp.Areas.Manage.Controllers
         { 
             ViewBag.Categorys = base.QueryCategoryAll();
             ModelPagerArticle model = new ModelPagerArticle();
-            model.PagerCount = 0;
-            model.PagerShowCount = 10;
-            model.PagerIndex = 1;
-            model.PagerSize = 10;
+            model.PagerCount = 0; 
+            model.PagerIndex = 1; 
             return View(model);
         }
         [HttpPost]
-        public ActionResult Index(string Category, string CategoryTwo, string KeyWord, string PagerIndex)
+        public ActionResult Index(string Category, string CategoryTwo, string KeyWord, string PagerIndex, string PagerSize)
         {
-            var pageSize = 10; 
-            ModelPagerArticle model = new ModelPagerArticle();
-            
+            var pageIndex = 0;
+            var pageSize = 0;
+            int.TryParse(PagerIndex, out pageIndex);
+            int.TryParse(PagerSize, out pageSize);
+
+            var rowCount = decimal.Zero; 
+            var resultMsg = string.Empty;
+            var model = new ModelPagerArticle();            
             ViewBag.Categorys = base.QueryCategoryAll();
             ViewBag.CategorysTwo = base.QueryCategoryAll();
-            LogicArticle artDal = new LogicArticle();
-            var resultMsg = string.Empty;
-            decimal rowCount = decimal.Zero;
-            var pageIndex = string.IsNullOrWhiteSpace(PagerIndex) ? 1 : Convert.ToInt32(PagerIndex);
+            LogicArticle artDal = new LogicArticle();            
+            
             CriteriaArticle.Pager criteria = new CriteriaArticle.Pager();
             criteria.CategoryId = string.IsNullOrWhiteSpace(Category) ? null : Category;
             criteria.CategoryTwo = string.IsNullOrWhiteSpace(CategoryTwo) ? null : CategoryTwo;
             criteria.KeyWord = string.IsNullOrWhiteSpace(KeyWord) ? null : KeyWord;
             var list = artDal.QueryArticleListPager(out resultMsg, out rowCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
-
-            var pageCount = Math.Ceiling(rowCount / pageSize);
+             
             model.ArtcleList = list;
-            model.PagerCount = pageCount;
-            model.PagerShowCount = 5;
+            model.PagerCount = Math.Ceiling(rowCount / pageSize); ;
             model.PagerIndex = pageIndex;
 
             return View(model);

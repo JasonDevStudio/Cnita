@@ -232,7 +232,7 @@ jQuery.extend(Boxy, {
 				btn_index = 3;	
 			}
 			//add end.  include the 'btn_index' below 
-			return "<input class='boxy-btn btn red" + btn_index + "' type='button' value='" + v + "' />";
+			return "<input class='boxy-btn red' type='button' value='" + v + "' />";
         }).join(' '));
         
         jQuery('input[type=button]', buttons).click(function() {

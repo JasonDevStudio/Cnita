@@ -123,10 +123,10 @@ namespace Library.Logic.DAL
                 parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
 
                 //查询执行
-                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                using (DataSet ds = DBHelper.ExecuteDataSet(sql, true, parm))
                 {
                     //DataReader 转换成 List
-                    list = GetModel(dr);
+                    list = GetModel(ds);
                     foreach (var item in parm)
                     {
                         //获取输出参数值

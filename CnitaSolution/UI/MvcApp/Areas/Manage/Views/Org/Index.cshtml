@@ -45,12 +45,7 @@
                             <!--搜索条件 开始-->
                             <div class="row-fluid">
                                 <div class="container-fluid">
-                                    <form method="post" action="@Url.Action("index", "Org")"  id="mainForm">
-                                        @Html.HiddenFor(model => model.PagerIndex)
-                                        @Html.HiddenFor(model => model.PagerCount)
-                                        @Html.HiddenFor(model => model.PagerRowCount)
-                                        @Html.HiddenFor(model => model.PagerShowCount)
-                                        @Html.HiddenFor(model => model.PagerSize)
+                                    <form method="post" action="@Url.Action("index", "Org")"  id="mainForm"> 
                                         <div class="row-fluid"> 
                                             <div class="span3">
                                                 @*关键字*@
@@ -166,15 +161,13 @@
                 pagerSize: 10,                                   //每页显示数量
                 pagerCount: @Model.PagerCount,                                   //总页数  $(data).find("#PagerCount").val()
                 pagerShowCount: 10,                                //分页控件显示页数
-                pagerActionUrl: "@Url.Action("Index", "Ads")",
+                pagerActionUrl: $("#mainForm").action,
                 pagerActiveStyle: "active"
             });
-
-
-            $(".boxy").boxy();
+             
         });
         function Search() {
-            $("#mainForm").submit(); 
+            $.JasonPager.Submit();
         }
 
         function Add() {
