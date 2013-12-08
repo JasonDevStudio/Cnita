@@ -14,3 +14,8 @@ D:\GitHub\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.pdb
 D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.dll
 D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.pdb
 D:\GitHub\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.csprojResolveAssemblyReference.cache
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.dll.config
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.Common\bin\Debug\Library.Common.pdb
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.Common\obj\Debug\Library.Common.pdb

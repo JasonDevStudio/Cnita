@@ -22,9 +22,9 @@ namespace Library.Models
         public String Name { get;set;} 
 
         /// <summary> 
-        /// 英文名 
+        /// 链接地址 
         /// </summary>
-        [Display(Name = "英文名")]
+        [Display(Name = "链接地址")]
         public String Nameen { get;set;} 
 
         /// <summary> 

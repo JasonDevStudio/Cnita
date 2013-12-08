@@ -1,0 +1,8 @@
+﻿
+.header{width:1133px;height:119px;clear:both;text-align:left;}
+.subMenu{width:1133px;height:80px;clear:both;display:inline-block;text-align:left;}
+.mainMenu{width:1133px;height:39px;clear:both;display:inline-block;background-image: url(../images/Header/Header_mainMenu.png);text-align:left;}
+.logo{width:642px;height:80px;float:left;display:inline;text-align:left;}
+.subMenuRight{width:491px;height:80px;float:left;display:inline;text-align:left;}
+.subMenuRightTop{width:491px;height:40px;clear:both;display:inline-block;text-align:left;}
+.subMenuRightBottom{width:491px;height:40px;clear:both;display:inline-block;text-align:left;}

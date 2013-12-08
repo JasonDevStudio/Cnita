@@ -207,6 +207,7 @@
     <Compile Include="Areas\Manage\Models\ModelPagerOrg.cs" />
     <Compile Include="Areas\Manage\Models\ModelTree.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerAccount.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -268,6 +269,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\Default\css\main.css" />
+    <Content Include="Content\themes\Default\images\footer_footer_top.jpg" />
+    <Content Include="Content\themes\Default\images\Header_logo.png" />
+    <Content Include="Content\themes\Default\images\Header_mainMenu.jpg" />
     <Content Include="Content\themes\manage\css\about-us.css" />
     <Content Include="Content\themes\manage\css\animate.css" />
     <Content Include="Content\themes\manage\css\blog.css" />
@@ -496,6 +501,7 @@
     <Content Include="Areas\Manage\Views\Home\Login.cshtml" />
     <Content Include="Areas\Manage\Views\Home\LogFail.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\Logo.jpg" />
     <Content Include="Scripts\bootstrap\additional-methods.min.js" />
     <Content Include="Scripts\bootstrap\app.js" />
     <Content Include="Scripts\bootstrap\bootstrap-colorpicker.js" />
@@ -613,6 +619,7 @@
     <Content Include="Scripts\boxy\image\boxy\boxy-sw.png" />
     <Content Include="Scripts\boxy\js\jquery-1.2.6.pack.js" />
     <Content Include="Scripts\boxy\js\jquery-boxy.js" />
+    <Content Include="Scripts\DD_belatedPNG_0.0.8a.js" />
     <Content Include="Scripts\JasonPager.js" />
     <Content Include="Scripts\jquery-1.10.1.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -867,19 +874,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -895,10 +889,11 @@
     <Content Include="Scripts\ueditor\net\scrawlUp.ashx" />
     <Content Include="Scripts\ueditor\net\Web.config" />
     <Content Include="Scripts\ueditor\ueditor.all.min.js.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Navigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="Uploads\Images\" />
   </ItemGroup>

@@ -1,49 +1,67 @@
-﻿<!DOCTYPE html><!--[if IE 8]><html lang="en" class="ie8 no-js"> <![endif]--><!--[if IE 9]><html lang="en" class="ie9 no-js"> <![endif]--><!--[if !IE]><!--><html lang="zh" class="no-js"> <!--<![endif]-->  
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>@ViewBag.Title </title>
+    <meta name="keywords" content="@ViewBag.KeyWord " />
+    <meta name="description" content="@ViewBag.Description" />
+    <link href="@Url.Content("~/Content/themes/Default/css/main.css")" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+    <!--[if lte IE 6]>
+<script type="text/javascript" src="@Url.Content("~/Scripts/DD_belatedPNG_0.0.8a.js")"></script>
+<script type="text/javascript">
+  DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
 
-    <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title </title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("将你的徽标放置在此处", "Index", "Home")</p>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <div class="header">
+                <div class="subMenu">
+                    <div class="logo">
+                        <div>
+                            <a href="@Url.Action("Index","Home")"><img id='logo' src='@Url.Content("~/Images/Logo.jpg")'  border='0' alt="Logo" /></a>
+                        </div>
+                    </div>
+                    <div class="subMenuRight">
+                        <div class="subMenuRightTop">
+                            <p><a href="@Url.Action("Login","Home")" >[会员登录]</a>	<a href="@Url.Action("Login","Home")" >[加入协会]</a>		</p>
+                        </div>
+                        <div class="subMenuRightBottom">
+                        </div>
+                    </div>
                 </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                            <li>@Html.ActionLink("关于", "About", "Home")</li>
-                            <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
+                <div class="mainMenu">
+                    @Html.Action("Navigation", "Home")
                 </div>
             </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - 我的 ASP.NET MVC 应用程序</p>
+        <div>
+            <div class="content">@RenderBody()</div>
+        </div>
+        <div>
+            <div class="footer">
+                <div class="footer_top">
+                    <p>
+                        <a href="#">关于我们</a>|
+                        <a href="#">联系我们</a>|
+                        <a href="#">广告服务</a>|
+                        <a href="#">网站地图</a>
+                    </p>
+                </div>
+                <div class="footer_bottom">
+                    <p>主办单位：中国产业用纺织品行业协会 电话:010-85229421 传真:010-85229425</p>
+                     <p>京公网安备11010102000562号 京ICP备09054622号 </p>
+                    
                 </div>
             </div>
-        </footer>
+        </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+    </div>
+
+</body>
+@RenderSection("Scripts", required: false)
 </html>

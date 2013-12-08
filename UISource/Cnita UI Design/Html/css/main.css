@@ -1,0 +1,5 @@
+﻿
+.container{overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:center;}
+.header{width:1133px;height:119px;clear:both;display:inline-block;text-align:left;}
+.content{width:1133px;clear:both;display:inline-block;text-align:left;}
+.footer{width:1133px;height:110px;clear:both;display:inline-block;text-align:left;}

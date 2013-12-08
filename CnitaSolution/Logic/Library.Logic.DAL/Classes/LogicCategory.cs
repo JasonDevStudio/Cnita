@@ -187,7 +187,7 @@ namespace Library.Logic.DAL
         /// </summary>
         /// <param name="id">ModelId 类别</param>
         /// <returns>ModelCategory</returns>
-        public IList<ModelCategory> CategoryAll(out string resultMsg, Int32 ParentCateg = 0)
+        public IList<ModelCategory> CategoryAll(out string resultMsg, Int32 ParentCateg = 0,string IsNav = null)
         {
             resultMsg = string.Empty;
             IList<ModelCategory> list = new List<ModelCategory>();
@@ -199,6 +199,7 @@ namespace Library.Logic.DAL
                 //参数添加
                 IList<DBParameter> parm = new List<DBParameter>();
                 parm.Add(new DBParameter() { ParameterName = "@ParentCateg", ParameterValue = ParentCateg, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
+                parm.Add(new DBParameter() { ParameterName = "@IsNav", ParameterValue = IsNav, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
 
                 //查询执行
                 using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
