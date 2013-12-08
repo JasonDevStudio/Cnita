@@ -22,6 +22,12 @@ namespace MvcApp.Areas.Manage.Models
         public string Category { get; set; }
 
         /// <summary>
+        /// 归属版块
+        /// </summary>
+        [Display(Name = "归属版块")]
+        public string OwnerCategory { get; set; }
+
+        /// <summary>
         /// 数据列表
         /// </summary>
         public IList<ModelPictures> AdsList { get; set; }

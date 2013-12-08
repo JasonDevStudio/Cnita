@@ -54,9 +54,16 @@
         //window.parent.EditNode(id, name);
     }
 
+    function AddTreeNode(id, name) {
+        var url = "@Url.Action("Edit", "Category")?Category=" + id;
+        window.parent.location = url;
+        //window.parent.EditNode(id, name);
+    }
+
         function addDiyDom(treeId, treeNode) {
             var aObj = $("#" + treeNode.tId + IDMark_A); 
-            var editStr = "<span class='button edit' onclick=\"EditTreeNode(" + treeNode.id + ")\" title='编辑 [" + treeNode.name +
+            var editStr = "<span class='button ico_docu' onclick=\"AddTreeNode(" + treeNode.id + ")\" title='添加 [" + treeNode.name + "]的下级分类'></span>"
+                +"<span class='button edit' onclick=\"EditTreeNode(" + treeNode.id + ")\" title='编辑 [" + treeNode.name +
                 "]'></span><span class='button remove' onclick=\"DeleteTreeNode(" + treeNode.id + ",'" + treeNode.name + "')\" title='删除 [" + treeNode.name + "]'></span>"
             aObj.after(editStr);
         }

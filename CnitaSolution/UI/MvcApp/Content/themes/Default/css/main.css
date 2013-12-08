@@ -27,3 +27,10 @@
 .footer_top p a:hover {color: #ffd800;font-weight: bold;text-decoration: none;}
 .footer_bottom{width:1133px;height:70px;clear:both;display:inline-block;text-align:left;}
 .footer_bottom p{text-align:center;color: #000000;margin-top:10px;}
+
+.banner{width:1133px;height:98px;clear:both;display:inline-block;text-align:left;}
+.subcontent{width:1133px;clear:both;display:inline-block;text-align:left;}
+.subcontent_nav{width:1133px;height:32px;clear:both;display:inline-block;text-align:left;}
+.subcontent_container{width:1133px;clear:both;display:inline-block;text-align:left;}
+.subcontent_sidebar{width:316px;float:left;display:inline;text-align:left;}
+.subcontent_content{width:817px;float:left;display:inline;text-align:left;}

@@ -27,5 +27,16 @@ namespace MvcApp.Controllers
             return PartialView(list);
         }
 
+        public ActionResult Banner(string categoryCode=null, string ownerCode=null,string width="1110" ,string height="100")
+        { 
+            ViewBag.width = width;
+            ViewBag.height = height;
+            var logic = new LogicPictures();
+            var resultMsg = string.Empty;
+            IList<ModelPictures> list = new List<ModelPictures>();
+            list = logic.QueryPicturesListByOwner(out resultMsg, categoryCode, ownerCode);
+            return PartialView(list);
+        }
+
     }
 }

@@ -35,11 +35,17 @@ namespace Library.Models
         public string CategoryName { get; set; }
 
         /// <summary> 
-        /// ¹éÊô 
+        /// ¹éÊô°æ¿é 
         /// </summary>
-        [Display(Name = "¹éÊô")]
+        [Display(Name = "¹éÊô°æ¿é")]
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "¹éÊôÊäÈë´íÎó£¡")]
-        public Int32 Owner { get;set;} 
+        public Int32 Owner { get;set;}
+
+        /// <summary> 
+        /// ¹éÊô°æ¿é 
+        /// </summary>
+        [Display(Name = "¹éÊô°æ¿é")] 
+        public string OwnerCategoryName { get; set; }
 
         /// <summary> 
         /// µØÖ· 

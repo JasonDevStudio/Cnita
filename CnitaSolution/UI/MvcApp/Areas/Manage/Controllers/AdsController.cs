@@ -11,10 +11,11 @@ using System.Web.Mvc;
 namespace MvcApp.Areas.Manage.Controllers
 {
     public class AdsController : BaseController
-    { 
+    {
         public ActionResult Index()
         {
             ViewBag.Categorys = base.QueryCategoryAll();
+            ViewBag.CategoryOwner = base.QueryCategoryAll();
             ModelPagerAds model = new ModelPagerAds();
             model.PagerCount = 0;
             model.PagerIndex = 1;
@@ -24,14 +25,15 @@ namespace MvcApp.Areas.Manage.Controllers
         [HttpPost]
         public ActionResult Index(ModelPagerAds model, string PagerIndex, string PagerSize)
         {
-            ViewBag.Categorys = base.QueryCategoryAll(model.Category);  
-
+            ViewBag.Categorys = base.QueryCategoryAll(model.Category);
+            ViewBag.CategoryOwner = base.QueryCategoryAll(model.OwnerCategory);
             var resultMsg = string.Empty;
             var recordCount = decimal.Zero;
             var criteria = new CriteriaPictures.Pager();
             criteria.Category = model.Category;
             criteria.KeyWord = model.KeyWord;
-            
+            criteria.OwnerCategory = model.OwnerCategory;
+
             var pageIndex = 0;
             var pageSize = 0;
             int.TryParse(PagerIndex, out pageIndex);
@@ -69,22 +71,29 @@ namespace MvcApp.Areas.Manage.Controllers
             return Json(result);
         }
 
-        public ActionResult Create(string Id=null)
+        public ActionResult Create(string Id = null)
         {
             var resultMsg = string.Empty;
             ModelPictures model = new ModelPictures();
             if (string.IsNullOrWhiteSpace(Id))
             {
                 ViewBag.Categorys = base.QueryCategoryAll();
+                ViewBag.CategoryOwner = base.QueryCategoryAll();
             }
             else
             {
                 LogicPictures logic = new LogicPictures();
                 model = logic.PicturesDetail(out resultMsg, int.Parse(Id));
                 if (model != null)
+                {
                     ViewBag.Categorys = base.QueryCategoryAll();
+                    ViewBag.CategoryOwner = base.QueryCategoryAll();
+                }
                 else
+                {
                     ViewBag.Categorys = base.QueryCategoryAll(model.Categoryid.ToString());
+                    ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner.ToString());
+                }
             }
             return View(model);
         }
@@ -94,6 +103,7 @@ namespace MvcApp.Areas.Manage.Controllers
         {
             var resultMsg = string.Empty;
             ViewBag.Categorys = base.QueryCategoryAll(model.Categoryid.ToString());
+            ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner.ToString());
             var result = new ResultBase();
             var fileName = CommonMethod.ImageUpload(out result, this.HttpContext);
             if (result.result == -2)
@@ -101,7 +111,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 ViewBag.CustomScript = UtilityScript.ShowMessage(result.resultMsg, isCreate: true);
                 return View(model);
             }
-            model.Picuri = fileName;
+            model.Picuri = string.IsNullOrWhiteSpace(fileName) ? model.Picuri : fileName;
 
             LogicPictures logic = new LogicPictures();
             var res = logic.PicturesInsertUpdate(out resultMsg, model);
@@ -114,7 +124,7 @@ namespace MvcApp.Areas.Manage.Controllers
             {
                 resultMsg = "操作失败,请检查数据是否正确后重新操作!";
                 ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true);
-            } 
+            }
             return View(model);
         }
 

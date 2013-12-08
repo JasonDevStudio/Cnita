@@ -26,7 +26,8 @@ namespace Library.Logic.DAL
                 var model = new ModelPictures();
                 model.Id = dr["Id"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Id"]);
                 model.Name = dr["Name"] == DBNull.Value ? string.Empty : dr["Name"].ToString();
-                model.CategoryName = dr["CategoryName"] == DBNull.Value ? string.Empty : dr["CategoryName"].ToString();
+                model.CategoryName = dr["OwnerCategoryName"] == DBNull.Value ? string.Empty : dr["OwnerCategoryName"].ToString();
+                model.OwnerCategoryName = dr["CategoryName"] == DBNull.Value ? string.Empty : dr["CategoryName"].ToString();
                 model.Categoryid = dr["CategoryId"]== DBNull.Value ? 0 : Convert.ToInt32(dr["CategoryId"]);
                 model.Owner = dr["Owner"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Owner"]);
                 model.Picuri = dr["PicUri"]== DBNull.Value ? string.Empty : dr["PicUri"].ToString();
@@ -49,6 +50,7 @@ namespace Library.Logic.DAL
                                 Id = dr["Id"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Id"]),
                                 Name = dr["Name"]== DBNull.Value ? string.Empty : dr["Name"].ToString(),
                                 CategoryName = dr["CategoryName"] == DBNull.Value ? string.Empty : dr["CategoryName"].ToString(),
+                                OwnerCategoryName = dr["OwnerCategoryName"] == DBNull.Value ? string.Empty : dr["OwnerCategoryName"].ToString(),
                                 Categoryid = dr["CategoryId"]== DBNull.Value ? 0 : Convert.ToInt32(dr["CategoryId"]),
                                 Owner = dr["Owner"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Owner"]),
                                 Picuri = dr["PicUri"]== DBNull.Value ? string.Empty : dr["PicUri"].ToString(),
@@ -83,7 +85,7 @@ namespace Library.Logic.DAL
                 IList<DBParameter> parm = new List<DBParameter>();
                 parm.Add(new DBParameter() { ParameterName = "KeyWord", ParameterValue = criteria.KeyWord, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "Category", ParameterValue = criteria.Category, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
-                parm.Add(new DBParameter() { ParameterName = "OwnerCode", ParameterValue = null, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "OwnerCode", ParameterValue = criteria.OwnerCategory, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PagerSize", ParameterValue = pageSize, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "PagerIndex", ParameterValue = pageIndex, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
                 parm.Add(new DBParameter() { ParameterName = "RowCount", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
@@ -142,6 +144,34 @@ namespace Library.Logic.DAL
                 resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
             }
             return model;
+        }
+
+        public IList<ModelPictures> QueryPicturesListByOwner(out string resultMsg, string CategoryCode, string ownerCode)
+        {
+            resultMsg = string.Empty;
+            var model = new ModelPictures();
+            IList<ModelPictures> list = new List<ModelPictures>();
+            try
+            {
+                //存储过程名称
+                string sql = "usp_pictures_select_by_owner";
+
+                //参数添加
+                IList<DBParameter> parm = new List<DBParameter>();
+                parm.Add(new DBParameter() { ParameterName = "CategoryCode", ParameterValue = CategoryCode, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "OwnerCode", ParameterValue = ownerCode, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String }); 
+
+                //查询执行
+                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                {
+                    list = GetModel(dr); 
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return list;
         }
 
         /// <summary>

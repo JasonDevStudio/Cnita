@@ -67,13 +67,13 @@
         </div> 
 
         @*归属*@
-        @*<div class="control-group">          
+        <div class="control-group">          
           <label class="control-label" for="input01">@Html.LabelFor(model => model.Owner)</label>
           <div class="controls">
-              @Html.TextBoxFor(model => model.Owner, new {@class="input-xlarge span6" }) 
+              @Html.DropDownListFor(model=>model.Owner,(IEnumerable<SelectListItem>)ViewBag.CategoryOwner,"请选择",new{@class="input-xlarge span6"}) 
             <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Owner)</i></p>
           </div>
-        </div> *@
+        </div> 
 
         @*广告链接*@
         <div class="control-group">          
@@ -91,7 +91,12 @@
           <label class="control-label" for="input01">@Html.LabelFor(model => model.Picuri)</label>
           <div class="controls">
               <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*"/>@*&nbsp;宽:<input type="text" class="span1" id="ImgWidth" name="ImgWidth" />&nbsp;高:<input type="text" class="span1" id="ImgHeight" name="ImgHeight" />*@
-            <p class="help-block"><i class="warning"></i></p>
+            <p class="help-block"><i class="warning">@Model.Picuri</i>&nbsp;
+                @if (!string.IsNullOrWhiteSpace(Model.Picuri)) { 
+                <a href="@Url.Content("~/Uploads/Images/")@Model.Picuri" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
+                }
+
+            </p>
           </div>
         </div> 
 

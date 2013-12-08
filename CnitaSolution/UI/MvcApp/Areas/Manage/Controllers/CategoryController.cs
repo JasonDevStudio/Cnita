@@ -43,13 +43,16 @@ namespace MvcApp.Areas.Manage.Controllers
             return Json(listTree);
         }
 
-        public ActionResult Edit(string id = null)
+        public ActionResult Edit(string id = null, string Category=null)
         {
             ModelCategory model = new ModelCategory();
 
             if (string.IsNullOrWhiteSpace(id))
-            {                
-                ViewBag.Categorys = base.QueryCategoryAll();
+            {
+                var Parentcateg = 0;
+                int.TryParse(Category,out Parentcateg);
+                model.Parentcateg = Parentcateg;
+                ViewBag.Categorys = base.QueryCategoryAll(string.IsNullOrWhiteSpace(Category) ? null : Category);
                 return View(model);
             }
             else

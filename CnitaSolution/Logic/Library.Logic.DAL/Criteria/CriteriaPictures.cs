@@ -21,6 +21,12 @@ namespace Library.Logic.DAL
             /// </summary>
             [Display(Name = "·ÖÀà")]
             public string Category { get; set; }
+
+            /// <summary>
+            /// ¹éÊô°æ¿é
+            /// </summary>
+            [Display(Name = "¹éÊô°æ¿é")]
+            public string OwnerCategory { get; set; }
         }
     }
 }
