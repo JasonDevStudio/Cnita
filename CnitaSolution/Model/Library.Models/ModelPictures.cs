@@ -39,7 +39,7 @@ namespace Library.Models
         /// </summary>
         [Display(Name = "¹éÊô°æ¿é")]
         [RegularExpression(@"^[0-9]*$", ErrorMessage = "¹éÊôÊäÈë´íÎó£¡")]
-        public Int32 Owner { get;set;}
+        public string Owner { get;set;}
 
         /// <summary> 
         /// ¹éÊô°æ¿é 

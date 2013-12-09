@@ -92,7 +92,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 else
                 {
                     ViewBag.Categorys = base.QueryCategoryAll(model.Categoryid.ToString());
-                    ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner.ToString());
+                    ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner);
                 }
             }
             return View(model);
@@ -103,7 +103,7 @@ namespace MvcApp.Areas.Manage.Controllers
         {
             var resultMsg = string.Empty;
             ViewBag.Categorys = base.QueryCategoryAll(model.Categoryid.ToString());
-            ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner.ToString());
+            ViewBag.CategoryOwner = base.QueryCategoryAll(model.Owner);
             var result = new ResultBase();
             var fileName = CommonMethod.ImageUpload(out result, this.HttpContext);
             if (result.result == -2)
@@ -123,7 +123,7 @@ namespace MvcApp.Areas.Manage.Controllers
             else
             {
                 resultMsg = "操作失败,请检查数据是否正确后重新操作!";
-                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true);
+                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "BtnShow");
             }
             return View(model);
         }

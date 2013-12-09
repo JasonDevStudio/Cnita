@@ -38,5 +38,38 @@ namespace MvcApp.Controllers
             return PartialView(list);
         }
 
+        /// <summary>
+        /// 小版块
+        /// </summary>
+        /// <param name="categoryCode">分类编号</param>
+        /// <param name="topCount">显示条数</param> 
+        public ActionResult SidebarForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode=null, string topCount = "5")
+        {
+            var logic = new LogicArticle();
+            var resultMsg = string.Empty; 
+            var CategIsAds = 0;
+            var Introduction = string.Empty;
+            var Thumbnails = string.Empty;
+            var CategName = string.Empty; 
+            var TopRowCount = 0;
+            int.TryParse(topCount,out TopRowCount);
+
+            var list = logic.QueryArticleListTopByCategoryCode(out resultMsg, out CategIsAds, out Introduction, out Thumbnails, out CategName,
+                categoryCode, categoryTwoCode, adsCategoryCode, TopRowCount);
+            ViewBag.CategIsAds = CategIsAds;
+            ViewBag.Introduction = Introduction;
+            ViewBag.Thumbnails = Thumbnails;
+            ViewBag.CategName = CategName;
+            ViewBag.CategoryCode = categoryCode;
+            ViewBag.AdsCategoryCode = adsCategoryCode;
+
+            return PartialView(list);
+        }
+
+        public ActionResult Defaults()
+        {
+            return View();
+        }
+        
     }
 }

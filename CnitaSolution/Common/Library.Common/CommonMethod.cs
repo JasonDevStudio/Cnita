@@ -9,6 +9,9 @@ namespace Library.Common
 {
     public class CommonMethod
     {
+        /// <summary>
+        /// 图片上传
+        /// </summary> 
         public static string ImageUpload(out ResultBase result, HttpContextBase cxt)
         {
             var fileName = string.Empty;
@@ -43,5 +46,26 @@ namespace Library.Common
             return fileName;
         }
 
+        /// <summary>
+        /// 字符串截取
+        /// </summary> 
+        public static string ObjSubstringByLength(string obj,int length)
+        {
+            if (!string.IsNullOrWhiteSpace(obj))
+            {
+                if (obj.Length > length)
+                {
+                    return obj.Substring(0, length) + "...";
+                }
+                else
+                {
+                    return obj;
+                }
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
 }

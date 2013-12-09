@@ -49,9 +49,7 @@ namespace MvcApp.Areas.Manage.Controllers
 
             if (string.IsNullOrWhiteSpace(id))
             {
-                var Parentcateg = 0;
-                int.TryParse(Category,out Parentcateg);
-                model.Parentcateg = Parentcateg;
+                model.Parentcateg = Category;
                 ViewBag.Categorys = base.QueryCategoryAll(string.IsNullOrWhiteSpace(Category) ? null : Category);
                 return View(model);
             }
@@ -62,7 +60,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 var resultMsg = string.Empty;
                 LogicCategory logic = new LogicCategory();
                 model = logic.CategoryDetail(out resultMsg, idx);
-                if (model != null && model.Parentcateg > 0)
+                if (model != null && string.IsNullOrWhiteSpace(model.Parentcateg)==false)
                 {
                     ViewBag.Categorys = base.QueryCategoryAll(model.Parentcateg.ToString());
                 }
@@ -85,7 +83,7 @@ namespace MvcApp.Areas.Manage.Controllers
         public ActionResult Edit(ModelCategory model, FormCollection fc)
         {
             var resultMsg = string.Empty;
-            ViewBag.Categorys = base.QueryCategoryAll(model.Parentcateg.ToString());
+            ViewBag.Categorys = base.QueryCategoryAll(model.Parentcateg);
             var result = new ResultBase();
             if (model.Id < 1)
             {
@@ -101,7 +99,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 ViewBag.CustomScript = UtilityScript.ShowMessage(result.resultMsg, isCreate: true);
                 return View(model);
             }
-            model.Thumbnails = fileName;  //model.Context = fc["editorValue"];
+            model.Thumbnails = string.IsNullOrWhiteSpace(fileName) ? model.Thumbnails : fileName;
 
             //数据保存
             LogicCategory logic = new LogicCategory();
@@ -114,7 +112,7 @@ namespace MvcApp.Areas.Manage.Controllers
             else
             {
                 resultMsg = "操作失败,请检查数据是否正确后重新操作!";
-                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true);
+                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "BtnShow");
             }
             return View(model);
         }

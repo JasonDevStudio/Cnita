@@ -1,14 +1,65 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Styles{
+    @RenderSection("Styles", required: false)
+}
 
+<div class="banner">
+    @if (IsSectionDefined("Banner"))
+    {
+        @RenderSection("Banner", false)
+    }
+    else
+    {
+        <div>
+            <iframe src="@Url.Action("Banner", "Home", new { categoryCode = "31", ownerCode = "", width = "1098" })", width="1100px"  height="100px" frameborder="0" scrolling="no"></iframe>
+        </div>
+    }
+</div>
+<div class="subcontent">
+    @*版块导航 开始*@
+    <div class="subcontent_nav">
+        @if (IsSectionDefined("SubContentNav"))
+        {
+            @RenderSection("SubContentNav", false)
+        }
+        else
+        {
+            <p>资讯</p>
+        }
+    </div>
+    @*版块导航 结束*@
+    <div class="subcontent_container">
+        @*侧边栏 开始*@
+        <div class="subcontent_sidebar">
+            @if (IsSectionDefined("Sidebar"))
+            {
+                @RenderSection("Sidebar", false)
+            }
+            else
+            {
+                @Html.Action("SidebarForum", "Home", new { categoryCode = "6", adsCategoryCode = "33" })
+                @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36" })
+            }
+        </div>
+        @*侧边栏 结束*@
+        @*内容 开始*@
+        <div class="subcontent_content">
+            <div class="subcontent_content subcontainer">
+                <div class="subcontainer_top">
+                </div>
+                <div class="subcontainer_middle" >
+                    @RenderBody()
+                </div>
+                <div class="subcontainer_bottom">
+                </div>
+            </div>
 
-<div class="banner"><img id='img_banner' src='images/content/content_banner.png' width='1133' height='98' border='0'  /></div>
-          <div class="subcontent">
-               <div class="subcontent_nav">
-               </div>
-               <div class="subcontent_container">
-                    <div class="subcontent_sidebar"><img id='img_subcontent_sidebar' src='images/content/content_subcontent_sidebar.png' width='316' height='917' border='0'  /></div>
-                    <div class="subcontent_content"><img id='img_subcontent_content' src='images/content/content_subcontent_content.png' width='817' height='917' border='0'  /></div>
-               </div>
-          </div>
+        </div>
+        @*内容 结束*@
+    </div>
+</div>
+@section Scripts{
+    @RenderSection("Scripts", required: false)
+}

@@ -29,7 +29,7 @@ namespace Library.Logic.DAL
                 model.CategoryName = dr["OwnerCategoryName"] == DBNull.Value ? string.Empty : dr["OwnerCategoryName"].ToString();
                 model.OwnerCategoryName = dr["CategoryName"] == DBNull.Value ? string.Empty : dr["CategoryName"].ToString();
                 model.Categoryid = dr["CategoryId"]== DBNull.Value ? 0 : Convert.ToInt32(dr["CategoryId"]);
-                model.Owner = dr["Owner"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Owner"]);
+                model.Owner = dr["Owner"]== DBNull.Value ? string.Empty : Convert.ToString(dr["Owner"]);
                 model.Picuri = dr["PicUri"]== DBNull.Value ? string.Empty : dr["PicUri"].ToString();
                 model.Piclink = dr["PicLink"]== DBNull.Value ? string.Empty : dr["PicLink"].ToString();
                 model.Status = dr["Status"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Status"]);
@@ -52,7 +52,7 @@ namespace Library.Logic.DAL
                                 CategoryName = dr["CategoryName"] == DBNull.Value ? string.Empty : dr["CategoryName"].ToString(),
                                 OwnerCategoryName = dr["OwnerCategoryName"] == DBNull.Value ? string.Empty : dr["OwnerCategoryName"].ToString(),
                                 Categoryid = dr["CategoryId"]== DBNull.Value ? 0 : Convert.ToInt32(dr["CategoryId"]),
-                                Owner = dr["Owner"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Owner"]),
+                                Owner = dr["Owner"]== DBNull.Value ? string.Empty : Convert.ToString(dr["Owner"]),
                                 Picuri = dr["PicUri"]== DBNull.Value ? string.Empty : dr["PicUri"].ToString(),
                                 Piclink = dr["PicLink"]== DBNull.Value ? string.Empty : dr["PicLink"].ToString(),
                                 Status = dr["Status"]== DBNull.Value ? 0 : Convert.ToInt32(dr["Status"]),

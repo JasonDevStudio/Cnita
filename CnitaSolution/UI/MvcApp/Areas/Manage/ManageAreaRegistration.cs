@@ -17,7 +17,8 @@ namespace MvcApp.Areas.Manage
             context.MapRoute(
                 "Manage_default",
                 "Manage/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Login", id = UrlParameter.Optional },
+                namespaces: new string[] { "MvcApp.Areas.Manage.Controllers" } 
             );
         }
     }

@@ -207,6 +207,7 @@
     <Compile Include="Areas\Manage\Models\ModelPagerOrg.cs" />
     <Compile Include="Areas\Manage\Models\ModelTree.cs" />
     <Compile Include="Areas\Manage\Models\ModelPagerAccount.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -273,6 +274,16 @@
     <Content Include="Content\themes\Default\images\footer_footer_top.jpg" />
     <Content Include="Content\themes\Default\images\Header_logo.png" />
     <Content Include="Content\themes\Default\images\Header_mainMenu.jpg" />
+    <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_bottom.png" />
+    <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_bottom.png" />
+    <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_middle.png" />
+    <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_top.png" />
+    <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_top.png" />
+    <Content Include="Content\themes\Default\images\subcontainer_subcontainer_bottom.png" />
+    <Content Include="Content\themes\Default\images\subcontainer_subcontainer_middle.png" />
+    <Content Include="Content\themes\Default\images\subcontainer_subcontainer_top.png" />
+    <Content Include="Content\themes\Default\images\subcontent_nav.png" />
+    <Content Include="Content\themes\JasonPager\default.css" />
     <Content Include="Content\themes\manage\css\about-us.css" />
     <Content Include="Content\themes\manage\css\animate.css" />
     <Content Include="Content\themes\manage\css\blog.css" />
@@ -1094,6 +1105,9 @@
     <Content Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\entries" />
     <Content Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\prop-base\btn-bg.gif.svn-base" />
     <Content Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\text-base\btn-bg.gif.svn-base" />
+    <Content Include="Views\Home\SidebarForum.cshtml" />
+    <Content Include="Views\Home\Defaults.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

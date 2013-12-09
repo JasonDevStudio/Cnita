@@ -140,7 +140,7 @@
         <div class="control-group">          
           <!-- Button -->
           <div class="controls">
-            <button class="btn red span2" type="submit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button> 
+            <button class="btn red span2" type="submit" id="btnSubmit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button> 
             
           </div>
         </div>
@@ -180,7 +180,10 @@
             window.location = "@Url.Action("Index","Article")";
         }
         function Loading(obj) {
-            $(obj).hide();
+            //$(obj).hide();
+        }
+        function BtnShow() {
+            $("#btnSubmit").show();
         }
     </script>
     @Html.Raw(ViewBag.CustomScript)

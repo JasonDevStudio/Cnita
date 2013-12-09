@@ -71,7 +71,7 @@ namespace MvcApp.Areas.Manage.Controllers
             else
             {
                 resultMsg = "操作失败,请检查数据是否正确后重新操作!";
-                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true);
+                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "BtnShow");
             }
             return View(model);
         }

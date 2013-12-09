@@ -97,8 +97,8 @@ namespace MvcApp.Areas.Manage.Controllers
             }
             else
             {
-                resultMsg = string.IsNullOrWhiteSpace(resultMsg) ?  "操作失败,请检查数据是否正确后重新操作!" : resultMsg.Replace(BaseDict.ErrorPrefix,""); 
-                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true);
+                resultMsg = string.IsNullOrWhiteSpace(resultMsg) ?  "操作失败,请检查数据是否正确后重新操作!" : resultMsg.Replace(BaseDict.ErrorPrefix,"");
+                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "BtnShow");
             }
             return View(model);
         }

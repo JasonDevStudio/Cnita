@@ -29,7 +29,7 @@ namespace Library.Logic.DAL
                 model.Nameen = dr["NameEn"] == DBNull.Value ? string.Empty : dr["NameEn"].ToString();
                 model.Thumbnails = dr["Thumbnails"] == DBNull.Value ? string.Empty : dr["Thumbnails"].ToString();
                 model.Introduction = dr["Introduction"] == DBNull.Value ? string.Empty : dr["Introduction"].ToString();
-                model.Parentcateg = dr["ParentCateg"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ParentCateg"]);
+                model.Parentcateg = dr["ParentCateg"] == DBNull.Value ? string.Empty : Convert.ToString(dr["ParentCateg"]);
                 model.Sort = dr["Sort"] == DBNull.Value ? 0 : Convert.ToInt32(dr["Sort"]);
                 model.Isnav = dr["IsNav"] == DBNull.Value ? 0 : Convert.ToInt32(dr["IsNav"]);
                 model.Isindex = dr["IsIndex"] == DBNull.Value ? 0 : Convert.ToInt32(dr["IsIndex"]);
@@ -53,7 +53,7 @@ namespace Library.Logic.DAL
                                  Nameen = dr["NameEn"] == DBNull.Value ? string.Empty : dr["NameEn"].ToString(),
                                  Thumbnails = dr["Thumbnails"] == DBNull.Value ? string.Empty : dr["Thumbnails"].ToString(),
                                  Introduction = dr["Introduction"] == DBNull.Value ? string.Empty : dr["Introduction"].ToString(),
-                                 Parentcateg = dr["ParentCateg"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ParentCateg"]),
+                                 Parentcateg = dr["ParentCateg"] == DBNull.Value ? string.Empty : Convert.ToString(dr["ParentCateg"]),
                                  Sort = dr["Sort"] == DBNull.Value ? 0 : Convert.ToInt32(dr["Sort"]),
                                  Isnav = dr["IsNav"] == DBNull.Value ? 0 : Convert.ToInt32(dr["IsNav"]),
                                  Isindex = dr["IsIndex"] == DBNull.Value ? 0 : Convert.ToInt32(dr["IsIndex"]),
@@ -72,7 +72,7 @@ namespace Library.Logic.DAL
                 var model = new ModelCategory();
                 model.Id = dr["Id"] == DBNull.Value ? 0 : Convert.ToInt32(dr["Id"]);
                 model.Name = dr["Name"] == DBNull.Value ? string.Empty : dr["Name"].ToString();
-                model.Parentcateg = dr["ParentCateg"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ParentCateg"]);
+                model.Parentcateg = dr["ParentCateg"] == DBNull.Value ? string.Empty : Convert.ToString(dr["ParentCateg"]);
                 model.Level = dr["LEVEL"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LEVEL"]);
                 modelList.Add(model);
             }
@@ -83,7 +83,7 @@ namespace Library.Logic.DAL
         {
             var returnList = new List<ModelCategory>();
             var listTemp = (from ModelCategory model in list
-                            where model.Parentcateg == Category
+                            where model.Parentcateg == Category.ToString()
                             select model).ToList();
 
             foreach (var item in listTemp)

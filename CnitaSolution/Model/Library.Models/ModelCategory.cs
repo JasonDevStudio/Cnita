@@ -41,11 +41,10 @@ namespace Library.Models
 
         /// <summary> 
         /// 父类 
-        /// </summary>
-        [Required]
+        /// </summary> 
         [Display(Name = "父类")]
-        [RegularExpression(@"^[0-9]*$", ErrorMessage = "父类输入错误！")]
-        public Int32 Parentcateg { get;set;}
+        //[RegularExpression(@"^[0-9]*$", ErrorMessage = "父类输入错误！")]
+        public string Parentcateg { get;set;}
 
         /// <summary> 
         /// 深度

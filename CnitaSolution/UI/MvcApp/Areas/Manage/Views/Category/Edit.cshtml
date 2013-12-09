@@ -45,7 +45,7 @@
                         <div class="row-fluid">
                             <!--表单 开始-->
                             <form id="mainForm" action="@Url.Action("Edit", "Category")" class="form-horizontal" enctype="multipart/form-data" method="post" >
-                                @Html.HiddenFor(model=>model.Id)
+                                @Html.HiddenFor(model => model.Id)
                                 @Html.AntiForgeryToken()
                                 @Html.ValidationSummary(true)
 
@@ -80,17 +80,22 @@
                                 <div class="control-group">
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Sort)</label>
                                     <div class="controls">
-                                        @Html.TextBoxFor(model => model.Sort ,new { @class = "input-xlarge span6" })
+                                        @Html.TextBoxFor(model => model.Sort, new { @class = "input-xlarge span6" })
                                         <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Sort)</i></p>
                                     </div>
-                                </div> 
+                                </div>
 
                                 @*预览图*@
                                 <div class="control-group">
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Thumbnails)</label>
                                     <div class="controls">
                                         <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*" />@*&nbsp;宽:<input type="text" class="span1" id="ImgWidth" name="ImgWidth" />&nbsp;高:<input type="text" class="span1" id="ImgHeight" name="ImgHeight" />*@
-                                        <p class="help-block"><i class="warning"></i></p>
+                                        <p class="help-block"><i class="warning">@Model.Thumbnails</i>&nbsp;
+                                            @if (!string.IsNullOrWhiteSpace(Model.Thumbnails))
+                                            { 
+                                                <a href="@Url.Content("~/Uploads/Images/")@Model.Thumbnails" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
+                                            }
+                                        </p>
                                     </div>
                                 </div>
 
@@ -102,11 +107,11 @@
                                         <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Introduction)</i></p>
                                     </div>
                                 </div>
-                                 
+
                                 <div class="control-group">
                                     <!-- Button -->
                                     <div class="controls">
-                                        <button class="btn red span2" type="submit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button>
+                                        <button class="btn red span2" type="submit" id="btnSubmit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button>
 
                                     </div>
                                 </div>
@@ -119,25 +124,28 @@
         </div>
 
     </div>
-</div>  
+</div>
 
-@section Styles{ 
+@section Styles{
 }
-@section Scripts { 
-        @Scripts.Render("~/bundles/jqueryval")
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
     @*实例化 编辑器*@
     <script type="text/javascript">
         $(document).ready(function () {
-          
+
         });
         function Goto() {
             window.location = "@Url.Action("Index", "Category")";
         }
         function Loading(obj) {
-            $(obj).hide();
+            //$(obj).hide();
+        }
+        function BtnShow() {
+            $("#btnSubmit").show();
         }
     </script>
     @Html.Raw(ViewBag.CustomScript)
 }
 
- 
+

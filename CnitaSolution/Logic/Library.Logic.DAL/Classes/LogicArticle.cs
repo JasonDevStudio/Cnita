@@ -125,7 +125,6 @@ namespace Library.Logic.DAL
             return list;
         }
 
-
         /// <summary>
         ///  查询实体
         /// </summary>
@@ -156,6 +155,72 @@ namespace Library.Logic.DAL
                 resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
             }
             return model;
+        }
+
+        /// <summary>
+        ///  TOP查询
+        /// </summary> 
+        /// <returns>IList<ModelArticle></returns>
+        public IList<ModelArticle> QueryArticleListTopByCategoryCode(out string resultMsg, out int CategIsAds, out string Introduction, out string Thumbnails,
+            out string CategName, string categoryCode = null, string categoryTwoCode=null, string adsCategoryCode = "33", int topCount = 5)
+        {
+            resultMsg = string.Empty;
+            CategIsAds = 0;
+            Introduction = string.Empty;
+            Thumbnails = string.Empty;
+            CategName = string.Empty;
+            IList<ModelArticle> list = new List<ModelArticle>();
+            try
+            {
+                //存储过程名称
+                string sql = "usp_article_select_by_top";
+
+                //参数添加
+                IList<DBParameter> parm = new List<DBParameter>();
+                parm.Add(new DBParameter() { ParameterName = "CategoryCode", ParameterValue = categoryCode, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "CategoryTwoCode", ParameterValue = categoryTwoCode, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "AdsCategoryCode", ParameterValue = adsCategoryCode, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "TopCount", ParameterValue = topCount, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
+                parm.Add(new DBParameter() { ParameterName = "CategName", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "Thumbnails", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "Introduction", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+                parm.Add(new DBParameter() { ParameterName = "CategIsAds", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.Int32 });
+                parm.Add(new DBParameter() { ParameterName = "resultMsg", ParameterInOut = BaseDict.ParmOut, ParameterType = DbType.String });
+
+                //查询执行
+                using (DataSet ds = DBHelper.ExecuteDataSet(sql, true, parm))
+                {
+                    foreach (var item in parm)
+                    {
+                        //获取输出参数值
+                        switch (item.ParameterName)
+                        {
+                            case "resultMsg":
+                                resultMsg = item.ParameterValue.ToString();
+                                break;
+                            case "CategIsAds":
+                                int.TryParse(item.ParameterValue.ToString(),out CategIsAds);
+                                break;
+                            case "Introduction":
+                                Introduction = item.ParameterValue.ToString();
+                                break;
+                            case "Thumbnails":
+                                Thumbnails = item.ParameterValue.ToString();
+                                break;
+                            case "CategName":
+                                CategName = item.ParameterValue.ToString();
+                                break;
+                        } 
+                    }
+
+                    list = GetModel(ds); 
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return list;
         }
 
         /// <summary>

@@ -1,0 +1,9 @@
+﻿
+.sidebar_forum{width:288px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.sidebar_forum_top{width:288px;height:41px;clear:both;display:inline-block;background-image: url(../images/SidebarForum/SidebarForum_sidebar_forum_top.png);text-align:left;}
+.sidebar_forum_middle_top{width:288px;clear:both;display:inline-block;background-image: url(../images/SidebarForum/SidebarForum_sidebar_forum_middle_top.png);  background-repeat: repeat-y;text-align:left; line-height:14px;}
+.sidebar_forum_middle_middle{width:288px;clear:both;display:inline-block;background-image: url(../images/SidebarForum/SidebarForum_sidebar_forum_middle_middle.png);  background-repeat: repeat-y;text-align:left;}
+.sidebar_forum_middle_bottom{width:288px;clear:both;display:inline-block;background-image: url(../images/SidebarForum/SidebarForum_sidebar_forum_middle_bottom.png);  background-repeat: repeat-y;text-align:left;}
+.sidebar_forum_bottom{width:288px;height:9px;font-size:1px;clear:both;display:inline-block;background-image: url(../images/SidebarForum/SidebarForum_sidebar_forum_bottom.png);text-align:left; line-height:9px;}
+.sidebar_forum_top_left{width:239px;height:41px;float:left;display:inline;text-align:left;}
+.sidebar_forum_top_right{width:49px;height:41px;float:left;display:inline;text-align:left;}
