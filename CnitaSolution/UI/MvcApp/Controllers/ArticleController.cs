@@ -1,6 +1,10 @@
-﻿using Library.Logic.DAL;
+﻿using Library.Common;
+using Library.Logic.DAL;
+using Library.Models;
+using Library.StringItemDict;
 using MvcApp.Areas.Manage.Controllers;
 using MvcApp.Areas.Manage.Models;
+using MvcApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +13,7 @@ using System.Web.Mvc;
 
 namespace MvcApp.Controllers
 {
-    public class ArticleController :  BaseController
+    public class ArticleController : BaseController
     {
         #region 私有函数
 
@@ -46,21 +50,55 @@ namespace MvcApp.Controllers
             return model;
         }
 
-        #endregion
-        
-
-        public ActionResult Index(string Category=null, string CategoryTwo=null)
+        private ModelArticle GetDataModel(string Id)
         {
-            ModelPagerArticle model = GetData(Category: Category, CategoryTwo: CategoryTwo);
+            var idx = 0;
+            var resultMsg = string.Empty;
+            var logic = new LogicArticle();
+            int.TryParse(Id, out idx);
+            var model = logic.ArticleDetail(out resultMsg, idx);
+
+            if (!string.IsNullOrWhiteSpace(resultMsg) && resultMsg.Contains(BaseDict.ErrorPrefix))
+            {
+                model.Context = resultMsg;
+            }
+
+            if (model.Id < 1)
+            {
+                model.Context = "未查询到数据!";
+            }
+
+            return model;
+        }
+
+        #endregion
+
+
+        public ActionResult Index(string Id = null, string CategoryTwo = null)
+        {
+            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo);
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(string Category, string CategoryTwo, string KeyWord, string PagerIndex, string PagerSize)
+        public ActionResult Index(string Id, string CategoryTwo, string KeyWord, string PagerIndex, string PagerSize)
         {
-            ModelPagerArticle model = GetData(Category: Category, CategoryTwo: CategoryTwo,PagerIndex:PagerIndex,PagerSize:PagerSize);
+            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
             return View(model);
         }
 
+        public ActionResult Detail(string Id)
+        {
+            var model = GetDataModel(Id);
+
+            return View(model);
+        }
+
+        public ActionResult Assoc(string Id)
+        {
+            var model = GetDataModel(Id);
+
+            return View(model);
+        }
     }
 }

@@ -66,9 +66,33 @@ namespace MvcApp.Controllers
             return PartialView(list);
         }
 
-        public ActionResult Defaults()
+        /// <summary>
+        /// 侧边栏 分类
+        /// </summary>
+        /// <param name="categoryCode">父分类Id</param> 
+        public ActionResult SidebarCategory(string categoryCode = null, string adsCategoryCode=null)
         {
-            return View();
+            var categoryId = 0;
+            var resultMsg = string.Empty;
+            var logic = new LogicCategory();
+
+            int.TryParse(categoryCode,out categoryId);
+            
+            IList<ModelCategory> list = new List<ModelCategory>();
+            list = logic.CategoryAll(out resultMsg, categoryId, "2");
+            var modelList = (from ModelCategory m in list
+                         where m.Id == categoryId
+                         select m).ToList();
+            var model = modelList != null && modelList.Count > 0 ? modelList.First() : new ModelCategory();
+
+            ViewBag.CategName = model.Name;
+            ViewBag.Thumbnails = model.Thumbnails;
+            ViewBag.CategoryCode = categoryCode;
+            ViewBag.AdsCategoryCode = adsCategoryCode;
+
+            //list.Remove(model);
+             
+            return PartialView(list);
         }
         
     }

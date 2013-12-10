@@ -85,12 +85,12 @@ namespace MvcApp.Areas.Manage.Controllers
             var resultMsg = string.Empty;
             ViewBag.Categorys = base.QueryCategoryAll(model.Parentcateg);
             var result = new ResultBase();
-            if (model.Id < 1)
-            {
-                resultMsg = "非法数据,无法提交!";
-                ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "Goto");
-                return View(model);
-            }
+            //if (model.Id < 1)
+            //{
+            //    resultMsg = "非法数据,无法提交!";
+            //    ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "Goto");
+            //    return View(model);
+            //}
 
             //图片上传
             var fileName = CommonMethod.ImageUpload(out result, this.HttpContext);
