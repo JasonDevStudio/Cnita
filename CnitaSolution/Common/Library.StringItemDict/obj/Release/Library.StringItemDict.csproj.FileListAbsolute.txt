@@ -1,0 +1,5 @@
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\bin\Release\Library.StringItemDict.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\bin\Release\Library.StringItemDict.pdb
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\obj\Release\Library.StringItemDict.csprojResolveAssemblyReference.cache
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\obj\Release\Library.StringItemDict.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\obj\Release\Library.StringItemDict.pdb

@@ -275,6 +275,8 @@
     <Content Include="Content\themes\Default\images\footer_footer_top.jpg" />
     <Content Include="Content\themes\Default\images\Header_logo.png" />
     <Content Include="Content\themes\Default\images\Header_mainMenu.jpg" />
+    <Content Include="Content\themes\Default\images\indexforum_indexforum_top.jpg" />
+    <Content Include="Content\themes\Default\images\indexforum_indexforum_top.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_bottom.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_bottom.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_middle.png" />
@@ -496,7 +498,6 @@
     <Content Include="Content\themes\manage\image\glyphiconshalflings-regular.ttf" />
     <Content Include="Content\themes\manage\image\glyphiconshalflings-regular.woff" />
     <Content Include="Content\themes\manage\image\js" />
-    <Content Include="Content\themes\manage\image\Thumbs.db" />
     <Content Include="Areas\Manage\Views\Shared\_manage.cshtml" />
     <Content Include="Areas\Manage\Views\Home\Index.cshtml" />
     <Content Include="Areas\Manage\Views\Article\Create.cshtml" />
@@ -512,6 +513,7 @@
     <Content Include="Areas\Manage\Views\Acc\Create.cshtml" />
     <Content Include="Areas\Manage\Views\Home\Login.cshtml" />
     <Content Include="Areas\Manage\Views\Home\LogFail.cshtml" />
+    <None Include="Properties\PublishProfiles\cnita.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\zazhi.gif" />
@@ -1009,6 +1011,11 @@
     <Content Include="Scripts\zTree\js\jquery.ztree.exedit-3.5.min.js" />
     <Content Include="Scripts\zTree\js\jquery.ztree.exhide-3.5.js" />
     <Content Include="Scripts\zTree\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="Uploads\Images\201312112150544988.jpg" />
+    <Content Include="Uploads\Images\201312112151045772.jpg" />
+    <Content Include="Uploads\Images\201312112153062573.jpg" />
+    <Content Include="Uploads\Images\201312112153155919.jpg" />
+    <Content Include="Uploads\Images\201312112215567067.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1172,6 +1179,8 @@
     <Content Include="Views\Article\AssocList.cshtml" />
     <Content Include="Views\Home\CategoryForum.cshtml" />
     <Content Include="Views\Article\AssocCates.cshtml" />
+    <Content Include="Views\Home\IndexCategoryForum.cshtml" />
+    <Content Include="Views\Article\NewsList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1230,7 +1239,6 @@
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\prop-base\" />
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\props\" />
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\text-base\" />
-    <Folder Include="Uploads\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

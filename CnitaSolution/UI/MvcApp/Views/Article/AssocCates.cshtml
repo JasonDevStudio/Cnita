@@ -9,10 +9,10 @@
     <p>@ViewBag.CategName</p>
 }
 
-@section Sidebar{
+@*@section Sidebar{
     @Html.Action("SidebarCategory", "Home", new { categoryCode = "2", adsCategoryCode = "33" })
     @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
-}
+}*@
 
 @if (Model != null && Model.Count() > 0)
 {

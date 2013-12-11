@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title></title>
 
-    <link id="mfcss" rel="stylesheet" href="@Url.Content("~/Scripts/UISlide/mf-pattern/mF_expo2010.css")" />
+    <link id="mfcss" rel="stylesheet" href="@Url.Content("~/Scripts/UISlide/mf-pattern/mF_classicHB.css")" />
     <!--引入风格应用css-->
     <style type="text/css">
         * {
@@ -50,22 +50,24 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Scripts/UISlide/myfocus-2.0.1.full.js")"></script>
     <!--引入myFocus库-->
-    <script type="text/javascript" src="@Url.Content("~/Scripts/UISlide/mf-pattern/mF_expo2010.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/UISlide/mf-pattern/mF_classicHB.js")"></script>
     <!--引入风格应用js-->
-
+    @if (ViewBag.IsSlide == "1") { 
     <script type="text/javascript">
         $(document).ready(function () {
             myFocus.set({
                 id: 'myFocus', //焦点图盒子ID
-                pattern: 'mF_expo2010', //风格应用的名称
-                time: 3, //切换时间间隔(秒)，省略设置即不自动切换
+                pattern: 'mF_classicHB', //风格应用的名称
+                time: 10, //切换时间间隔(秒)，省略设置即不自动切换
                 trigger: 'click', //触发切换模式:'click'(点击)/'mouseover'(悬停)，默认'click'
                 width: @(ViewBag.width), //设置宽度(主图区)
                 height: @(ViewBag.height), //设置高度(主图区)
                 wrap:false,
+                index:0,
                 txtHeight: '0'//文字层高度设置,'default'为默认高度，0为隐藏，默认'default'
             });
         });
     </script>
+    }
 </body>
 </html>

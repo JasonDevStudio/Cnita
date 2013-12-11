@@ -1,0 +1,102 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Scripts/zTree/css/zTreeStyle/zTreeStyle.css")" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div>
+        <div id="divTreeContainer" class="ztree">
+                                
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap/jquery-1.8.3.js")"></script> 
+<script type="text/javascript" src="@Url.Content("~/Scripts/zTree/js/jquery.ztree.all-3.5.js")"></script>
+<script type="text/javascript">
+
+        var IDMark_Switch = "_switch",
+                    IDMark_Icon = "_ico",
+                    IDMark_Span = "_span",
+                    IDMark_Input = "_input",
+                    IDMark_Check = "_check",
+                    IDMark_Edit = "_edit",
+                    IDMark_Remove = "_remove",
+                    IDMark_Ul = "_ul",
+                    IDMark_A = "_a";
+
+        $(document).ready(function () {
+            LoadTree();
+        });
+
+        //节点单击事件 跳转到分类编辑
+        function TreeOnClick(event, treeId, treeNode, clickFlag) {
+            var url = "@Url.Action("Edit", "Category")\\"+treeNode.id;
+            window.parent.location = url; 
+        }
+
+    function DeleteTreeNode(id, name) {
+            window.parent.DeleteNode(id, name);
+        }
+
+    function EditTreeNode(id, name) {
+        var url = "@Url.Action("Edit", "Category")\\" + id;
+        window.parent.location = url;
+        //window.parent.EditNode(id, name);
+    }
+
+    function AddTreeNode(id, name) {
+        var url = "@Url.Action("Edit", "Category")?Category=" + id;
+        window.parent.location = url;
+        //window.parent.EditNode(id, name);
+    }
+
+        function addDiyDom(treeId, treeNode) {
+            var aObj = $("#" + treeNode.tId + IDMark_A); 
+            var editStr = "<span class='button ico_docu' onclick=\"AddTreeNode(" + treeNode.id + ")\" title='添加 [" + treeNode.name + "]的下级分类'></span>"
+                +"<span class='button edit' onclick=\"EditTreeNode(" + treeNode.id + ")\" title='编辑 [" + treeNode.name +
+                "]'></span><span class='button remove' onclick=\"DeleteTreeNode(" + treeNode.id + ",'" + treeNode.name + "')\" title='删除 [" + treeNode.name + "]'></span>"
+            aObj.after(editStr);
+        }
+
+
+        function LoadTree() {
+            var setting = {
+                view: {
+                    addDiyDom: addDiyDom,
+                    nameIsHTML: true,
+                    showTitle: false
+                },
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                },
+                callback: {
+                    //beforeClick: beforeClick,
+                    //onClick: TreeOnClick
+                }
+            };
+
+             $.ajax(
+                {
+                    url: "@Url.Action("Tree","Category")",
+                    data: {},
+                    type:"post",
+                    success: function (data, status) {
+                        $.fn.zTree.init($("#divTreeContainer"), setting, data);
+                        var treeObj = $.fn.zTree.getZTreeObj("divTreeContainer");
+                        treeObj.expandAll(true);
+                    }, 
+                });   
+        }
+    </script>

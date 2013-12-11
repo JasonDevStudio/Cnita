@@ -74,6 +74,24 @@
           </div>
         </div> 
 
+        @*是否需要登录*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.IsPermission)</label>
+          <div class="controls">
+              @Html.CheckBoxFor(model => model.IsPermission, new {@class="input-xlarge span6" }) 
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.IsPermission)</i></p>
+          </div>
+        </div> 
+
+        @*推荐*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.IsRec)</label>
+          <div class="controls">
+              @Html.CheckBoxFor(model => model.IsRec, new {@class="input-xlarge span6" }) 
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.IsRec)</i></p>
+          </div>
+        </div> 
+
         @*作者*@
         <div class="control-group">          
           <label class="control-label" for="input01">@Html.LabelFor(model => model.Author)</label>
@@ -92,14 +110,7 @@
           </div>
         </div>
         
-        @*是否需要登录*@
-        <div class="control-group">          
-          <label class="control-label" for="input01">@Html.LabelFor(model => model.IsPermission)</label>
-          <div class="controls">
-              @Html.CheckBoxFor(model => model.IsPermission, new {@class="input-xlarge span6" }) 
-            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.IsPermission)</i></p>
-          </div>
-        </div> 
+        
 
         @*关键字*@
         <div class="control-group">          

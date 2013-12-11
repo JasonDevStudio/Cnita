@@ -1,0 +1,7 @@
+﻿
+.indexforum{width:405px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.indexforum_top{width:405px;height:41px;clear:both;display:inline-block;background-image: url(../images/indexforum/indexforum_indexforum_top.png);text-align:left;}
+.indexforum_middle{width:405px;clear:both;display:inline-block;text-align:left;}
+.indexforum_bottom{width:405px;clear:both;display:inline-block;text-align:left;}
+.indexforum_top_left{width:330px;height:41px;float:left;display:inline;text-align:left;}
+.indexforum_top_right{width:75px;height:41px;float:left;display:inline;text-align:left;}

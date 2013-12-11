@@ -1,0 +1,4 @@
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\bin\Release\Library.Models.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\bin\Release\Library.Models.pdb
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\obj\Release\Library.Models.dll
+D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\obj\Release\Library.Models.pdb

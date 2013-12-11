@@ -12,7 +12,3 @@ D:\GitHub\CnitaSolution\Common\Library.StringItemDict\bin\Debug\Library.StringIt
 D:\GitHub\CnitaSolution\Common\Library.StringItemDict\obj\Debug\Library.StringItemDict.dll
 D:\GitHub\CnitaSolution\Common\Library.StringItemDict\obj\Debug\Library.StringItemDict.pdb
 D:\GitHub\CnitaSolution\Common\Library.StringItemDict\obj\Debug\Library.StringItemDict.csprojResolveAssemblyReference.cache
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\bin\Debug\Library.StringItemDict.dll
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\bin\Debug\Library.StringItemDict.pdb
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\obj\Debug\Library.StringItemDict.dll
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Common\Library.StringItemDict\obj\Debug\Library.StringItemDict.pdb

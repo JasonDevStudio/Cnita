@@ -191,21 +191,7 @@
             
         });
         function Search() {
-            $.JasonPager.Submit();
-           @* $.ajax(
-                {
-                    url:"@Url.Action("Index", "Article")",
-                    data: {
-                        Category: $("#Category").val(),
-                        KeyWord: $("#KeyWord").val()
-                    },
-                    type: "post", 
-                    success: function (data, status) {
-                        $("#divPagerContainer").show();
-                        $("#MainContainer").html($(data).find("#MainContainer").html());
-                        
-                    }, 
-                });*@
+            $.JasonPager.Submit();           
         }
 
         function Add() {

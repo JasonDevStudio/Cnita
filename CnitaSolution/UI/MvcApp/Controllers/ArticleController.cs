@@ -75,7 +75,9 @@ namespace MvcApp.Controllers
 
         #endregion
 
-
+        /// <summary>
+        /// 文章列表
+        /// </summary> 
         public ActionResult Index(string Id = null, string CategoryTwo = null)
         {
             ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo);
@@ -89,6 +91,9 @@ namespace MvcApp.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 文章 详情
+        /// </summary> 
         public ActionResult Detail(string Id)
         {
             var model = GetDataModel(Id);
@@ -96,6 +101,9 @@ namespace MvcApp.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 协会介绍 内容页
+        /// </summary> 
         public ActionResult Assoc(string Id)
         {
             var model = GetDataModel(Id);
@@ -103,6 +111,9 @@ namespace MvcApp.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 会员企业 列表页
+        /// </summary> 
         public ActionResult AssocList(string Id, string CategoryTwo, string KeyWord, string PagerIndex="1", string PagerSize="30")
         {
             var model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
@@ -110,6 +121,11 @@ namespace MvcApp.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// 子版块列表页
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         public ActionResult AssocCates(string Id)
         {
             var categoryId = 0;
@@ -131,6 +147,11 @@ namespace MvcApp.Controllers
             list.Remove(model);
 
             return View(list);
+        }
+
+        public ActionResult NewsList()
+        {
+            return View();
         }
     }
 }

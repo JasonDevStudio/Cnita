@@ -85,6 +85,12 @@ namespace Library.Models
         public Int32 Isrecommend { get;set;}
 
         /// <summary> 
+        /// 推荐 
+        /// </summary>
+        [Display(Name = "推荐")]
+        public bool IsRec { get; set; }
+
+        /// <summary> 
         /// 是否登录查看 
         /// </summary>
         [Display(Name = "是否登录查看")]

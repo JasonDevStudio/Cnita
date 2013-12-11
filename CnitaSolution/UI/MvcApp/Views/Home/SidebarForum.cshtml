@@ -5,7 +5,7 @@
         <p>@ViewBag.CategName</p>
     </div>
     <div class="sidebar_forum_top_right">
-        <p><a href="@Url.Action("Index","Article") @ViewBag.CategoryCode">more</a></p>
+        <p><a href="@Url.Action("Index", "Article", new { Id=ViewBag.CategoryCode}) ">more</a></p>
     </div>
 </div>
 <div class="sidebar_forum_middle_top">
@@ -26,7 +26,7 @@
     {
         foreach (var item in Model)
         {
-        <p><a href="#" title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 18)</a> </p>
+        <p><a href="@Url.Action("Detail", "Article", new { Id=item.Id}) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 18)</a> </p>
         }
     }
 </div>
@@ -34,7 +34,7 @@
     @if (Convert.ToInt32(ViewBag.CategIsAds) > 0)
     { 
         <div>
-            <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "260", height = "80" })", width="260px"  height="80px" frameborder="0" scrolling="no"></iframe>
+            <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "260", height = "80",isSlide=ViewBag.IsSlide})", width="260px"  height="80px" frameborder="0" scrolling="no"></iframe>
         </div>  
     }
     else

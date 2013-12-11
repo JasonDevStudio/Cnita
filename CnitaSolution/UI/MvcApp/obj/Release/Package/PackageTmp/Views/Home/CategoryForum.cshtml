@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Library.Models.ModelArticle>
+
+<div class="categoryforum">
+    <div class="categoryforum_top">
+        <div class="categoryforum_top_left">
+            <p>@ViewBag.CategName</p>
+        </div>
+        <div class="categoryforum_top_right">
+            <p><a href="@Url.Action("Index", "Article") @ViewBag.CategoryCode">more</a></p>
+        </div>
+    </div>
+    <div class="categoryforum_middle">
+        <div class="categoryforum_middle_1">
+
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                <div class="contlist">
+                    <div class="contlist_title">
+                        <a href="@Url.Action("Detail", "Article")\@item.Id">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 30)</a>
+                    </div>
+                    <div class="contlist_date">
+                        @string.Format("{0:yyyy-MM-dd}", item.Createdate)
+                    </div>
+                </div>
+                            
+                }
+
+            }
+            else
+            { 
+                <div class="contlist">
+                    <p style="text-align: center">未查询到数据</p>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="categoryforum_bottom">
+        <hr />
+    </div>
+</div>

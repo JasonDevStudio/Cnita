@@ -6,7 +6,7 @@
             <p>@ViewBag.CategName</p>
         </div>
         <div class="categoryforum_top_right">
-            <p><a href="@Url.Action("Index", "Article") @ViewBag.CategoryCode">more</a></p>
+            <p><a href="@Url.Action("Index", "Article",new { Id=ViewBag.CategoryCode}) ">more</a></p>
         </div>
     </div>
     <div class="categoryforum_middle">
@@ -18,7 +18,7 @@
                 {
                 <div class="contlist">
                     <div class="contlist_title">
-                        <a href="@Url.Action("Detail", "Article")\@item.Id">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 30)</a>
+                        <a href="@Url.Action("Detail", "Article", new { Id=item.Id})">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 40)</a>
                     </div>
                     <div class="contlist_date">
                         @string.Format("{0:yyyy-MM-dd}", item.Createdate)
