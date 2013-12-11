@@ -67,6 +67,16 @@
                                     </div>
                                 </div>
 
+                                @*是否导航*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Isnav)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Isnav, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Isnav)</i></p>
+                                    </div>
+                                </div>
+
+
                                 @*地址*@
                                 <div class="control-group">
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Nameen)</label>
@@ -75,6 +85,8 @@
                                         <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Nameen)</i></p>
                                     </div>
                                 </div>
+
+
 
                                 @*排序*@
                                 <div class="control-group">

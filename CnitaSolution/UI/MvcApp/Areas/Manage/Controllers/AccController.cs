@@ -61,7 +61,7 @@ namespace MvcApp.Areas.Manage.Controllers
 
             var list = logic.QueryUserListPager(out resultMsg, out recordCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
             model.PagerRowCount = recordCount;
-            model.PagerCount = Math.Ceiling(recordCount / pageSize);
+            model.PagerCount = pageSize == 0 ? 0 : Math.Ceiling(recordCount / pageSize);
             model.PagerIndex = pageIndex;
             model.AccList = list;
             return View(model);

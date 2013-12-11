@@ -6,14 +6,15 @@
         <p>@ViewBag.CategName</p>
     </div>
     <div class="sidebar_forum_top_right">
-        <p><a href="@Url.Action("Assoc", "Article", new { categoryCode=ViewBag.CategoryCode})">more</a></p>
+       @* <p><a href="@Url.Action("AssocList", "Article", new { categoryCode = ViewBag.CategoryCode })">more</a></p>*@
     </div>
 </div>
 <div class="sidebar_forum_middle_top">
     @if (!string.IsNullOrWhiteSpace(Convert.ToString(ViewBag.Thumbnails)))
     { 
         <div>
-            <a href="#"><img src="@Url.Content("~/Uploads/Images/" + ViewBag.Thumbnails)"></a>  
+            <a href="#">
+                <img src="@Url.Content("~/Uploads/Images/" + ViewBag.Thumbnails)"></a>
         </div>
         
     }
@@ -27,7 +28,7 @@
     {
         foreach (var item in Model)
         {
-        <p><a href="#" title="@item.Name">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Name, 12)</a> </p>
+        <p><a href="@(string.IsNullOrWhiteSpace(item.Nameen) ? "#" : Url.Content(item.Nameen))" title="@item.Name">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Name, 12)</a> </p>
         }
     }
 </div>
@@ -44,4 +45,4 @@
     }
 </div>
 <div class="sidebar_forum_bottom">
-</div> 
+</div>

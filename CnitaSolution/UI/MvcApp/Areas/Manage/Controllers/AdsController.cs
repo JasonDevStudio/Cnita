@@ -42,7 +42,7 @@ namespace MvcApp.Areas.Manage.Controllers
             LogicPictures logic = new LogicPictures();
             var list = logic.QueryPicturesListPager(out resultMsg, out recordCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
             model.PagerRowCount = recordCount;
-            model.PagerCount = Math.Ceiling(recordCount / pageSize);
+            model.PagerCount = pageSize == 0 ? 0 : Math.Ceiling(recordCount / pageSize);
             model.PagerIndex = pageIndex;
             model.AdsList = list;
             return View(model);

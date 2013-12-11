@@ -5,6 +5,11 @@
     Layout = "~/Views/Shared/_LayoutContent.cshtml";
 }
 @using MvcApp.Areas.Manage.Models
+
+@section SubContentNav{
+    <p>@Model.KeyWord</p>
+}
+
 <div style="display: none;">
     <form id="MainForm" action="@Url.Action("Index", "Article")">
         @Html.HiddenFor(model => model.Category)

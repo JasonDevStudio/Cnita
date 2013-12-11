@@ -1,0 +1,7 @@
+﻿
+.categoryforum{width:718px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.categoryforum_top{width:718px;height:28px;clear:both;display:inline-block;text-align:left;}
+.categoryforum_middle{width:718px;clear:both;display:inline-block;text-align:left;}
+.categoryforum_bottom{width:718px;height:22px;clear:both;display:inline-block;text-align:left;}
+.categoryforum_top_left{width:637px;height:28px;float:left;display:inline;text-align:left; line-height:12px;}
+.categoryforum_top_right{width:81px;height:28px;float:left;display:inline;text-align:left;}

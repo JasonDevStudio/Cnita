@@ -41,10 +41,12 @@ namespace MvcApp.Controllers
                 var list = artDal.QueryArticleListPager(out resultMsg, out rowCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
 
                 model.ArtcleList = list;
-                model.PagerCount = Math.Ceiling(rowCount / pageSize); ;
+                model.PagerCount = pageSize == 0 ? 0 :Math.Ceiling(rowCount / pageSize); 
                 model.PagerIndex = pageIndex;
                 model.Category = Category;
                 model.CategoryTwo = CategoryTwo;
+                if (list.Count>0)
+                model.KeyWord = list.First().CategoryName;
             }
 
             return model;
@@ -99,6 +101,36 @@ namespace MvcApp.Controllers
             var model = GetDataModel(Id);
 
             return View(model);
+        }
+
+        public ActionResult AssocList(string Id, string CategoryTwo, string KeyWord, string PagerIndex="1", string PagerSize="30")
+        {
+            var model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
+
+            return View(model);
+        }
+
+        public ActionResult AssocCates(string Id)
+        {
+            var categoryId = 0;
+            var resultMsg = string.Empty;
+            var logic = new LogicCategory();
+
+            int.TryParse(Id, out categoryId);
+
+            IList<ModelCategory> list = new List<ModelCategory>();
+            list = logic.CategoryAll(out resultMsg, categoryId, "2");
+            var modelList = (from ModelCategory m in list
+                             where m.Id == categoryId
+                             select m).ToList();
+            var model = modelList != null && modelList.Count > 0 ? modelList.First() : new ModelCategory();
+
+            ViewBag.CategName = model.Name;
+            ViewBag.CategoryCode = Id; 
+
+            list.Remove(model);
+
+            return View(list);
         }
     }
 }

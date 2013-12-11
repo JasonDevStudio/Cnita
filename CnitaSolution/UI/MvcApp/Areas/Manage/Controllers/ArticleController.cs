@@ -47,7 +47,7 @@ namespace MvcApp.Areas.Manage.Controllers
             var list = artDal.QueryArticleListPager(out resultMsg, out rowCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
              
             model.ArtcleList = list;
-            model.PagerCount = Math.Ceiling(rowCount / pageSize); ;
+            model.PagerCount = pageSize == 0 ? 0 : Math.Ceiling(rowCount / pageSize);
             model.PagerIndex = pageIndex;
 
             return View(model);
