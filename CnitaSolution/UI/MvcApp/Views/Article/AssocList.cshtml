@@ -12,7 +12,9 @@
 }
 
 @section Sidebar{
+    @*协会介绍*@
     @Html.Action("SidebarCategory", "Home", new { categoryCode = "2", adsCategoryCode = "33" })
+    @*会员企业*@
     @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
 }
 

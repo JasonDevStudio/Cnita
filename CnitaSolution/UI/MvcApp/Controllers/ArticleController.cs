@@ -73,6 +73,31 @@ namespace MvcApp.Controllers
             return model;
         }
 
+        /// <summary>
+        /// 查询分类
+        /// </summary> 
+        private IList<ModelCategory> GetDataCategory(string Id)
+        {
+            var categoryId = 0;
+            var resultMsg = string.Empty;
+            var logic = new LogicCategory();
+
+            int.TryParse(Id, out categoryId);
+
+            IList<ModelCategory> list = new List<ModelCategory>();
+            list = logic.CategoryAll(out resultMsg, categoryId, "2");
+            var modelList = (from ModelCategory m in list
+                             where m.Id == categoryId
+                             select m).ToList();
+            var model = modelList != null && modelList.Count > 0 ? modelList.First() : new ModelCategory();
+
+            ViewBag.CategName = model.Name;
+            ViewBag.CategoryCode = Id; 
+            list.Remove(model);
+
+            return list;
+        }
+
         #endregion
 
         /// <summary>
@@ -127,25 +152,8 @@ namespace MvcApp.Controllers
         /// <param name="Id"></param>
         /// <returns></returns>
         public ActionResult AssocCates(string Id)
-        {
-            var categoryId = 0;
-            var resultMsg = string.Empty;
-            var logic = new LogicCategory();
-
-            int.TryParse(Id, out categoryId);
-
-            IList<ModelCategory> list = new List<ModelCategory>();
-            list = logic.CategoryAll(out resultMsg, categoryId, "2");
-            var modelList = (from ModelCategory m in list
-                             where m.Id == categoryId
-                             select m).ToList();
-            var model = modelList != null && modelList.Count > 0 ? modelList.First() : new ModelCategory();
-
-            ViewBag.CategName = model.Name;
-            ViewBag.CategoryCode = Id; 
-
-            list.Remove(model);
-
+        {  
+            var list = GetDataCategory(Id);
             return View(list);
         }
 
@@ -162,9 +170,10 @@ namespace MvcApp.Controllers
         /// 会展信息 列表页面
         /// </summary>
         /// <returns></returns>
-        public ActionResult EventList()
+        public ActionResult EventList(string Id)
         {
-            return View();
+            var list = GetDataCategory(Id);
+            return View(list);
         }
     }
 }

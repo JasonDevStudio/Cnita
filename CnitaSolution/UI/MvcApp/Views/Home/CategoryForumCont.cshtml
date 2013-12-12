@@ -1,0 +1,29 @@
+﻿@model Library.Models.ModelCategory
+
+
+<div class="sidebar_forum_top">
+    <div class="sidebar_forum_top_left">
+        <p>
+            <p>@Model.Name</p>
+        </p>
+    </div>
+    <div class="sidebar_forum_top_right">
+        <p></p>
+    </div>
+</div>
+<div class="sidebar_forum_middle_top">
+    &nbsp;
+</div>
+<div class="sidebar_forum_middle_middle" >
+    <div class="sidebar_forum_middle_middle_one_Introduction">
+        @if (Model != null )
+        { 
+            @Html.Raw(Model.Introduction)
+        }
+    </div>
+</div>
+<div class="sidebar_forum_middle_bottom">
+    &nbsp;
+</div>
+<div class="sidebar_forum_bottom">
+</div>

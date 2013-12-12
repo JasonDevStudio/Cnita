@@ -40,7 +40,9 @@
             }
             else
             {
+                @*会展侧边栏版块*@
                 @Html.Action("SidebarForum", "Home", new { categoryCode = "6", adsCategoryCode = "33" })
+                @*热门文章*@
                 @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36" })
             }
             @if (IsSectionDefined("SidebarBottom"))
@@ -49,6 +51,7 @@
             }
             else
             {
+                @*杂志*@
                 <div class="sidebar_forum_top">
                     <p class="sidebar_forum_top_p"><a href="#">《技术纺织品》杂志</a> | <a href="@Url.Action("Detail", "Article")\13">手机报</a></p>
                 </div>

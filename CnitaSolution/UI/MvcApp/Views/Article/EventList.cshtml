@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "";
+﻿@model IEnumerable<Library.Models.ModelCategory>
+@{
+    ViewBag.Title = ViewBag.CategName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Styles{
@@ -15,7 +16,7 @@
 
     @*版块导航 开始*@
     <div class="subcontent_nav">
-        <p>会展信息</p>
+        <p>@ViewBag.CategName</p>
     </div>
     @*版块导航 结束*@
     <div class="subcontent_container">
@@ -29,7 +30,14 @@
                         </div>
                         <div class="subcontainer_middle">
                             <div class="subcontainer_middle_one">
-                                @Html.Action("EventListForum", "Home", new { categoryCode = "60", adsCategoryCode = "33" , isSlide = "1" })
+                                @if (Model != null && Model.Count() > 0)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        @Html.Action("EventListForum", "Home", new { categoryCode = item.Id, adsCategoryCode = "33", isSlide = "0" ,topCount="6"})
+                                    }
+                                }
+                                
                             </div>
                         </div>
                         <div class="subcontainer_bottom">
@@ -42,13 +50,16 @@
             <div class="eventparentlist_right">
                 @*侧边栏 开始*@
                 <div class="subcontent_sidebar">
+                    @*协会公告*@
+                    @Html.Action("SidebarForum", "Home", new { categoryCode = "18", adsCategoryCode = "33", isSlide = "0"  ,topCount="6"})
+                    @*科普*@
+                    @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0"  ,topCount="6"})
+                    @*热门文章*@
+                    @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36"  ,topCount="6"})
 
-                    @Html.Action("SidebarForum", "Home", new { categoryCode = "18", adsCategoryCode = "33" , isSlide = "0"})
-                    @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33",isSlide = "0" })
-                    @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36" })
-
+                    @*杂志*@
                     <div class="sidebar_forum_top">
-                        <p class="sidebar_forum_top_p"><a href="#">《技术纺织品》杂志</a> | <a href="@Url.Action("Detail", "Article")\13">手机报</a></p>
+                        <p class="sidebar_forum_top_p"><a href="#">《技术纺织品》杂志</a> </p>
                     </div>
                     <div class="sidebar_forum_middle_top">
                         <br />
@@ -74,9 +85,10 @@
                     <div class="sidebar_forum_middle_bottom">
                         <br />
                     </div>
-                    <div class="sidebar_forum_bottom">
-                    </div>
-
+                    <div class="sidebar_forum_bottom"></div>
+                    @*纤维原料|行情*@
+                    @Html.Action("CategoryForumContent", "Home", new { categoryCode = 63, adsCategoryCode = "33", isSlide = "0" ,topCount="6"})
+                    
                 </div>
                 @*侧边栏 结束*@
             </div>

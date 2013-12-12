@@ -153,9 +153,27 @@ namespace MvcApp.Controllers
         /// <summary>
         /// 侧边栏小版块 显示文章用 版块 : 纤维颜料 | 行情
         /// </summary> 
-        public ActionResult CategoryForumContent(string Id = null, string categoryCode = null)
+        public ActionResult CategoryForumContent(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "5")
         {
-            return PartialView();
+            var list = GetForumData(categoryCode, adsCategoryCode, categoryTwoCode, topCount);
+
+            return PartialView(list);
+        }
+
+        /// <summary>
+        /// 侧边栏 联系我们小版块 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public ActionResult CategoryForumCont(string Id)
+        {
+            var resultMsg = string.Empty;
+            var idx = 0;
+            var logic = new LogicCategory();
+            int.TryParse(Id, out idx);
+            var model = logic.CategoryDetail(out resultMsg, idx);
+
+            return PartialView(model);
         }
 
         /// <summary>
