@@ -209,11 +209,13 @@
     <Compile Include="Areas\Manage\Models\ModelPagerAccount.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UEditorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelAssoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\ueditor\net\Config.cs" />
     <Compile Include="Scripts\ueditor\net\Uploader.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -272,6 +274,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\Default\css\main.css" />
+    <Content Include="Content\themes\Default\images\eventlist_eventlist_bottom.png" />
     <Content Include="Content\themes\Default\images\footer_footer_top.jpg" />
     <Content Include="Content\themes\Default\images\Header_logo.png" />
     <Content Include="Content\themes\Default\images\Header_mainMenu.jpg" />
@@ -1031,14 +1034,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Areas\Manage\Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\ueditor\net\fileUp.ashx" />
-    <Content Include="Scripts\ueditor\net\getContent.ashx" />
-    <Content Include="Scripts\ueditor\net\getMovie.ashx" />
-    <Content Include="Scripts\ueditor\net\getRemoteImage.ashx" />
-    <Content Include="Scripts\ueditor\net\imageManager.ashx" />
-    <Content Include="Scripts\ueditor\net\imageUp.ashx" />
-    <Content Include="Scripts\ueditor\net\scrawlUp.ashx" />
-    <Content Include="Scripts\ueditor\net\Web.config" />
     <Content Include="Scripts\ueditor\ueditor.all.min.js.map" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Navigation.cshtml" />
@@ -1181,6 +1176,16 @@
     <Content Include="Views\Article\AssocCates.cshtml" />
     <Content Include="Views\Home\IndexCategoryForum.cshtml" />
     <Content Include="Views\Article\NewsList.cshtml" />
+    <Content Include="Scripts\ueditor\net\fileUp.ashx" />
+    <Content Include="Scripts\ueditor\net\getContent.ashx" />
+    <Content Include="Scripts\ueditor\net\getMovie.ashx" />
+    <Content Include="Scripts\ueditor\net\getRemoteImage.ashx" />
+    <Content Include="Scripts\ueditor\net\imageManager.ashx" />
+    <Content Include="Scripts\ueditor\net\imageUp.ashx" />
+    <Content Include="Scripts\ueditor\net\scrawlUp.ashx" />
+    <Content Include="Scripts\ueditor\net\Web.config" />
+    <Content Include="Views\Home\EventListForum.cshtml" />
+    <Content Include="Views\Article\EventList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1239,6 +1244,9 @@
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\prop-base\" />
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\props\" />
     <Folder Include="Scripts\UISlide\mf-pattern\img\mF_tbhuabao\.svn\tmp\text-base\" />
+    <Folder Include="Uploads\Files\" />
+    <Folder Include="Uploads\Movies\" />
+    <Folder Include="Uploads\Temps\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

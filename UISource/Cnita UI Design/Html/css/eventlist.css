@@ -1,0 +1,10 @@
+﻿
+.eventlist{width:692px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.eventlist_top{width:692px;clear:both;display:inline-block;text-align:left;}
+.eventlist_contentlist{width:692px;clear:both;display:inline-block;text-align:left;}
+.eventlist_more{width:692px;height:19px;clear:both;display:inline-block;text-align:left; line-height:19px;}
+.eventlist_bottom{width:692px;height:17px;clear:both;display:inline-block;background-image: url(../images/eventlist/eventlist_eventlist_bottom.png);text-align:left; line-height:17px;}
+.eventlist_pic{width:224px;float:left;display:inline;text-align:left;}
+.eventlist_info{width:468px;float:left;display:inline;text-align:left;}
+.eventlist_info_title{width:468px;height:28px;clear:both;display:inline-block;text-align:left;}
+.eventlist_info_content{width:468px;clear:both;display:inline-block;text-align:left;}

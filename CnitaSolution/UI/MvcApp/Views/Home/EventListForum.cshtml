@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Library.Models.ModelArticle>
+
+<div class="eventlist">
+    <div class="eventlist_top">
+        <div class="eventlist_pic">
+            @if (Convert.ToInt32(ViewBag.CategIsAds) > 0)
+            { 
+                <div>
+                    <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "200", height = "130", isSlide = ViewBag.IsSlide })", width="205px"  height="130px" frameborder="0" scrolling="no"></iframe>
+                </div>  
+            }
+            else
+            { 
+                <br />
+            }
+        </div>
+        <div class="eventlist_info">
+            <div class="eventlist_info_title">
+                <p>@ViewBag.CategName</p>
+            </div>
+            <div class="eventlist_info_content">
+                <div class="eventlist_info_content_one">@Html.Raw(ViewBag.Introduction)</div>
+                <div class="eventlist_info_content_two">
+                    @if (Model != null && Model.Count() > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                        <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a> </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="eventlist_contentlist">
+        <div class="eventlist_contentlist_one">
+            @if (Model != null && Model.Count() > 0)
+            {
+                foreach (var item in Model)
+                {
+                <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a> </p>
+                }
+            }
+        </div>
+    </div>*@
+    <div class="eventlist_more">
+        <p><a href="@Url.Action("Index", "Article", new { Id = ViewBag.CategoryCode }) ">more</a></p>
+    </div>
+    <div class="eventlist_bottom">
+    </div>
+</div>

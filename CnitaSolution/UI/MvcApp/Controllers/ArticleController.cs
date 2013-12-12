@@ -149,7 +149,20 @@ namespace MvcApp.Controllers
             return View(list);
         }
 
+        /// <summary>
+        /// 新闻资讯 列表页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult NewsList()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 会展信息 列表页面
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EventList()
         {
             return View();
         }

@@ -1,12 +1,14 @@
 ﻿@model IEnumerable<Library.Models.ModelArticle>
 
+
+
 <div class="indexforum">
     <div class="indexforum_top">
         <div class="indexforum_top_left">
             <p>@ViewBag.CategName</p>
         </div>
         <div class="indexforum_top_right">
-            <p><a href="@Url.Action("Index", "Article", new { Id=ViewBag.CategoryCode}) ">more</a></p>
+            <p><a href="@Url.Action("Index", "Article", new { Id = ViewBag.CategoryCode }) ">more</a></p>
         </div>
     </div>
     <div class="indexforum_middle">
@@ -19,15 +21,15 @@
         }
     </div>
     <div class="indexforum_bottom">
-    @if (Convert.ToInt32(ViewBag.CategIsAds) > 0)
-    { 
-        <div>
-            <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "365", height = "80" ,isSlide="0"})", width="370px"  height="85px" frameborder="0" scrolling="no"></iframe>
-        </div>  
-    }
-    else
-    { 
-        <br />
-    }
+        @if (Convert.ToInt32(ViewBag.CategIsAds) > 0)
+        { 
+            <div>
+                <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "365", height = "80", isSlide = "0" })", width="370px"  height="85px" frameborder="0" scrolling="no"></iframe>
+            </div>  
+        }
+        else
+        { 
+            <br />
+        }
     </div>
 </div>

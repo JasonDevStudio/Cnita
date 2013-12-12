@@ -18,7 +18,7 @@ public class imageManager : IHttpHandler
     {
         context.Response.ContentType = "text/plain";
 
-        string[] paths = { "Uploads"}; //需要遍历的目录列表，最好使用缩略图地址，否则当网速慢时可能会造成严重的延时
+        string[] paths = { "upload", "upload1" }; //需要遍历的目录列表，最好使用缩略图地址，否则当网速慢时可能会造成严重的延时
         string[] filetype = { ".gif", ".png", ".jpg", ".jpeg", ".bmp" };                //文件允许格式
 
         string action = context.Server.HtmlEncode(context.Request["action"]);
@@ -29,7 +29,7 @@ public class imageManager : IHttpHandler
             
             foreach (string path in paths)
             {
-                DirectoryInfo info = new DirectoryInfo(context.Server.MapPath("~/"+path));
+                DirectoryInfo info = new DirectoryInfo(context.Server.MapPath(path));
 
                 //目录验证
                 if (info.Exists)

@@ -45,6 +45,7 @@
                         <div class="row-fluid">
                             <!--表单 开始-->
                             <form id="mainForm" action="@Url.Action("Edit", "Category")" class="form-horizontal" enctype="multipart/form-data" method="post" >
+                                @Html.TextAreaFor(model => model.Introduction, new { @class = "input-xlarge span9", style = "Height:100px;display:none; " })
                                 @Html.HiddenFor(model => model.Id)
                                 @Html.AntiForgeryToken()
                                 @Html.ValidationSummary(true)
@@ -102,7 +103,8 @@
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Thumbnails)</label>
                                     <div class="controls">
                                         <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*" />@*&nbsp;宽:<input type="text" class="span1" id="ImgWidth" name="ImgWidth" />&nbsp;高:<input type="text" class="span1" id="ImgHeight" name="ImgHeight" />*@
-                                        <p class="help-block"><i class="warning">@Model.Thumbnails</i>&nbsp;
+                                        <p class="help-block">
+                                            <i class="warning">@Model.Thumbnails</i>&nbsp;
                                             @if (!string.IsNullOrWhiteSpace(Model.Thumbnails))
                                             { 
                                                 <a href="@Url.Content("~/Uploads/Images/")@Model.Thumbnails" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
@@ -115,8 +117,9 @@
                                 <div class="control-group">
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Introduction)</label>
                                     <div class="controls">
-                                        @Html.TextAreaFor(model => model.Introduction, new { @class = "input-xlarge span9", style = "Height:100px;" })
-                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Introduction)</i></p>
+                                        <div id="editor" class="span9">
+                                            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Introduction)</i></p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -139,13 +142,22 @@
 </div>
 
 @section Styles{
+    <link href="@Url.Content("~/Scripts/ueditor/themes/iframe.css")" rel="stylesheet" />
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script src="@Url.Content("~/Scripts/ueditor/ueditor.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/ueditor/ueditor.config.js")"></script>
     @*实例化 编辑器*@
     <script type="text/javascript">
         $(document).ready(function () {
-
+            //实例化编辑器
+            var ue = UE.getEditor('editor');
+            var cont = $("#Introduction");
+            ue.addListener('ready', function (editor) {
+                ue.execCommand('inserthtml', cont.val());
+                //ue.setContent(cont, true);
+            });
         });
         function Goto() {
             window.location = "@Url.Action("Index", "Category")";

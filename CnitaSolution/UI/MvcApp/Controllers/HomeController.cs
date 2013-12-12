@@ -149,6 +149,24 @@ namespace MvcApp.Controllers
             ViewBag.IsSlide = isSlide;
             return PartialView(list);
         }
+
+        /// <summary>
+        /// 侧边栏小版块 显示文章用 版块 : 纤维颜料 | 行情
+        /// </summary> 
+        public ActionResult CategoryForumContent(string Id = null, string categoryCode = null)
+        {
+            return PartialView();
+        }
+
+        /// <summary>
+        /// 展会列表页 模块
+        /// </summary> 
+        public ActionResult EventListForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "5", string isSlide = "1")
+        {
+            var list = GetForumData(categoryCode, adsCategoryCode, categoryTwoCode, topCount);
+            ViewBag.IsSlide = isSlide;
+            return PartialView(list);
+        }
         
     }
 }
