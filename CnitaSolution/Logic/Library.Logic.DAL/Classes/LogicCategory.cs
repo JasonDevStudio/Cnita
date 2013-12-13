@@ -187,6 +187,40 @@ namespace Library.Logic.DAL
         /// </summary>
         /// <param name="id">ModelId 类别</param>
         /// <returns>ModelCategory</returns>
+        public ModelCategory CategoryDetailByPid(out string resultMsg, Int32 id,DateTime StartDate ,DateTime EndDate)
+        {
+            resultMsg = string.Empty;
+            var model = new ModelCategory();
+            try
+            {
+                //存储过程名称
+                string sql = "usp_category_select_detail_by_pid";
+
+                //参数添加
+                IList<DBParameter> parm = new List<DBParameter>();
+                parm.Add(new DBParameter() { ParameterName = "Id", ParameterValue = id, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
+                parm.Add(new DBParameter() { ParameterName = "StartDate", ParameterValue = StartDate, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.DateTime });
+                parm.Add(new DBParameter() { ParameterName = "EndDate", ParameterValue = EndDate, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.DateTime });
+
+                //查询执行
+                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                {
+                    IList<ModelCategory> list = GetModel(dr);
+                    model = list.First();
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return model;
+        }
+
+        /// <summary>
+        ///  查询实体
+        /// </summary>
+        /// <param name="id">ModelId 类别</param>
+        /// <returns>ModelCategory</returns>
         public IList<ModelCategory> CategoryAll(out string resultMsg, Int32 ParentCateg = 0,string IsNav = null)
         {
             resultMsg = string.Empty;

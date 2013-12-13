@@ -45,6 +45,21 @@ namespace MvcApp.Controllers
             return list;
         }
 
+        /// <summary>
+        /// 查询分类实体
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        private ModelCategory GetCategoryDetail(string Id)
+        {
+            var resultMsg = string.Empty;
+            var idx = 0;
+            var logic = new LogicCategory();
+            int.TryParse(Id, out idx);
+            var model = logic.CategoryDetail(out resultMsg, idx);
+            return model;
+        }
+
         #endregion
 
 
@@ -167,12 +182,18 @@ namespace MvcApp.Controllers
         /// <returns></returns>
         public ActionResult CategoryForumCont(string Id)
         {
-            var resultMsg = string.Empty;
-            var idx = 0;
-            var logic = new LogicCategory();
-            int.TryParse(Id, out idx);
-            var model = logic.CategoryDetail(out resultMsg, idx);
+            var model = GetCategoryDetail(Id);
+            return PartialView(model);
+        }
 
+        /// <summary>
+        /// 杂志页面 左侧侧边栏上方版块
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public ActionResult CategoryForumMagazine(string Id)
+        {
+            var model = GetCategoryDetail(Id);
             return PartialView(model);
         }
 

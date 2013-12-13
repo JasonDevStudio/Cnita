@@ -74,3 +74,4 @@ D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Kernel\Library.Kerne
 D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Kernel\Library.Kernel.DataBaseHelper\obj\Debug\Library.Kernel.DataBaseHelper.csprojResolveAssemblyReference.cache
 D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Kernel\Library.Kernel.DataBaseHelper\obj\Debug\Library.DataBaseHelper.dll
 D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Kernel\Library.Kernel.DataBaseHelper\obj\Debug\Library.DataBaseHelper.pdb
+D:\GitHub\Cnita\CnitaSolution\Kernel\Library.Kernel.DataBaseHelper\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml

@@ -1,7 +1,7 @@
 ﻿@model ModelPagerArticle
 
 @{
-    ViewBag.Title = "列表信息";
+    ViewBag.Title = "";
     Layout = "~/Views/Shared/_LayoutContent.cshtml";
 }
 @using MvcApp.Areas.Manage.Models
@@ -35,7 +35,7 @@
         {
         <div class="contlist">
             <div class="contlist_title">
-                <a href="@Url.Action("Assoc", "Article")\@item.Id">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a>
+                <a href="@Url.Action("Assoc", "Article", new { Id=item.Id})">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a>
             </div>
             <div class="contlist_date">
                 @string.Format("{0:yyyy-MM-dd}", item.Createdate)

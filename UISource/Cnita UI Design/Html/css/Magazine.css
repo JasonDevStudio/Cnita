@@ -1,0 +1,9 @@
+﻿
+.magazine{width:1003px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.magazine_left{width:201px;float:left;display:inline;text-align:left;}
+.magazine_middle{width:525px;float:left;display:inline;text-align:left;}
+.magazine_right{width:277px;float:left;display:inline;text-align:left;}
+.magazine_left_top{width:201px;clear:both;display:inline-block;text-align:left;}
+.magazine_left_middle{width:201px;clear:both;display:inline-block;text-align:left;}
+.magazine_middle_top{width:525px;height:51px;clear:both;display:inline-block;background-image: url(../images/Magazine/Magazine_magazine_middle_top.png);text-align:left;}
+.magazine_middle_middle{width:525px;clear:both;display:inline-block;text-align:left;}

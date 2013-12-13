@@ -25,7 +25,17 @@ namespace MvcApp.Areas.Manage.Models
         /// 副分类
         /// </summary>
         [Display(Name = "副分类")]
-        public string CategoryTwo { get; set; } 
+        public string CategoryTwo { get; set; }
+
+        /// <summary>
+        /// 年份
+        /// </summary>
+        public string Year { get; set; }
+
+        /// <summary>
+        /// 月份
+        /// </summary>
+        public string Month { get; set; }
         
         /// <summary>
         /// 数据列表

@@ -278,6 +278,10 @@
     <Content Include="Content\themes\Default\images\Header_mainMenu.jpg" />
     <Content Include="Content\themes\Default\images\indexforum_indexforum_top.jpg" />
     <Content Include="Content\themes\Default\images\indexforum_indexforum_top.png" />
+    <Content Include="Content\themes\Default\images\magazineleftmiddle_magazineleftmiddle_middle.png" />
+    <Content Include="Content\themes\Default\images\magazineleftmiddle_magazineleftmiddle_middle_bottom.png" />
+    <Content Include="Content\themes\Default\images\magazineleftmiddle_magazineleftmiddle_top.png" />
+    <Content Include="Content\themes\Default\images\Magazine_magazine_middle_top.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_bottom.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_bottom.png" />
     <Content Include="Content\themes\Default\images\SidebarForum_sidebar_forum_middle_middle.png" />
@@ -1180,6 +1184,8 @@
     <Content Include="Views\Article\EventList.cshtml" />
     <Content Include="Views\Home\CategoryForumContent.cshtml" />
     <Content Include="Views\Home\CategoryForumCont.cshtml" />
+    <Content Include="Views\Article\MagazineIndex.cshtml" />
+    <Content Include="Views\Home\CategoryForumMagazine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

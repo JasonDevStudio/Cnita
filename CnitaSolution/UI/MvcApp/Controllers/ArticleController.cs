@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Mvc;//
 
 namespace MvcApp.Controllers
 {
@@ -41,12 +41,12 @@ namespace MvcApp.Controllers
                 var list = artDal.QueryArticleListPager(out resultMsg, out rowCount, criteria, pageSize: pageSize, pageIndex: pageIndex);
 
                 model.ArtcleList = list;
-                model.PagerCount = pageSize == 0 ? 0 :Math.Ceiling(rowCount / pageSize); 
+                model.PagerCount = pageSize == 0 ? 0 : Math.Ceiling(rowCount / pageSize);
                 model.PagerIndex = pageIndex;
                 model.Category = Category;
                 model.CategoryTwo = CategoryTwo;
-                if (list.Count>0)
-                model.KeyWord = list.First().CategoryName;
+                if (list.Count > 0)
+                    model.KeyWord = list.First().CategoryName;
             }
 
             return model;
@@ -92,7 +92,7 @@ namespace MvcApp.Controllers
             var model = modelList != null && modelList.Count > 0 ? modelList.First() : new ModelCategory();
 
             ViewBag.CategName = model.Name;
-            ViewBag.CategoryCode = Id; 
+            ViewBag.CategoryCode = Id;
             list.Remove(model);
 
             return list;
@@ -139,7 +139,7 @@ namespace MvcApp.Controllers
         /// <summary>
         /// 会员企业 列表页
         /// </summary> 
-        public ActionResult AssocList(string Id, string CategoryTwo, string KeyWord, string PagerIndex="1", string PagerSize="30")
+        public ActionResult AssocList(string Id, string CategoryTwo, string KeyWord, string PagerIndex = "1", string PagerSize = "30")
         {
             var model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
 
@@ -152,7 +152,7 @@ namespace MvcApp.Controllers
         /// <param name="Id"></param>
         /// <returns></returns>
         public ActionResult AssocCates(string Id)
-        {  
+        {
             var list = GetDataCategory(Id);
             return View(list);
         }
@@ -174,6 +174,41 @@ namespace MvcApp.Controllers
         {
             var list = GetDataCategory(Id);
             return View(list);
+        }
+        
+        /// <summary>
+        /// 杂志版块
+        /// </summary> 
+        public ActionResult MagazineIndex(string Category, string Year, string Month, string PagerIndex = "1", string PagerSize = "30")
+        {
+            Year = string.IsNullOrWhiteSpace(Year) ? DateTime.Now.Year.ToString() : Year;
+            Month = string.IsNullOrWhiteSpace(Month) ? DateTime.Now.Month.ToString() : Month;
+            var idx = 0;
+            var iYear = 0;
+            var iMonth = 0;
+            int.TryParse(Year, out iYear);
+            int.TryParse(Month, out iMonth);
+            int.TryParse(Category, out idx);
+            var resultMsg = string.Empty;
+            var logic = new LogicCategory();
+            var model = new ModelPagerArticle();
+            var monthDays = DateTime.DaysInMonth(iYear, iMonth);
+            var startDate = new DateTime(iYear, iMonth, 1, 0, 0, 0);
+            var endDate = new DateTime(iYear, iMonth, monthDays, 23, 59, 59);
+            var cateModel = logic.CategoryDetailByPid(out resultMsg, idx, startDate, endDate);
+
+            if (cateModel != null)
+            {
+                ViewBag.CategoryName = cateModel.Name;
+                ViewBag.Thumbnails = cateModel.Thumbnails;
+                model = GetData(Category: cateModel.Id.ToString(), PagerIndex: PagerIndex, PagerSize: PagerSize);
+                model.Year = Year;
+                model.Month = Month;
+                model.Category = Category;
+            }
+
+            return View(model);
+
         }
     }
 }
