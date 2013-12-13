@@ -56,36 +56,8 @@
                     @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0"  ,topCount="6"})
                     @*热门文章*@
                     @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36"  ,topCount="6"})
-
                     @*杂志*@
-                    <div class="sidebar_forum_top">
-                        <p class="sidebar_forum_top_p"><a href="#">《技术纺织品》杂志</a> </p>
-                    </div>
-                    <div class="sidebar_forum_middle_top">
-                        <br />
-                    </div>
-                    <div class="sidebar_forum_middle_middle">
-                        <table>
-                            <tr>
-                                <td>
-                                    <img src="@Url.Content("~/Images/zazhi.gif")" />
-                                </td>
-                                <td>
-                                    <p><a href="@Url.Action("Detail", "Article", new { id = 14 })" target="_blank">订阅</a></p>
-                                    <p><a href="@Url.Action("Detail", "Article", new { id = 15 })" target="_blank">广告服务</a></p>
-                                    <p><a href="@Url.Action("Detail", "Article", new { id = 16 })" target="_blank">征稿启事</a></p>
-                                    <p><a href="@Url.Action("Details", "Article", new { id = 17 })" target="_blank">期刊理事会</a></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="sidebar_forum_middle_bottom">
-                        <br />
-                    </div>
-                    <div class="sidebar_forum_bottom"></div>
+                    @Html.Action("MagazineForum","Home")
                     @*纤维原料|行情*@
                     @Html.Action("CategoryForumContent", "Home", new { categoryCode = 63, adsCategoryCode = "33", isSlide = "0" ,topCount="6"})
                     

@@ -8,7 +8,7 @@ a:hover {color: orange;text-decoration: none;}
 
 .subMenu{width:1133px;height:80px;clear:both;display:inline-block;text-align:center;}
 .mainMenu{width:1133px;height:39px;clear:both;display:inline-block;background-image: url(../images/Header_mainMenu.jpg);text-align:center;}
-.mainMenu p{margin-top:10px;color: #FFFFFF; font-size:12px;}
+.mainMenu p{margin-top:10px;color: #FFFFFF; font-size:13px;}
 .mainMenu p a {color: #FFFFFF;font-weight: bold;text-decoration: none;padding-right:1px; padding-left:1px;} 
 .mainMenu p a:hover {color: #ffd800;font-weight: bold;text-decoration: none;}
 
@@ -80,7 +80,7 @@ a:hover {color: orange;text-decoration: none;}
 .categoryforum{width:718px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;padding-left:20px;}
 .categoryforum_top{width:718px;height:28px;clear:both;display:inline-block;text-align:left;}
 .categoryforum_middle{width:718px;clear:both;display:inline-block;text-align:left;}
-.categoryforum_middle_1{margin-left:50px;margin-top:15px;}
+.categoryforum_middle_1{margin-left:40px;margin-top:15px;}
 .categoryforum_bottom{width:718px;height:22px;clear:both;display:inline-block;text-align:left;}
 .categoryforum_bottom hr{margin-left:45px;}
 .categoryforum_top_left{width:637px;height:28px;float:left;display:inline;text-align:left; line-height:12px;}

@@ -35,15 +35,15 @@ Login 页面 (未完成)
 页面UI变更:
 
 1. 首页
-2. 行业分会 : 使用 Article/Assoc 页面加载数据,原来的行业介绍			(OK)
-3. 专业技术委员会 : 使用 Article/Assoc,与行业分会 使用同一页面
-4. 标准化技术 : 使用 Article/Index 页面加载数据.
-5. 产品检测 : 使用 Article/Assoc,与行业分会 使用同一页面
-6. 资讯频道 : 使用 Article/Assoccates 页面加载数据
-7. 调研统计 : 使用 Article/Assoccates 页面加载数据
-8. 技术创新 : 使用 Article/Assoccates 页面加载数据
-9. 会展信息 : 使用 参考网站 展会 页面加载数据,(已完成).
-10.期刊杂志 : 与参考网站相比,略为精简,(未完成).
+2. 行业分会 : 使用 Article/Assoc 页面加载数据,原来的行业介绍							(OK)
+3. 专业技术委员会 : 使用 Article/Assoc,与行业分会 使用同一页面							(OK)
+4. 标准化技术 : 使用 Article/Index 页面加载数据.										(OK)
+5. 产品检测 : 使用 Article/Assoc,与行业分会 使用同一页面								(OK)
+6. 资讯频道 : 使用 Article/Assoccates 页面加载数据  (现使用 Article/newslist )			(OK)
+7. 调研统计 : 使用 Article/Assoccates 页面加载数据										(OK)
+8. 技术创新 : 使用 Article/Assoccates 页面加载数据										(OK)
+9. 会展信息 : 使用 参考网站 展会 页面加载数据,(已完成).									(OK)
+10.期刊杂志 : 与参考网站相比,略为精简,(已完成).											(OK)
 11.人员与职业鉴定会员名录 : 参照 Article/Assoccates 页面,内容下放需要添加 培训基地展示, 使用一篇文章在编辑器里面编辑.
 12.联系我们 : 使用 Article/Detail 页面加载数据.
 

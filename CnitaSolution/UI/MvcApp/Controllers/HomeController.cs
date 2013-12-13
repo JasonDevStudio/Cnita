@@ -198,6 +198,15 @@ namespace MvcApp.Controllers
         }
 
         /// <summary>
+        /// 杂志小版块
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult MagazineForum()
+        {
+            return PartialView();
+        }
+
+        /// <summary>
         /// 展会列表页 模块
         /// </summary> 
         public ActionResult EventListForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "5", string isSlide = "1")

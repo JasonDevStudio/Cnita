@@ -88,10 +88,10 @@ namespace Library.Logic.DAL
 
             foreach (var item in listTemp)
             {
-                var namePrefix = "|-";
+                var namePrefix = "|¡ª";
                 for (int i = 0; i < item.Level; i++)
                 {
-                    namePrefix += "--";
+                    namePrefix += "¡ª¡ª";
                 }
                 item.Name = namePrefix + item.Name;
                 returnList.Add(item);

@@ -12,8 +12,3 @@ D:\GitHub\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.pdb
 D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.dll
 D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.pdb
 D:\GitHub\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.csprojResolveAssemblyReference.cache
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.dll
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\bin\Debug\Library.Models.pdb
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.dll
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.pdb
-D:\01-项目存放\02-Project\04-GitHub\Cnita\CnitaSolution\Model\Library.Models\obj\Debug\Library.Models.csprojResolveAssemblyReference.cache

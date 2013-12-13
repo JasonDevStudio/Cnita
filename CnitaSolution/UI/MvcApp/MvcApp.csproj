@@ -1186,6 +1186,7 @@
     <Content Include="Views\Home\CategoryForumCont.cshtml" />
     <Content Include="Views\Article\MagazineIndex.cshtml" />
     <Content Include="Views\Home\CategoryForumMagazine.cshtml" />
+    <Content Include="Views\Home\MagazineForum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -129,10 +129,10 @@ namespace MvcApp.Controllers
         /// <summary>
         /// 协会介绍 内容页
         /// </summary> 
-        public ActionResult Assoc(string Id)
+        public ActionResult Assoc(string Id, string categoryCode)
         {
             var model = GetDataModel(Id);
-
+            ViewBag.Category = categoryCode;
             return View(model);
         }
 

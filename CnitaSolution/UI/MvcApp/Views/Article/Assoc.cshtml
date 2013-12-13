@@ -12,18 +12,14 @@
 
 @section Sidebar{
     @*协会介绍*@
-    @Html.Action("SidebarCategory", "Home", new { categoryCode = "2", adsCategoryCode = "33" })
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = ViewBag.Category, adsCategoryCode = "33" })
     @*会员企业*@
     @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
     @*联系我们*@
     @Html.Action("CategoryForumCont", "Home", new { Id = 5 })
     @*科普*@
     @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0", topCount = "6" })
-}
-
-@section SidebarBottom{
-
-}
+} 
 
 
 <div id="MainContainer" class="main_container">
