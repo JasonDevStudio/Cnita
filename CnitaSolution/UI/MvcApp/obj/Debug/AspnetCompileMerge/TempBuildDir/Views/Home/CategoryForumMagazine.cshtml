@@ -1,0 +1,14 @@
+﻿@model Library.Models.ModelCategory
+
+
+<div class="magazine_left_top">
+    <div class="magazine_left_top_top">
+        <p>@*@Model.Name*@</p>
+    </div>
+    <div class="magazine_left_top_middle">
+        <div><img src="@Url.Content("~/Uploads/Images/")@Model.Thumbnails"   /></div>
+    </div>
+    <div class="magazine_left_top_bottom">
+        @Html.Raw(Model.Introduction)
+    </div>
+</div>

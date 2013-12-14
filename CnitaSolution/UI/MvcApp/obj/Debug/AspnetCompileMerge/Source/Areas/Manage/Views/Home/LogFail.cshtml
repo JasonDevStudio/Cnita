@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "登录失效";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link href="@Url.Content("~/Content/themes/manage/css/error.css")" rel="stylesheet" type="text/css"/> 
+}
+
+<body class="page-404-full-page">
+	<div class="row-fluid">
+		<div class="span12 page-404">
+			<div class="number">
+				LogFail
+			</div>
+			<div class="details">                 
+				<form action="#">
+					<div class="input-append">                       
+						<button type="button" onclick="LoginGoto()" class="btn blue big">重新登录</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    </body>
+<script type="text/javascript">
+    function LoginGoto() {
+        window.parent.location = "@Url.Action("Login","Home")";
+    }
+</script>

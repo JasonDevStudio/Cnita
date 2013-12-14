@@ -23,8 +23,8 @@ namespace MvcApp.Controllers
             model.PagerCount = 0;
             model.PagerIndex = 1;
 
-            if (!string.IsNullOrWhiteSpace(Category) || !string.IsNullOrWhiteSpace(CategoryTwo))
-            {
+            //if (!string.IsNullOrWhiteSpace(Category) || !string.IsNullOrWhiteSpace(CategoryTwo))
+            //{
                 var pageIndex = 0;
                 var pageSize = 0;
                 int.TryParse(PagerIndex, out pageIndex);
@@ -47,7 +47,7 @@ namespace MvcApp.Controllers
                 model.CategoryTwo = CategoryTwo;
                 if (list.Count > 0)
                     model.KeyWord = list.First().CategoryName;
-            }
+            //}
 
             return model;
         }
@@ -103,16 +103,18 @@ namespace MvcApp.Controllers
         /// <summary>
         /// 文章列表
         /// </summary> 
-        public ActionResult Index(string Id = null, string CategoryTwo = null)
+        public ActionResult Index(string Id = null, string CategoryTwo = null, string KeyWord = null)
         {
-            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo);
+            string PagerIndex = "1";
+            string PagerSize = "30";
+            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(string Id, string CategoryTwo, string KeyWord, string PagerIndex, string PagerSize)
+        public ActionResult Index(string Id=null, string CategoryTwo=null, string KeyWord=null, string PagerIndex="1", string PagerSize="30")
         {
-            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
+            ModelPagerArticle model = GetData(Category: Id, CategoryTwo: CategoryTwo, KeyWord: KeyWord, PagerIndex: PagerIndex, PagerSize: PagerSize);
             return View(model);
         }
 
@@ -139,10 +141,10 @@ namespace MvcApp.Controllers
         /// <summary>
         /// 会员企业 列表页
         /// </summary> 
-        public ActionResult AssocList(string Id, string CategoryTwo, string KeyWord, string PagerIndex = "1", string PagerSize = "30")
+        public ActionResult AssocList(string Id, string categoryCode, string CategoryTwo, string KeyWord, string PagerIndex = "1", string PagerSize = "30")
         {
             var model = GetData(Category: Id, CategoryTwo: CategoryTwo, PagerIndex: PagerIndex, PagerSize: PagerSize);
-
+            ViewBag.Category = categoryCode;
             return View(model);
         }
 

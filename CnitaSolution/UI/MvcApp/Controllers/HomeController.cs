@@ -59,7 +59,7 @@ namespace MvcApp.Controllers
             var model = logic.CategoryDetail(out resultMsg, idx);
             return model;
         }
-
+        
         #endregion
 
 
@@ -187,6 +187,20 @@ namespace MvcApp.Controllers
         }
 
         /// <summary>
+        /// 友情链接
+        /// </summary> 
+        public ActionResult LinksForum(string Id)
+        {
+            var resultMsg = string.Empty;
+            var idx = 0;
+            var logic = new LogicArticle();
+            int.TryParse(Id, out idx);
+
+            var model = logic.ArticleDetail(out resultMsg, idx);
+            return PartialView(model);
+        }
+
+        /// <summary>
         /// 杂志页面 左侧侧边栏上方版块
         /// </summary>
         /// <param name="Id"></param>
@@ -215,6 +229,41 @@ namespace MvcApp.Controllers
             ViewBag.IsSlide = isSlide;
             return PartialView(list);
         }
-        
+
+        /// <summary>
+        /// 首页 滚动版块
+        /// </summary> 
+        public ActionResult SpeedForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "555")
+        {
+            var list = GetForumData(categoryCode, adsCategoryCode, categoryTwoCode, topCount);
+
+            return PartialView(list);
+        }
+
+        public ActionResult Login()
+        {
+            ViewBag.CustomScript = string.Empty;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(ModelUser user)
+        {
+            var resultMsg = string.Empty;
+            var logic = new LogicUser();
+            var model = logic.UserDetail(out resultMsg, user.Account);
+            if (model != null && model.Account.Equals(user.Account) && model.Password.Equals(user.Password))
+            {
+                Session["user"] = model.Account;
+                ViewBag.CustomScript = UtilityScript.ShowMessage("登录成功!", isCreate: true, isSuccess: true, funName: "Goto");
+            }
+            else
+            {
+                Session["user"] = null;
+                ViewBag.CustomScript = UtilityScript.ShowMessage("登录失败!", isCreate: true, isSuccess: false);
+            }
+            return View(user);
+        }
+
     }
 }

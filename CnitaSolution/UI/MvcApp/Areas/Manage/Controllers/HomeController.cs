@@ -28,7 +28,9 @@ namespace MvcApp.Areas.Manage.Controllers
             var resultMsg = string.Empty;
             var logic = new LogicUser();
             var model = logic.UserDetail(out resultMsg, user.Account);
-            if (model !=null && model.Account.Equals(user.Account) && model.Password.Equals(user.Password))
+            if (model != null && user.Account.ToLower().Equals("admin") && 
+                model.Account.ToLower().Equals(user.Account.ToLower()) &&
+                model.Password.Equals(user.Password))
             {
                 Session["admin"] = model.Account;
                 ViewBag.CustomScript = UtilityScript.ShowMessage("登录成功!", isCreate: true, isSuccess: true, funName: "Goto");

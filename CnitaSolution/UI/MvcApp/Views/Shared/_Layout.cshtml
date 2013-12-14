@@ -19,10 +19,11 @@
 <body>
     @{
         var className = "mainMenu";
-        if (Request.Browser.Browser.Contains("IE") || Request.Browser.Browser.Contains("InternetExplorer")) {
+        if (Request.Browser.Browser.Contains("IE") || Request.Browser.Browser.Contains("InternetExplorer"))
+        {
             className = "mainMenuIE";
         }
-        }
+    }
     <div class="container">
         <div>
             <div class="header">
@@ -35,9 +36,27 @@
                     </div>
                     <div class="subMenuRight">
                         <div class="subMenuRightTop">
-                            <p><a href="@Url.Action("Login", "Home")" >[会员登录]</a>	<a href="@Url.Action("Login", "Home")" >[加入协会]</a>		</p>
+                            <p>
+                                @if (Session["user"] == null)
+                                { 
+                                    <a href="@Url.Action("Login", "Home")" >[会员登录]</a>
+                                }
+                                else
+                                { 
+                                    <a href="@Url.Action("Login", "Home")" >欢迎回来,[@Session["user"]]</a>
+                                }
+                                &nbsp;<a href="@Url.Action("Assoc", "Article", new { id = "1286", categoryCode = "2" })" >[加入协会]</a>
+                            </p>
                         </div>
                         <div class="subMenuRightBottom">
+                            <form class="form-subscribe" action="@Url.Action("Index","Article")" method="post" id="LayoutSearchForm">
+                                <div class="input-group input-large">
+                                    <input class="form-control" type="text" name="KeyWord" id="KeyWord" />
+                                    <span class="input-group-btn">
+                                        <button class="btn theme-btn" type="button" onclick="LayoutSearch()">搜索</button>
+                                    </span>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -53,10 +72,9 @@
             <div class="footer">
                 <div class="footer_top">
                     <p>
-                        <a href="#">关于我们</a>|
-                        <a href="#">联系我们</a>|
-                        <a href="#">广告服务</a>|
-                        <a href="#">网站地图</a>
+                        <a href="@Url.Action("Detail", "Article", new { Id = 1287 })">关于我们</a>|
+                        <a href="@Url.Action("Detail", "Article", new { Id = 52 })">联系我们</a>|
+                        <a href="@Url.Action("Detail", "Article", new { Id = 15 })">广告服务</a>
                     </p>
                 </div>
                 <div class="footer_bottom">
@@ -69,12 +87,17 @@
 
     </div>
 
-</body>  
-<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script> 
+</body>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-       
+
     });
+    function LayoutSearch() {
+        if ($("#KeyWord").val()) {
+            document.forms["LayoutSearchForm"].submit();
+        }
+    }
 </script>
 @RenderSection("Scripts", required: false)
 </html>
