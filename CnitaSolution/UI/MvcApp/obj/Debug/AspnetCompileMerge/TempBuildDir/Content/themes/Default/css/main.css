@@ -95,7 +95,7 @@ a:hover {color: orange;text-decoration: none;}
 .indexforum_bottom{width:370px;clear:both;display:inline-block;text-align:left;}
 .indexforum_bottom div{margin-left:13px;}
 .indexforum_top_left{width:290px;height:41px;float:left;display:inline;text-align:left;}
-.indexforum_top_left p{margin-left:25px;margin-top:11px;font-size:15px;font-weight:bold;}
+.indexforum_top_left p{margin-left:25px;margin-top:11px;font-size:15px;font-weight:bold;color:orange;}
 .indexforum_top_right{width:80px;height:41px;float:left;display:inline;text-align:left;}
 .indexforum_top_right p{text-align:right;margin-top:16px;}
 
