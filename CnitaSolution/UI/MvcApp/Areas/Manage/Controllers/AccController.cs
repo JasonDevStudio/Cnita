@@ -68,14 +68,18 @@ namespace MvcApp.Areas.Manage.Controllers
         }
 
         public ActionResult Create(string Id = null)
-        {
-            ViewBag.Orgs = GetOrgs();
+        {            
             var resultMsg = string.Empty;
             var model = new ModelUser();
             if (!string.IsNullOrWhiteSpace(Id))
             {
                 LogicUser logic = new LogicUser();
                 model = logic.UserDetail(out resultMsg, int.Parse(Id));
+                ViewBag.Orgs = GetOrgs(model.Organization.ToString());
+            }
+            else
+            {
+                ViewBag.Orgs = GetOrgs();
             }
             return View(model);
         }
@@ -90,7 +94,7 @@ namespace MvcApp.Areas.Manage.Controllers
             var logic = new LogicUser();
             model.Status = 1;
             var res = logic.UserInsertUpdate(out resultMsg, model);
-            if (res > 0)
+            if (res > 0 || resultMsg.Contains(BaseDict.SuccessPrefix))
             {
                 resultMsg = "操作成功!";
                 ViewBag.CustomScript = UtilityScript.ShowMessage(resultMsg, isCreate: true, isSuccess: true, funName: "Goto");

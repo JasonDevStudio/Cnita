@@ -2775,6 +2775,7 @@
     <Content Include="Scripts\boxy\js\jquery-1.2.6.pack.js" />
     <Content Include="Scripts\boxy\js\jquery-boxy.js" />
     <Content Include="Scripts\DD_belatedPNG_0.0.8a.js" />
+    <Content Include="Scripts\IndexAds.js" />
     <Content Include="Scripts\JasonPager.js" />
     <Content Include="Scripts\jquery-1.10.1.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

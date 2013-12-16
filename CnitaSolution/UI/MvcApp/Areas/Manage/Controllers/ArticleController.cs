@@ -99,7 +99,7 @@ namespace MvcApp.Areas.Manage.Controllers
             }
 
             model.Context = fc["editorValue"];
-            model.Thumbnails = fileName;
+            model.Thumbnails = string.IsNullOrWhiteSpace(fileName) ? model.Thumbnails : fileName; 
             model.Status = Convert.ToInt32(model.IsPermission);
             model.Isrecommend = Convert.ToInt32(model.IsRec);
             LogicArticle artDal = new LogicArticle();

@@ -95,6 +95,7 @@ namespace MvcApp.Areas.Manage.Controllers
                 ViewBag.CustomScript = UtilityScript.ShowMessage(result.resultMsg, isCreate: true);
                 return View(model);
             }
+            model.Parentcateg = string.IsNullOrWhiteSpace(model.Parentcateg) ? "0" : model.Parentcateg;
             model.Thumbnails = string.IsNullOrWhiteSpace(fileName) ? model.Thumbnails : fileName;
             model.Introduction = fc["editorValue"];
             //数据保存
