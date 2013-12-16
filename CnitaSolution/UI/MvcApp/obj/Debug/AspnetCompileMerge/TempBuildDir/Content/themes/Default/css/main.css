@@ -5,6 +5,7 @@ a:hover {color: orange;text-decoration: none;}
 .header{width:1133px;height:119px;clear:both;display:inline-block;text-align:center;}
 .content{width:1133px;clear:both;display:inline-block;text-align:center;margin-left:33px;}
 .footer{width:1133px;height:110px;clear:both;display:inline-block;text-align:center;}
+.indextopads_container{width:1133px;height:0px;clear:both;display:inline-block;text-align:center;}
 
 .subMenu{width:1133px;height:80px;clear:both;display:inline-block;text-align:center;}
 .mainMenu{width:1133px;height:39px;clear:both;display:inline-block;background-image: url(../images/Header_mainMenu.jpg);text-align:center;}

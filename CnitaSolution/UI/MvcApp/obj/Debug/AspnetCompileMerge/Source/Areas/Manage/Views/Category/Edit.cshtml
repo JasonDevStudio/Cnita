@@ -47,6 +47,7 @@
                             <form id="mainForm" action="@Url.Action("Edit", "Category")" class="form-horizontal" enctype="multipart/form-data" method="post" >
                                 @Html.TextAreaFor(model => model.Introduction, new { @class = "input-xlarge span9", style = "Height:100px;display:none; " })
                                 @Html.HiddenFor(model => model.Id)
+                                @Html.HiddenFor(model => model.Thumbnails)
                                 @Html.AntiForgeryToken()
                                 @Html.ValidationSummary(true)
 
@@ -102,12 +103,13 @@
                                 <div class="control-group">
                                     <label class="control-label" for="input01">@Html.LabelFor(model => model.Thumbnails)</label>
                                     <div class="controls">
-                                        <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*" />@*&nbsp;宽:<input type="text" class="span1" id="ImgWidth" name="ImgWidth" />&nbsp;高:<input type="text" class="span1" id="ImgHeight" name="ImgHeight" />*@
+                                        <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*" />                                        
                                         <p class="help-block">
-                                            <i class="warning">@Model.Thumbnails</i>&nbsp;
+                                            <i class="warning" id="ImgUri">@Model.Thumbnails</i>&nbsp;
                                             @if (!string.IsNullOrWhiteSpace(Model.Thumbnails))
                                             { 
-                                                <a href="@Url.Content("~/Uploads/Images/")@Model.Thumbnails" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
+                                                <a id="ImgPreview" href="@Url.Content("~/Uploads/Images/")@Model.Thumbnails" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
+                                                <a id="ImgDelete" href="Javascript:void(0);" onclick="ImgDelete()" class="btn red mini"><i class="icon-trash m-icon-white"></i>&nbsp;删除</a>
                                             }
                                         </p>
                                     </div>
@@ -167,6 +169,14 @@
         }
         function BtnShow() {
             $("#btnSubmit").show();
+        }
+        function ImgDelete() {
+            $("#Thumbnails").val("");
+            $("#ImgPreview").attr("href", "#");
+            $("#ImgPreview").hide();
+            $("#ImgDelete").attr("href", "#");
+            $("#ImgDelete").hide();
+            $("#ImgUri").html("");
         }
     </script>
     @Html.Raw(ViewBag.CustomScript)
