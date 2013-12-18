@@ -1,0 +1,97 @@
+﻿@model ModelPagerArticle
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+@using MvcApp.Areas.Manage.Models
+
+
+@section SubContentNav{
+    <p>@Model.KeyWord</p>
+}
+
+@section Sidebar{
+   @*协会介绍*@
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = ViewBag.Category, adsCategoryCode = "33" })
+    @*会员企业*@
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
+    @*联系我们*@
+    @Html.Action("CategoryForumCont", "Home", new { Id = 5 })
+    @*科普*@
+    @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+    @*纤维原料|行情*@
+    @Html.Action("CategoryForumContent", "Home", new { categoryCode = 63, adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+}
+
+
+
+<div style="display: none;">
+    <form id="MainForm" action="@Url.Action("AssocList", "Article")">
+        @Html.HiddenFor(model => model.Category)
+        @Html.HiddenFor(model => model.CategoryTwo)
+    </form>
+</div>
+<!--列表 开始-->
+<div id="MainContainer" class="main_container">
+
+    @if (Model.ArtcleList != null && Model.ArtcleList.Count() > 0)
+    {
+        foreach (var item in Model.ArtcleList)
+        {
+        <div class="contlist">
+            <div class="contlist_title">
+                <a href="@Url.Action("Assoc", "Article", new { Id = item.Id })">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a>
+            </div>
+            <div class="contlist_date">
+                @string.Format("{0:yyyy-MM-dd}", item.Createdate)
+            </div>
+        </div>
+                            
+        }
+
+    }
+    else
+    { 
+        <div class="contlist">
+            <p style="text-align: center">未查询到数据</p>
+        </div>
+    }
+    <br />
+    <!--分页 开始-->
+    <div>
+        <div id="divPagerContainer" class="JasonPager">
+        </div>
+        <br />
+    </div>
+    <!--分页 结束-->
+
+
+</div>
+<!--列表 结束-->
+@section Styles{
+    <link href="@Url.Content("~/Content/themes/JasonPager/default.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/msgbox/msgbox.css")" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="@Url.Content("~/Scripts/JasonPager.js")"></script>
+    <script src="@Url.Content("~/Scripts/msgbox/msgbox.js")"></script>
+    <script type="text/javascript">
+        var htmlMyPagination = null;
+        $(document).ready(function () {
+
+            $.JasonPager.Load({
+                pagerIndex: @Model.PagerIndex,                                   //当前页码
+                pagerSize: 10,                                   //每页显示数量
+                pagerCount: @Model.PagerCount,                                   //总页数  $(data).find("#PagerCount").val()
+                pagerShowCount: 10,                                //分页控件显示页数
+                pagerActionUrl: $("#mainForm").action,
+                pagerActiveStyle: "active"
+            });
+            
+        });
+        function Search() {
+            $.JasonPager.Submit(); 
+        }
+    </script>
+}

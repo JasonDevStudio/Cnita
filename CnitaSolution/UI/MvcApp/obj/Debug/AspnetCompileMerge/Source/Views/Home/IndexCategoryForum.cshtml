@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Library.Models.ModelArticle>
+
+
+
+<div class="indexforum">
+    <div class="indexforum_top">
+        <div class="indexforum_top_left">
+            <p>@ViewBag.CategName</p>
+        </div>
+        <div class="indexforum_top_right">
+            <p><a href="@Url.Action("Index", "Article", new { Id = ViewBag.CategoryCode }) ">more</a></p>
+        </div>
+    </div>
+    <div class="indexforum_middle">
+        @if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+            <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 25)</a> </p>
+            }
+        }
+    </div>
+    <div class="indexforum_bottom">
+        @if (Convert.ToInt32(ViewBag.CategIsAds) > 0)
+        { 
+            <div>
+                <iframe src="@Url.Action("Banner", "Home", new { categoryCode = ViewBag.AdsCategoryCode, ownerCode = ViewBag.CategoryCode, width = "355", height = "65", isSlide = "0" })", width="355px"  height="65px" frameborder="0" scrolling="no"></iframe>
+            </div>  
+        }
+        else
+        { 
+            <br />
+        }
+    </div>
+</div>

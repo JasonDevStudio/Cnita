@@ -1,0 +1,45 @@
+﻿@model Library.Models.ModelArticle
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.KeyWord = Model.Keyword;
+    ViewBag.Description = Model.Keyword;
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+@section SubContentNav{
+    <p>@Model.CategoryName</p>
+}
+
+@section Sidebar{
+    @*协会介绍*@
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = ViewBag.Category, adsCategoryCode = "33" })
+    @*会员企业*@
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
+    @*联系我们*@
+    @Html.Action("CategoryForumCont", "Home", new { Id = 5 })
+    @*科普*@
+    @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+    @*纤维原料|行情*@
+    @Html.Action("CategoryForumContent", "Home", new { categoryCode = 63, adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+}
+
+
+<div id="MainContainer" class="main_container">
+    <div class="main_container_title">
+        <p>@Html.DisplayFor(model => model.Title)</p>
+    </div>
+    <div class="main_container_date">
+        <p>@Html.DisplayNameFor(model => model.Author) : @Html.DisplayFor(model => model.Author) &nbsp;
+            @Html.DisplayNameFor(model => model.Source) : @Html.DisplayFor(model => model.Source) &nbsp;@Html.DisplayNameFor(model => model.Createdate) : @string.Format("{0:yyyy-MM-dd}", Model.Createdate)
+        </p>
+        <p>
+            <hr />
+        </p>
+    </div>
+    <div class="main_container_cont">
+        @Html.Raw(Model.Context)
+    </div>
+</div>
+@section Scripts{
+    @Html.Raw(ViewBag.CustomScript)
+}

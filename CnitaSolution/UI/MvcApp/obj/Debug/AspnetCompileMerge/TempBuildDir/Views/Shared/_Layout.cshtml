@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>@ViewBag.Title </title>
+    <meta name="keywords" content="@ViewBag.KeyWord " />
+    <meta name="description" content="@ViewBag.Description" />
+    <link href="@Url.Content("~/Content/themes/Default/css/main.css")" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+    <!--[if lte IE 6]>
+<script type="text/javascript" src="@Url.Content("~/Scripts/DD_belatedPNG_0.0.8a.js")"></script>
+<script type="text/javascript">
+  DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+
+</head>
+<body>
+    @{
+        var className = "mainMenu";
+        if (Request.Browser.Browser.Contains("IE") || Request.Browser.Browser.Contains("InternetExplorer"))
+        {
+            className = "mainMenuIE";
+        }
+    }
+    @RenderSection("IndexTopAds",false)
+    <div class="container">
+        <div>
+            <div class="header">
+                <div class="subMenu">
+                    <div class="logo">
+                        <div>
+                            <a href="@Url.Action("Index", "Home")">
+                                <img id='logo' src='@Url.Content("~/Images/Logo.jpg")'  border='0' alt="Logo" /></a>
+                        </div>
+                    </div>
+                    <div class="subMenuRight">
+                        <div class="subMenuRightTop">
+                            <p>
+                                @if (Session["user"] == null)
+                                { 
+                                    <a href="@Url.Action("Login", "Home")" >[会员登录]</a>
+                                }
+                                else
+                                { 
+                                    <a href="@Url.Action("Login", "Home")" >欢迎回来,[@Session["user"]]</a>
+                                }
+                                &nbsp;<a href="@Url.Action("Assoc", "Article", new { id = "1286", categoryCode = "2" })" >[加入协会]</a>
+                            </p>
+                        </div>
+                        <div class="subMenuRightBottom">
+                            <form class="form-subscribe" action="@Url.Action("Index","Article")" method="post" id="LayoutSearchForm">
+                                <div class="input-group input-large">
+                                    <input class="form-control" type="text" name="KeyWord" id="KeyWord" />
+                                    <span class="input-group-btn">
+                                        <button class="btn theme-btn" type="button" onclick="LayoutSearch()">搜索</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="divMainMenu" class="@className">
+                    @Html.Action("Navigation", "Home")
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="content">@RenderBody()</div>
+        </div>
+        <div>
+            <div class="footer">
+                <div class="footer_top">
+                    <p>
+                        <a href="@Url.Action("Detail", "Article", new { Id = 1287 })">关于我们</a>|
+                        <a href="@Url.Action("Detail", "Article", new { Id = 52 })">联系我们</a>|
+                        <a href="@Url.Action("Detail", "Article", new { Id = 15 })">广告服务</a>
+                    </p>
+                </div>
+                <div class="footer_bottom">
+                    <p>主办单位：中国产业用纺织品行业协会 电话:010-85229421 传真:010-85229425</p>
+                    <p>京公网安备11010102000562号 京ICP备09054622号 </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+    function LayoutSearch() {
+        if ($("#KeyWord").val()) {
+            document.forms["LayoutSearchForm"].submit();
+        }
+    }
+</script>
+@RenderSection("Scripts", required: false)
+</html>

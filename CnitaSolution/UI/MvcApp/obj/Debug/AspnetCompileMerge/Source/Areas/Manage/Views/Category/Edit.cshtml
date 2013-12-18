@@ -1,0 +1,185 @@
+﻿@model Library.Models.ModelCategory
+
+@{
+    ViewBag.Title = "编辑分类信息";
+    Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml";
+}
+
+
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                <!--Jason.Yao <small>后台管理系统</small>-->
+            </h3>
+            <ul class="breadcrumb">
+                <li><i class="icon-home"></i><a href="index.html">后台管理</a>                <i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Index", "Category")">分类管理</a><i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Edit", "Category")">编辑分类信息</a></li>
+                <li class="pull-right no-text-shadow">
+                    <div id="dashboard-report-range"
+                        class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
+                        data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+                        <i class="icon-calendar"></i><span></span><i class="icon-angle-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-cogs"></i>编辑分类信息</div>
+                        <div class="tools">
+                            <a href="" class="collapse"></a><a href="" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row-fluid">
+                            <!--表单 开始-->
+                            <form id="mainForm" action="@Url.Action("Edit", "Category")" class="form-horizontal" enctype="multipart/form-data" method="post" >
+                                @Html.TextAreaFor(model => model.Introduction, new { @class = "input-xlarge span9", style = "Height:100px;display:none; " })
+                                @Html.HiddenFor(model => model.Id)
+                                @Html.HiddenFor(model => model.Thumbnails)
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+
+                                @*名称*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Name)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Name, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Name)</i></p>
+                                    </div>
+                                </div>
+
+                                @*父分类*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Parentcateg)</label>
+                                    <div class="controls">
+                                        @Html.DropDownListFor(model => model.Parentcateg, (IEnumerable<SelectListItem>)ViewBag.Categorys, "请选择", new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Parentcateg)</i></p>
+                                    </div>
+                                </div>
+
+                                @*是否导航*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Isnav)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Isnav, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Isnav)</i></p>
+                                    </div>
+                                </div>
+
+
+                                @*地址*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Nameen)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Nameen, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Nameen)</i></p>
+                                    </div>
+                                </div>
+
+
+
+                                @*排序*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Sort)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Sort, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Sort)</i></p>
+                                    </div>
+                                </div>
+
+                                @*预览图*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Thumbnails)</label>
+                                    <div class="controls">
+                                        <input type="file" value="浏览..." id="fileUp" name="fileUp" accept="image/*" />                                        
+                                        <p class="help-block">
+                                            <i class="warning" id="ImgUri">@Model.Thumbnails</i>&nbsp;
+                                            @if (!string.IsNullOrWhiteSpace(Model.Thumbnails))
+                                            { 
+                                                <a id="ImgPreview" href="@Url.Content("~/Uploads/Images/")@Model.Thumbnails" target="_blank" class="btn green mini"><i class="icon-search m-icon-white"></i>&nbsp;预览</a>
+                                                <a id="ImgDelete" href="Javascript:void(0);" onclick="ImgDelete()" class="btn red mini"><i class="icon-trash m-icon-white"></i>&nbsp;删除</a>
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+
+                                @*摘要*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Introduction)</label>
+                                    <div class="controls">
+                                        <div id="editor" class="span9">
+                                            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Introduction)</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <!-- Button -->
+                                    <div class="controls">
+                                        <button class="btn red span2" type="submit" id="btnSubmit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button>
+
+                                    </div>
+                                </div>
+                            </form>
+                            <!--表单 结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Styles{
+    <link href="@Url.Content("~/Scripts/ueditor/themes/iframe.css")" rel="stylesheet" />
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="@Url.Content("~/Scripts/ueditor/ueditor.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/ueditor/ueditor.config.js")"></script>
+    @*实例化 编辑器*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //实例化编辑器
+            var ue = UE.getEditor('editor');
+            var cont = $("#Introduction");
+            ue.addListener('ready', function (editor) {
+                ue.execCommand('inserthtml', cont.val());
+                //ue.setContent(cont, true);
+            });
+        });
+        function Goto() {
+            window.location = "@Url.Action("Index", "Category")";
+        }
+        function Loading(obj) {
+            //$(obj).hide();
+        }
+        function BtnShow() {
+            $("#btnSubmit").show();
+        }
+        function ImgDelete() {
+            $("#Thumbnails").val("");
+            $("#ImgPreview").attr("href", "#");
+            $("#ImgPreview").hide();
+            $("#ImgDelete").attr("href", "#");
+            $("#ImgDelete").hide();
+            $("#ImgUri").html("");
+        }
+    </script>
+    @Html.Raw(ViewBag.CustomScript)
+}
+
+

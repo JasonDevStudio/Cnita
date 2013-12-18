@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Library.Models.ModelCategory>
+
+<p>
+@Html.ActionLink("首页","Index","Home")
+@if (Model != null && Model.Count() > 0) { 
+    foreach (var item in Model)
+	{
+         @Html.Raw("|")
+        <a href="@Url.Content(item.Nameen)">@item.Name</a> 
+	}                        
+}
+</p>

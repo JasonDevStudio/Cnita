@@ -1,0 +1,28 @@
+#lwc,   #rwc   { 
+width:97px; 
+height:240px; 
+background:#ffffff;
+}
+#lwca,   #rwca   { 
+width:97px; 
+height:97px; 
+background:#ffffff;
+}
+.close{
+	height: 13px;
+	width: 13px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-image: url(../ad/close.gif);
+	background-repeat: no-repeat;
+	margin-top: 2px;
+	margin-right: 2px;
+}
+#lwc,#rwc,#lwc_c,#rwc_c { 
+display:none; 
+}
+#lwca,#rwca,#lwc_ca,#rwc_ca { 
+display:none; 
+}

@@ -64,10 +64,10 @@
       <publishTime>12/06/2013 13:44:54</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>12/18/2013 08:44:13</publishTime>
+      <publishTime>12/18/2013 14:50:45</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>12/18/2013 08:44:13</publishTime>
+      <publishTime>12/18/2013 14:50:45</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>12/06/2013 13:44:54</publishTime>
@@ -145,34 +145,34 @@
       <publishTime>12/06/2013 13:44:54</publishTime>
     </File>
     <File Include="bin/Library.Common.dll">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Library.Common.pdb">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.dll">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:58</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.pdb">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:58</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.dll">
-      <publishTime>12/18/2013 08:30:19</publishTime>
+      <publishTime>12/18/2013 14:29:59</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.pdb">
-      <publishTime>12/18/2013 08:30:19</publishTime>
+      <publishTime>12/18/2013 14:29:59</publishTime>
     </File>
     <File Include="bin/Library.Models.dll">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Library.Models.pdb">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.dll">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.pdb">
-      <publishTime>12/18/2013 08:30:18</publishTime>
+      <publishTime>12/18/2013 14:29:57</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Edm.dll">
       <publishTime>12/06/2013 13:44:54</publishTime>
@@ -205,10 +205,10 @@
       <publishTime>12/06/2013 13:44:54</publishTime>
     </File>
     <File Include="bin/MvcApp.dll">
-      <publishTime>12/18/2013 08:43:55</publishTime>
+      <publishTime>12/18/2013 14:30:02</publishTime>
     </File>
     <File Include="bin/MvcApp.pdb">
-      <publishTime>12/18/2013 08:43:55</publishTime>
+      <publishTime>12/18/2013 14:30:02</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/06/2013 13:44:54</publishTime>
@@ -7624,7 +7624,19 @@
       <publishTime>12/06/2013 13:44:53</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/18/2013 08:44:09</publishTime>
+      <publishTime>12/18/2013 14:50:38</publishTime>
+    </File>
+    <File Include="Scripts/ad112/ad.css">
+      <publishTime>12/18/2013 14:46:04</publishTime>
+    </File>
+    <File Include="Scripts/ad112/ad.js">
+      <publishTime>12/18/2013 14:44:18</publishTime>
+    </File>
+    <File Include="Scripts/ad112/ad_100x300.jpg">
+      <publishTime>12/18/2013 13:50:32</publishTime>
+    </File>
+    <File Include="Scripts/ad112/close.gif">
+      <publishTime>12/18/2013 13:50:32</publishTime>
     </File>
     <File Include="Scripts/bootstrap/additional-methods.min.js">
       <publishTime>12/06/2013 13:44:53</publishTime>
@@ -9777,11 +9789,14 @@
     <File Include="Views/Home/CategoryForumMagazine.cshtml">
       <publishTime>12/13/2013 16:50:50</publishTime>
     </File>
+    <File Include="Views/Home/CoupletAds.cshtml">
+      <publishTime>12/18/2013 14:41:16</publishTime>
+    </File>
     <File Include="Views/Home/EventListForum.cshtml">
       <publishTime>12/13/2013 08:08:06</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/16/2013 16:23:20</publishTime>
+      <publishTime>12/18/2013 14:41:24</publishTime>
     </File>
     <File Include="Views/Home/IndexCategoryForum.cshtml">
       <publishTime>12/16/2013 08:20:53</publishTime>
@@ -9826,7 +9841,7 @@
       <publishTime>12/06/2013 13:44:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/18/2013 08:32:43</publishTime>
+      <publishTime>12/18/2013 14:49:39</publishTime>
     </File>
   </ItemGroup>
 </Project>

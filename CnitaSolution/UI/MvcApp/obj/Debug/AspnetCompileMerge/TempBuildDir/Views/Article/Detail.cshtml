@@ -1,0 +1,40 @@
+﻿@model Library.Models.ModelArticle
+
+@{
+    ViewBag.Title = Model.Title;
+    ViewBag.KeyWord = Model.Keyword;
+    ViewBag.Description = Model.Keyword;
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+@{
+    if (Model.Status == 1) { 
+        Session["UrlReferrer"]  = Url.Action("Detail","Article",new{Id=Model.Id});
+        if (Session["user"] == null)
+        {
+            Response.Redirect(Url.Action("Login", "Home"));
+        }
+        
+    }
+}
+
+
+@section SubContentNav{
+    <p>@Model.CategoryName</p>
+}
+<div id="MainContainer" class="main_container">
+    <div  class="main_container_title">
+        <p>@Html.DisplayFor(model => model.Title)</p>
+    </div>
+    <div  class="main_container_date">
+        <p>@Html.DisplayNameFor(model => model.Author) : @Html.DisplayFor(model => model.Author) &nbsp;
+            @Html.DisplayNameFor(model => model.Source) : @Html.DisplayFor(model => model.Source) &nbsp;@Html.DisplayNameFor(model => model.Createdate) : @string.Format("{0:yyyy-MM-dd}",Model.Createdate) </p>
+        <p><hr /></p>
+    </div>
+    <div  class="main_container_cont">
+        @Html.Raw(Model.Context)
+    </div>
+</div>
+@section Scripts{ 
+    @Html.Raw(ViewBag.CustomScript)
+}

@@ -1,0 +1,333 @@
+﻿@model Library.Models.ModelOrganization
+
+@{
+    ViewBag.Title = "编辑/新增 会员信息";
+    Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml";
+}
+
+
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                <!--Jason.Yao <small>后台管理系统</small>-->
+            </h3>
+            <ul class="breadcrumb">
+                <li><i class="icon-home"></i><a href="index.html">后台管理</a>                <i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Index", "Org")">会员管理</a><i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Create", "Org")">编辑/新增 会员信息</a></li>
+                <li class="pull-right no-text-shadow">
+                    <div id="dashboard-report-range"
+                        class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
+                        data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+                        <i class="icon-calendar"></i><span></span><i class="icon-angle-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-cogs"></i>新增/编辑 会员信息</div>
+                        <div class="tools">
+                            <a href="" class="collapse"></a><a href="" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row-fluid">
+                            <!--表单 开始-->
+                            <form id="mainForm" action="@Url.Action("Create", "Org")" class="form-horizontal" enctype="multipart/form-data" method="post" >
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+
+                                @*名称*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Orgname)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Orgname, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Orgname)</i></p>
+                                    </div>
+                                </div>
+
+                                @*英文名称*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Orgenname)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Orgenname, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Orgenname)</i></p>
+                                    </div>
+                                </div>
+
+                                @*地址*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Address)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Address, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Address)</i></p>
+                                    </div>
+                                </div>
+
+                                @*英文地址*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Addressen)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Addressen, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Addressen)</i></p>
+                                    </div>
+                                </div>
+
+                                @*英文地址*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Addressen)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Addressen, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Addressen)</i></p>
+                                    </div>
+                                </div>
+
+                                @*邮政编码*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Zipcode)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Zipcode, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Zipcode)</i></p>
+                                    </div>
+                                </div>
+
+                                @*网址*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Internetsite)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Internetsite, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Internetsite)</i></p>
+                                    </div>
+                                </div>
+
+                                @*企业性质*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Natureofbusiness)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Natureofbusiness, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Natureofbusiness)</i></p>
+                                    </div>
+                                </div>
+
+                                @*固定资产*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Fixedassets)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Fixedassets, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Fixedassets)</i></p>
+                                    </div>
+                                </div>
+
+                                @*企业负责人*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Legalperson)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Legalperson, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Legalperson)</i></p>
+                                    </div>
+                                </div>
+
+                                @*职务*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Post)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Post, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Post)</i></p>
+                                    </div>
+                                </div>
+
+                                @*电话*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Tel)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Tel, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Tel)</i></p>
+                                    </div>
+                                </div>
+
+                                @*传真*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Fax)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Fax, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Fax)</i></p>
+                                    </div>
+                                </div>
+
+                                @*手机*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Phone)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Phone, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Phone)</i></p>
+                                    </div>
+                                </div>
+
+                                @*Email*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Email)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Email, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Email)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contact)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contact, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contact)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人职务*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contactpost)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contactpost, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contactpost)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人电话*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contacttel)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contacttel, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contacttel)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人传真*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contactfax)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contactfax, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contactfax)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人手机*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contactphone)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contactphone, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contactphone)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要联系人Email*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Contactemail)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Contactemail, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Contactemail)</i></p>
+                                    </div>
+                                </div>
+
+                                @*单位类别*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Unittype)</label>
+                                    <div class="controls">
+                                        
+                                        @Html.TextBoxFor(model => model.Unittype, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Unittype)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要产品涉及的应用领域*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Productapplications)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Productapplications, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Productapplications)</i></p>
+                                    </div>
+                                </div>
+
+                                @*主要非织造布生产工艺类别*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Processcategory)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Processcategory, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Processcategory)</i></p>
+                                    </div>
+                                </div>
+
+                                 @*会员级别*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Membershiplevel)</label>
+                                    <div class="controls">
+                                        @Html.TextBoxFor(model => model.Membershiplevel, new { @class = "input-xlarge span6" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Membershiplevel)</i></p>
+                                    </div>
+                                </div>
+
+                                @*单位简介*@
+                                <div class="control-group">
+                                    <label class="control-label" for="input01">@Html.LabelFor(model => model.Introduction)</label>
+                                    <div class="controls">
+                                        @Html.TextAreaFor(model => model.Introduction, new { @class = "input-xlarge span9" ,style="height:150px;" })
+                                        <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Introduction)</i></p>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <!-- Button -->
+                                    <div class="controls">
+                                        <button class="btn red span2" type="submit" id="btnSubmit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button>
+
+                                    </div>
+                                </div>
+                                @Html.HiddenFor(model => model.Orgid)
+                            </form>
+                            <!--表单 结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Styles{
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @*实例化 编辑器*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+        function Goto() {
+            window.location = "@Url.Action("Index", "Org")";
+        }
+        function Loading(obj) {
+            //$(obj).hide();
+        }
+        function BtnShow() {
+            $("#btnSubmit").show();
+        }
+    </script>
+    @Html.Raw(ViewBag.CustomScript)
+}
+
+
+
+
+
+
+

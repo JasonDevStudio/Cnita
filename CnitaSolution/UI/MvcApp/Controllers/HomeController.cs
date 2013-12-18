@@ -240,6 +240,31 @@ namespace MvcApp.Controllers
             return PartialView(list);
         }
 
+        /// <summary>
+        /// 对联广告 模块
+        /// </summary>
+        /// <param name="categoryCode"></param>  
+        public ActionResult CoupletAds(string categoryCode=null, string ownerCode=null)
+        {
+            var logic = new LogicPictures();
+            var resultMsg = string.Empty;
+            var listTemp = new List<ModelPictures>();
+            IList<ModelPictures> list = new List<ModelPictures>();
+            list = logic.QueryPicturesListByOwner(out resultMsg, categoryCode, ownerCode);
+
+            if (list.Count > 0)
+            {
+                listTemp.Add(list.First());
+                listTemp.Add(list.Last());
+            } 
+            return PartialView(listTemp);
+        }
+
+        
+        /// <summary>
+        /// 登录页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Login()
         {
             ViewBag.CustomScript = string.Empty;

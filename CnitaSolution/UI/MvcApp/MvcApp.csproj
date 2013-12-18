@@ -2652,6 +2652,10 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\zazhi.gif" />
     <Content Include="Images\Logo.jpg" />
+    <Content Include="Scripts\ad112\ad.css" />
+    <Content Include="Scripts\ad112\ad.js" />
+    <Content Include="Scripts\ad112\ad_100x300.jpg" />
+    <Content Include="Scripts\ad112\close.gif" />
     <Content Include="Scripts\bootstrap\additional-methods.min.js" />
     <Content Include="Scripts\bootstrap\app.js" />
     <Content Include="Scripts\bootstrap\bootstrap-colorpicker.js" />
@@ -3199,6 +3203,8 @@
     <Content Include="Uploads\Images\201312141529489839.jpg" />
     <Content Include="Uploads\Images\201312141532059091.jpg" />
     <Content Include="Uploads\Images\201312141538023709.gif" />
+    <Content Include="Uploads\Images\201312180852293905.jpg" />
+    <Content Include="Uploads\Images\201312181432231869.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -3367,6 +3373,7 @@
     <Content Include="Views\Home\SpeedForum.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Uploads\Files\2013-12-12\e84c699f-d679-42aa-8791-3ec4462f4a78.rar" />
+    <Content Include="Views\Home\CoupletAds.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

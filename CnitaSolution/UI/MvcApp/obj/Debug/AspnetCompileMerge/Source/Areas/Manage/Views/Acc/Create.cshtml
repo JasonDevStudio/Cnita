@@ -1,0 +1,148 @@
+﻿@model Library.Models.ModelUser
+
+@{
+    ViewBag.Title = "编辑/新增 账号信息";
+    Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml";
+}
+ 
+ 
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                <!--Jason.Yao <small>后台管理系统</small>-->
+            </h3>
+            <ul class="breadcrumb">
+                <li><i class="icon-home"></i><a href="index.html">后台管理</a>                <i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Index","Acc")">账号管理</a><i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Create","Acc")">编辑/新增 账号信息</a></li>
+                <li class="pull-right no-text-shadow">
+                    <div id="dashboard-report-range"
+                        class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
+                        data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+                        <i class="icon-calendar"></i><span></span><i class="icon-angle-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-cogs"></i>新增/编辑 账号信息</div>
+                        <div class="tools">
+                            <a href="" class="collapse"></a><a href="" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row-fluid">
+                            <!--表单 开始-->
+    <form id="mainForm" action="@Url.Action("Create","Acc")" class="form-horizontal" enctype="multipart/form-data" method="post" > 
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+        @*名称*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.Name)</label>
+          <div class="controls">
+              @Html.TextBoxFor(model => model.Name, new {@class="input-xlarge span6" }) 
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Name)</i></p>
+          </div>
+        </div> 
+        
+        @*账号*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.Account)</label>
+          <div class="controls">
+              @Html.TextBoxFor(model => model.Account, new {@class="input-xlarge span6" })  
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Account)</i></p>
+          </div>
+        </div>  
+
+        @*组织机构*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.Organization)</label>
+          <div class="controls">
+              @Html.DropDownListFor(model => model.Organization,(IEnumerable<SelectListItem>)ViewBag.Orgs,"请选择", new {@class="input-xlarge span6"}) 
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Organization)</i></p>
+          </div>
+        </div> 
+         
+        @*密码*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.Password)</label>
+          <div class="controls">
+              @Html.PasswordFor(model => model.Password, new {@class="input-xlarge span6" })  
+            <p class="help-block"><i class="warning">@Html.ValidationMessageFor(model => model.Password)</i></p>
+          </div>
+        </div> 
+
+        @*确认密码*@
+        <div class="control-group">          
+          <label class="control-label" for="input01">@Html.LabelFor(model => model.ConfirmPassword)</label>
+          <div class="controls">
+              @Html.PasswordFor(model => model.ConfirmPassword, new {@class="input-xlarge span6" })  
+            <p class="help-block"><i class="warning" id="helpConfirmPassword">@Html.ValidationMessageFor(model => model.ConfirmPassword)</i></p>
+          </div>
+        </div> 
+          
+        <div class="control-group">          
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn red span2" type="button" id="btnSubmit" onclick="Loading(this)">提交 <i class="m-icon-swapright m-icon-white"></i></button> 
+            
+          </div>
+        </div>
+</form>
+                            <!--表单 结束-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div> 
+@Html.HiddenFor(model=>model.Id)
+
+@section Styles{ 
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval") 
+    @*实例化 编辑器*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+        });
+        function Goto() {
+            window.location = "@Url.Action("Index","Acc")";
+        }
+        function Loading(obj) {
+            if ($("#Password").val() != $("#ConfirmPassword").val()) {
+                $("#helpConfirmPassword").html("两次输入密码不一致,请校验!");
+                $("#Password").focus();
+                return false;
+            }
+            //$(obj).hide();
+            document.forms["mainForm"].submit();
+        }
+        function BtnShow() {
+            $("#btnSubmit").show();
+        }
+    </script>
+    @Html.Raw(ViewBag.CustomScript)
+}
+
+
+
+
+
+
+

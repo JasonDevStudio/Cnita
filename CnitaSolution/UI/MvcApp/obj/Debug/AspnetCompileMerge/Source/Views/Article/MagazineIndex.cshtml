@@ -1,0 +1,181 @@
+﻿@model MvcApp.Areas.Manage.Models.ModelPagerArticle
+@{
+    ViewBag.Title = "杂志期刊 " + ViewBag.CategoryName;
+    ViewBag.KeyWord = "杂志期刊 " + ViewBag.CategoryName;
+    ViewBag.Description = "杂志期刊 " + ViewBag.CategoryName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="banner">
+    <div>
+        <iframe src="@Url.Action("Banner", "Home", new { categoryCode = "31", ownerCode = "", width = "1098" })", width="1100px"  height="100px" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+<div class="subcontent">
+    @*版块导航 开始*@
+    <div class="subcontent_nav">
+        <p>杂志期刊 @ViewBag.CategoryName</p>
+    </div>
+    @*版块导航 结束*@
+</div>
+<div class="subcontent_container">
+    <div class="magazine">
+        <div class="magazine_left">
+            <div class="magazine_left_top">
+                @Html.Action("CategoryForumMagazine", "Home", new { Id = Model.Category })
+            </div>
+            <div class="magazine_left_middle">
+                <div class="magazineleftmiddle">
+                    <div class="magazineleftmiddle_top">
+                        <p><a href="@Url.Action("Index", "Article")">more</a> </p>
+                    </div>
+                    <div class="magazineleftmiddle_middle">
+                        <div class="magazineleftmiddle_middle_top_year">
+                            <p>@DateTime.Now.Year 年</p>
+                        </div>
+                        <div class="magazineleftmiddle_middle_top_moth">
+                            <p>
+                                <a href="javascript:void(0);" onclick="SearchOne('1')">01</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('2')">02</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('3')">03</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('4')">04</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('5')">05</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('6')">06</a>&nbsp;
+                            </p>
+                            <p>
+                                <a href="javascript:void(0);" onclick="SearchOne('7')">07</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('8')">08</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('9')">09</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('10')">10</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('11')">11</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchOne('12')">12</a>&nbsp;
+                            </p>
+                        </div>
+                        <div class="magazineleftmiddle_middle_middle_year">
+                            <p>@DateTime.Now.AddYears(-1).Year 年</p>
+                        </div>
+                        <div class="magazineleftmiddle_middle_middle_moth">
+                            <p>
+                                <a href="javascript:void(0);" onclick="SearchTwo('1')">01</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('2')">02</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('3')">03</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('4')">04</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('5')">05</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('6')">06</a>&nbsp;
+                            </p>
+                            <p>
+                                <a href="javascript:void(0);" onclick="SearchTwo('7')">07</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('8')">08</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('9')">09</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('10')">10</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('11')">11</a>&nbsp;
+                                <a href="javascript:void(0);" onclick="SearchTwo('12')">12</a>&nbsp;
+                            </p>
+                        </div>
+                    </div>
+                    <div class="magazineleftmiddle_middle_bottom">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="magazine_middle">
+            <div class="magazine_middle_top">
+            </div>
+            <div class="magazine_middle_middle">
+                <!--列表 开始-->
+                <div id="MainContainer" class="main_container_magazine">
+
+                    @if (Model.ArtcleList != null && Model.ArtcleList.Count() > 0)
+                    {
+                        foreach (var item in Model.ArtcleList)
+                        {
+                        <div class="magazine_middle_list">
+                            <div class="magazine_middle_list_left">
+                                <a href="@Url.Action("Detail", "Article", new { Id = item.Id })">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 20)</a>
+                            </div>
+                            <div class="magazine_middle_list_right">
+                                @string.Format("{0:yyyy-MM-dd}", item.Createdate)
+                            </div>
+                        </div>
+                     
+                        }
+
+                    }
+                    else
+                    { 
+                        <div class="magazine_middle_list">
+                            <p style="text-align: center">未查询到数据</p>
+                        </div>
+                    }
+                    <br />
+                    <!--分页 开始-->
+                    <div>
+                        <div id="divPagerContainer" class="JasonPager" style="margin-right:0px;">
+                        </div>
+                        <br />
+                    </div>
+                    <!--分页 结束-->
+
+
+                </div>
+                <!--列表 结束-->
+
+            </div>
+        </div>
+        <div class="magazine_right">
+            <div class="magazine_right_one">
+                @*协会公告*@
+                @Html.Action("SidebarForum", "Home", new { categoryCode = "18", adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+                @*科普*@
+                @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0", topCount = "6" })
+                @*热门文章*@
+                @Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36", topCount = "6" })
+            </div>
+        </div>
+    </div>
+</div>
+<form id="mainForm" action="@Url.Action("MagazineIndex", "Article")" style="display:none;">
+    @Html.HiddenFor(model => model.Category)
+    @Html.HiddenFor(model => model.Year)
+    @Html.HiddenFor(model => model.Month)
+</form>
+@section Styles{
+    <link href="@Url.Content("~/Content/themes/JasonPager/default.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/themes/msgbox/msgbox.css")" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="@Url.Content("~/Scripts/JasonPager.js")"></script>
+    <script src="@Url.Content("~/Scripts/msgbox/msgbox.js")"></script>
+    <script type="text/javascript">
+        var htmlMyPagination = null;
+        $(document).ready(function () {
+
+            $.JasonPager.Load({
+                pagerIndex: @Model.PagerIndex,                                   //当前页码
+                pagerSize: 10,                                   //每页显示数量
+                pagerCount: @Model.PagerCount,                                   //总页数  $(data).find("#PagerCount").val()
+                pagerShowCount: 10,                                //分页控件显示页数
+                pagerActionUrl: $("#mainForm").action,
+                pagerActiveStyle: "active"
+            });
+            
+        });
+        function Search() {
+            $.JasonPager.Submit(); 
+        }
+
+        function SearchOne(month) {
+            var year = "@DateTime.Now.Year";
+            $("#Year").val(year);
+            $("#Month").val(month);
+            $.JasonPager.Submit(); 
+        }
+
+        function SearchTwo(month) {
+            var year = "@DateTime.Now.AddYears(-1).Year";
+            $("#Year").val(year);
+            $("#Month").val(month);
+            $.JasonPager.Submit(); 
+        }
+    </script>
+}
