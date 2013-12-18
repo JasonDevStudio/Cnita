@@ -1739,7 +1739,6 @@
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\gae-python\static\robots.txt" />
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\node\.gitignore" />
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\node\public\files\.gitignore" />
-    <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\node\public\files\thumbnail\.gitignore" />
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\node\server.js" />
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\node\tmp\.gitignore" />
     <Content Include="Content\themes\assets\plugins\jquery-file-upload\server\php\files\notes.txt" />
@@ -1905,10 +1904,6 @@
     <Content Include="Content\themes\assets\plugins\jquery-validation\demo\tinymce\themes\simple\langs\en.js" />
     <Content Include="Content\themes\assets\plugins\jquery-validation\demo\tinymce\themes\simple\skins\default\ui.css" />
     <Content Include="Content\themes\assets\plugins\jquery-validation\demo\tinymce\tiny_mce.js" />
-    <Content Include="Content\themes\assets\plugins\jquery-validation\dist\additional-methods.js" />
-    <Content Include="Content\themes\assets\plugins\jquery-validation\dist\additional-methods.min.js" />
-    <Content Include="Content\themes\assets\plugins\jquery-validation\dist\jquery.validate.js" />
-    <Content Include="Content\themes\assets\plugins\jquery-validation\dist\jquery.validate.min.js" />
     <Content Include="Content\themes\assets\plugins\jquery-validation\Gruntfile.js" />
     <Content Include="Content\themes\assets\plugins\jquery-validation\lib\jquery-1.6.4.js" />
     <Content Include="Content\themes\assets\plugins\jquery-validation\lib\jquery-1.7.2.js" />
@@ -3375,7 +3370,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\themes\assets\plugins\jquery-file-upload\server\node\public\files\thumbnail\" />
     <Folder Include="Content\themes\assets\plugins\jquery-file-upload\server\php\files\thumbnail\" />
+    <Folder Include="Content\themes\assets\plugins\jquery-validation\dist\" />
     <Folder Include="Scripts\UISlide\mf-pattern\.svn\prop-base\" />
     <Folder Include="Scripts\UISlide\mf-pattern\.svn\props\" />
     <Folder Include="Scripts\UISlide\mf-pattern\.svn\tmp\prop-base\" />

@@ -169,6 +169,8 @@
             $("#indextopads_container").height(height);
             if (height < heightOld) {
                 setTimeout("TimeShow()", 0.3);
+            } else {
+                setTimeout("noneAds()", 5000); //停留时间自己适当调整
             }
         }
 
@@ -184,8 +186,7 @@
 
         function showAds() {            
             $("#indextopads_container").show();
-            TimeShow();
-            setTimeout("noneAds()", 5000); //停留时间自己适当调整
+            TimeShow();            
         }
 
         $(document).ready(function () {
