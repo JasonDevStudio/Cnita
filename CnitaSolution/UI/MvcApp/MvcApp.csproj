@@ -2726,6 +2726,7 @@
     <Content Include="Scripts\bootstrap\jquery.knob.js" />
     <Content Include="Scripts\bootstrap\jquery.multi-select.js" />
     <Content Include="Scripts\bootstrap\jquery.nestable.js" />
+    <Content Include="Scripts\bootstrap\jquery.pin.min.js" />
     <Content Include="Scripts\bootstrap\jquery.pulsate.min.js" />
     <Content Include="Scripts\bootstrap\jquery.slimscroll.min.js" />
     <Content Include="Scripts\bootstrap\jquery.sparkline.min.js" />
