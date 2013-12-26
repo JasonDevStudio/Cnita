@@ -24,7 +24,7 @@ a:hover {color: orange;text-decoration: none;}
 .subMenuRight{width:491px;height:80px;float:left;display:inline;text-align:left;}
 .subMenuRightTop{width:491px;height:40px;clear:both;display:inline-block;text-align:left;}
 .subMenuRightTop p {margin-right:20px;text-align:right;font-size:14px;}
-.subMenuRightTop p a {color: blue;font-weight: bold;text-decoration: none;padding-right:12px;padding-left:12px;}
+.subMenuRightTop p a {color: blue;font-weight: bold;text-decoration: none;padding-right:1px;padding-left:8px;}
 .subMenuRightTop p a:hover {color: orange;font-weight: bold;text-decoration: none;}
 .subMenuRightBottom{width:491px;height:40px;clear:both;display:inline-block;text-align:right;}
 .subMenuRightBottom form{margin-right:25px;}
@@ -65,6 +65,11 @@ a:hover {color: orange;text-decoration: none;}
 .sidebar_forum_middle_middle_two{margin-left:20px;}
 .sidebar_forum_middle_middle_one_Introduction{margin-left:15px;}
 .sidebar_forum_middle_middle marquee{width:250px;}
+.sidebar_forum_middle_middle p{margin-right:10px;margin-left:15px;}
+.sidebar_forum_middle_middle ul{margin:0 0 0 0;padding:0 10px 0 10px;}
+.sidebar_forum_middle_middle ul li{margin: 0 0 0 0; padding: 5px 0 5px 0; list-sytle: none; list-style-type: none; border-bottom-style: dashed; border-bottom-width: 1px; border-bottom-color: #C0C0C0;}
+.sidebar_forum_middle_middle ul li a{color: #000;text-decoration: none;padding-right:12px;padding-left:0px;}
+.sidebar_forum_middle_middle ul li a:hover {color: orange;text-decoration: none;}
 
 .subcontainer_top{width:803px;height:10px;font-size:1px;clear:both;display:inline-block;background-image: url(../images/subcontainer_subcontainer_top.png);text-align:left; line-height:13px;}
 .subcontainer_middle{width:803px;clear:both;display:inline-block;background-image: url(../images/subcontainer_subcontainer_middle.png);  background-repeat: repeat-y;text-align:left;}
@@ -99,6 +104,10 @@ a:hover {color: orange;text-decoration: none;}
 .indexforum_top_left p{margin-left:25px;margin-top:11px;font-size:15px;font-weight:bold;color:orange;}
 .indexforum_top_right{width:80px;height:41px;float:left;display:inline;text-align:left;}
 .indexforum_top_right p{text-align:right;margin-top:16px;}
+.indexforum_middle p{margin:3px 8px 3px 7px;}
+.indexforum_middle_top_title{margin:5px 15px 5px 15px;text-align:center;font-size:15px;font-weight:bold;}
+.indexforum_middle_top_cont{margin:5px 15px 5px 15px;}
+.indexforum_middle_middle{margin:8px 15px 8px 0px;}
 
 .newlist{width:810px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
 .newlist_left{width:405px;float:left;display:inline;text-align:left;}
@@ -167,9 +176,11 @@ a:hover {color: orange;text-decoration: none;}
 .magazineleftmiddle_middle_middle_moth p a{margin-left:5px;margin-right:5px;margin-top:3px;margin-bottom:3px;padding:0px 0px 0px 0px;}
 .magazineleftmiddle_top p{text-align:right;margin-right:15px;}
 
-.linkforum{margin-left:-2px;}
-.linkforum img{width: 150px; height: 60px; border: 1px solid #CCCCCC;margin-left:1px;}
+.linkforum{margin-left:-2px;text-align:center;}
+.linkforum img{width: 214px; height: 60px; border: 1px solid #CCCCCC;}
 
-.speedlist{width:283px;height:21px;clear:both;text-align:left;}
-.speedlist_left{width:204px;height:21px;float:left;display:inline;text-align:left;}
-.speedlist_right{width:79px;height:21px;float:left;display:inline;text-align:left;}
+.speedlist{width:283px;height:21px;clear:both;text-align:left;font-size:12px;padding:0 0 8px 0;}
+.speedlist_left{width:194px;height:21px;float:left;display:inline;text-align:left;}
+.speedlist_right{width:89px;height:21px;float:left;display:inline;text-align:center;}
+.speedlist_left p{margin:0;padding:0;}
+.speedlist_right p{margin:0;padding:0;}

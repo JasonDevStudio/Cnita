@@ -158,6 +158,38 @@ namespace Library.Logic.DAL
         }
 
         /// <summary>
+        ///  查询实体
+        /// </summary>
+        /// <param name="categoryId">ModelId 编号</param>
+        /// <returns>ModelArticle</returns>
+        public ModelArticle ArticleDetailByIsRecommend(out string resultMsg, Int32 categoryId)
+        {
+            resultMsg = string.Empty;
+            var model = new ModelArticle();
+            try
+            {
+                //存储过程名称
+                string sql = "usp_article_select_detail_by_isrecommend";
+
+                //参数添加
+                IList<DBParameter> parm = new List<DBParameter>();
+                parm.Add(new DBParameter() { ParameterName = "ID", ParameterValue = categoryId, ParameterInOut = BaseDict.ParmIn, ParameterType = DbType.Int32 });
+
+                //查询执行
+                using (IDataReader dr = DBHelper.ExecuteReader(sql, true, parm))
+                {
+                    IList<ModelArticle> list = GetModel(dr);
+                    model = list.First();
+                }
+            }
+            catch (Exception ex)
+            {
+                resultMsg = string.Format("{0} {1}", BaseDict.ErrorPrefix, ex.ToString());
+            }
+            return model;
+        }
+
+        /// <summary>
         ///  TOP查询
         /// </summary> 
         /// <returns>IList<ModelArticle></returns>

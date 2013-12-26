@@ -17,7 +17,7 @@
             <p style="padding:0;margin:3px 0px 0px 5px;;font-size13px;font-weight:bold;"><a href="#">公司名称</a></p>
         </div>
         <div class="speedlist_right">
-            <p style="padding:0;margin:3px 0px 0px 5px;;font-size13px;font-weight:bold;"><a href="#">职位</a></p>
+            <p style="padding:0;margin:3px 0px 0px 5px;;font-size13px;font-weight:bold;"><a href="#">协会职位</a></p>
         </div>
     </div>
     <marquee id="a" onmouseover="a.stop()" onmouseout="a.start()" scrollamount="2" direction="up">
@@ -27,10 +27,10 @@
         {
             <div class="speedlist">
         <div class="speedlist_left">
-            <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 18)</a> </p>
+            <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 11)</a> </p>
         </div>
         <div class="speedlist_right" >
-            <p style="margin-left:15px;">@item.Keyword</p>
+            <p style="margin-left:0px;"><a href="javascript:void(0);">@item.Keyword</a></p>
         </div>
     </div>
                 

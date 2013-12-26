@@ -3206,7 +3206,9 @@
     <Content Include="Uploads\Images\201312141538023709.gif" />
     <Content Include="Uploads\Images\201312180852293905.jpg" />
     <Content Include="Uploads\Images\201312181432231869.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

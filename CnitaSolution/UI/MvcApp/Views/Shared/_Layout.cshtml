@@ -47,14 +47,15 @@
                                     <a href="@Url.Action("Login", "Home")" >欢迎回来,[@Session["user"]]</a>
                                 }
                                 &nbsp;<a href="@Url.Action("Assoc", "Article", new { id = "1286", categoryCode = "2" })" >[加入协会]</a>
+                                &nbsp;<a href="#" style="color:#c3baba">English Version</a>
                             </p>
                         </div>
                         <div class="subMenuRightBottom">
                             <form class="form-subscribe" action="@Url.Action("Index","Article")" method="post" id="LayoutSearchForm">
                                 <div class="input-group input-large">
-                                    <input class="form-control" type="text" name="KeyWord" id="KeyWord" />
+                                    <input class="form-control" type="text" style="width:250px;border:solid;border-color:orange;border-width:1px;" name="KeyWord" id="KeyWord" />
                                     <span class="input-group-btn">
-                                        <button class="btn theme-btn" type="button" onclick="LayoutSearch()">搜索</button>
+                                        <button class="btn theme-btn" type="button" style="background-color:orange;border:solid;border-color:orange;border-width:1px; font-weight:bold;color:white;" onclick="LayoutSearch()">搜索</button>
                                     </span>
                                 </div>
                             </form>

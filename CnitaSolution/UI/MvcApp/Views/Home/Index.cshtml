@@ -1,17 +1,20 @@
 ﻿@{
-    ViewBag.Title = "中国产业纺织品协会";
+    ViewBag.Title = "中国电气绝缘网";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 @section Styles{
-    <link href="@Url.Content("~/Scripts/ad112/ad.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Scripts/ad112/ad.css")" rel="stylesheet" type="text/css" /> 
 }
 @section IndexTopAds{
     <div class="container" id="indextopads_container" style="margin: auto; display: none; top: 0px; overflow: hidden; text-align: center;">
+       
         <div class="indextopads_container">
             <iframe src="@Url.Action("Banner", "Home", new { categoryCode = "84", ownerCode = "", width = "1098", height = "350", isSlide = "0" })", width="1100px"  height="350px" frameborder="0" scrolling="no"></iframe>
+             <div style="margin-top:-30px;text-align:right;width:1098px;"><input  type="button" value="Close"  onclick="adsClose();" /></div>
         </div>
+        
     </div>
 }
 <div class="banner">
@@ -48,7 +51,7 @@
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*行业要闻*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "50", adsCategoryCode = "34", topCount = "8", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "50", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
                             </div>
                         </div>
                         <div class="newlist_right">
@@ -66,13 +69,13 @@
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*调研统计*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "81", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "81", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
                             </div>
                         </div>
                         <div class="newlist_right">
                             <div class="newlist_right_one">
                                 @*专题专区*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "53", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "53", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
                             </div>
                         </div>
                     </div>
@@ -83,13 +86,13 @@
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*协会动态*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "49", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "49", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
                             </div>
                         </div>
                         <div class="newlist_right">
                             <div class="newlist_right_one">
                                 @*国内外标准化*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "67", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "67", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
                             </div>
                         </div>
                     </div>
@@ -134,13 +137,13 @@
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*政策法规*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "51", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "51", adsCategoryCode = "34", topCount = "7", isSlide = "0" })
                             </div>
                         </div>
                         <div class="newlist_right">
                             <div class="newlist_right_one">
                                 @*行业排名*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "58", adsCategoryCode = "34", topCount = "5", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "58", adsCategoryCode = "34", topCount = "7", isSlide = "0" })
                             </div>
                         </div>
                     </div>
@@ -162,24 +165,25 @@
 </div>
 @section Scripts{
     <script src="@Url.Content("~/Scripts/bootstrap/jquery.pin.min.js")"></script>
+@*    <script src="@Url.Content("~/Scripts/boxy/js/jquery-boxy.js")" type="text/javascript"></script> *@
     <script type="text/javascript">
         var height = 0;
         var heightOld = 350;
         function TimeShow() {
-            height = height + 1;
+            height = height + 15;
             $("#indextopads_container").height(height);
             if (height < heightOld) {
-                setTimeout("TimeShow()", 0.3);
+                setTimeout("TimeShow()", 10);
             } else {
-                setTimeout("noneAds()", 5000); //停留时间自己适当调整
+                //setTimeout("noneAds()", 5000); //停留时间自己适当调整
             }
         }
 
         function TimeHide() {
-            heightOld = heightOld - 1;
+            heightOld = heightOld - 15;
             $("#indextopads_container").height(heightOld);
             if (heightOld > 0) {
-                setTimeout("TimeHide()", 0.3);
+                setTimeout("TimeHide()", 10);
             } else {
                 $("#indextopads_container").hide();
             }
@@ -188,9 +192,10 @@
         function showAds() {
             var container = $("#indextopads_container");
             if (container) {
+                //$("#indextopads_container").height(350);
                 $("#indextopads_container").show();
             }
-
+            
             TimeShow();
         }
 
@@ -229,9 +234,15 @@
                 $("#rwc_c").hide();
             }
         }
-    </script>
 
+        function adsClose() {
+            TimeHide();
+        }
+
+    </script>
+@*    @Html.Raw(ViewBag.CustomScript)*@
 }
+
 @section CoupletAds{
 @Html.Action("CoupletAds", "Home", new { categoryCode = "32" })
 }

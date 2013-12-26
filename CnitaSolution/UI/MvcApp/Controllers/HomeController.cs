@@ -30,17 +30,25 @@ namespace MvcApp.Controllers
             var Introduction = string.Empty;
             var Thumbnails = string.Empty;
             var CategName = string.Empty;
+            var categoryId = 0;
             var TopRowCount = 0;
             int.TryParse(topCount, out TopRowCount);
+            int.TryParse(categoryCode,out categoryId);
 
             var list = logic.QueryArticleListTopByCategoryCode(out resultMsg, out CategIsAds, out Introduction, out Thumbnails, out CategName,
                 categoryCode, categoryTwoCode, adsCategoryCode, TopRowCount);
+
+            var model = logic.ArticleDetailByIsRecommend(out resultMsg, categoryId);
+
             ViewBag.CategIsAds = CategIsAds;
             ViewBag.Introduction = Introduction;
             ViewBag.Thumbnails = Thumbnails;
             ViewBag.CategName = CategName;
             ViewBag.CategoryCode = categoryCode;
             ViewBag.AdsCategoryCode = adsCategoryCode;
+            ViewBag.ArtAbstract = model != null ? model.Abstract : string.Empty;
+            ViewBag.ArtTitle = model != null ? model.Title : string.Empty;
+            ViewBag.ArtId = model != null ? model.Id : 0;
 
             return list;
         }
@@ -68,6 +76,7 @@ namespace MvcApp.Controllers
         /// </summary> 
         public ActionResult Index()
         {
+            ViewBag.CustomScript = UtilityScript.ShowMessage("尊敬的用户,您好! 本站为测试站点,有效时间至2014年1月20日止,测试期间数据均为测试数据,在此期间你可以通过管理后台对数据进行维护,在测试完毕之后我可以直接把维护好的数据进行保留!",title:"申明:", isCreate: true, isSuccess: false);
             return View();
         }
 

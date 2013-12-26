@@ -12,11 +12,15 @@
         </div>
     </div>
     <div class="indexforum_middle">
+        @if (ViewBag.ArtTitle != null) { 
+        <div class="indexforum_middle_top_title"><a href="@Url.Action("Detail", "Article", new { Id = ViewBag.ArtId }) " title="@ViewBag.ArtTitle">@Library.Common.CommonMethod.ObjSubstringByLength(ViewBag.ArtTitle,20)</a></div>
+        <div class="indexforum_middle_top_cont">@Library.Common.CommonMethod.ObjSubstringByLength(ViewBag.ArtAbstract, 100)</div>
+        }
         @if (Model != null && Model.Count() > 0)
         {
             foreach (var item in Model)
             {
-            <p><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 25)</a> </p>
+            <div class="indexforum_middle_middle"><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title">·@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 25)</a> </div>
             }
         }
     </div>
