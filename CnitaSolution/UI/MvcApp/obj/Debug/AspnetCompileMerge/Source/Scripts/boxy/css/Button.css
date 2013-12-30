@@ -1,0 +1,99 @@
+﻿.btn {
+    background-color: #E5E5E5;
+    background-image: none;
+    border: 0 none;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #333333;
+    cursor: pointer;
+    filter: none;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    outline: medium none;
+    padding: 7px 14px;
+    text-shadow: none;
+}
+.btn.red {
+    background-color: #D84A38;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.red:hover, .btn.red:focus, .btn.red:active, .btn.red.active, .btn.red[disabled], .btn.red.disabled {
+    background-color: #BB2413 !important;
+    color: #FFFFFF !important;
+}
+.btn.transparent {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    text-shadow: none;
+}
+.btn.blue {
+    background-color: #4D90FE;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.blue:hover, .btn.blue:focus, .btn.blue:active, .btn.blue.active, .btn.blue[disabled], .btn.blue.disabled {
+    background-color: #0362FD !important;
+    color: #FFFFFF !important;
+}
+.btn.green {
+    background-color: #35AA47;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.green:hover, .btn.green:focus, .btn.green:active, .btn.green.active, .btn.green.disabled, .btn.green[disabled] {
+    background-color: #1D943B !important;
+    color: #FFFFFF !important;
+}
+.btn.purple {
+    background-color: #852B99;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.purple:hover, .btn.purple:focus, .btn.purple:active, .btn.purple.active, .btn.purple.disabled, .btn.purple[disabled] {
+    background-color: #6D1B81 !important;
+    color: #FFFFFF !important;
+}
+.btn.yellow {
+    background-color: #FFB848;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.yellow:hover, .btn.yellow:focus, .btn.yellow:active, .btn.yellow.active, .btn.yellow.disabled, .btn.yellow[disabled] {
+    background-color: #ECA22E !important;
+    color: #FFFFFF !important;
+}
+.btn.black {
+    background-color: #555555;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.btn.black:hover, .btn.black:focus, .btn.black:active, .btn.black.active, .btn.black.disabled, .btn.black[disabled] {
+    background-color: #222222 !important;
+    color: #FFFFFF !important;
+}
+.mini {
+    font-size: 11px !important;
+    height: 13px;
+    line-height: 13px;
+    padding: 4px 10px;
+}
+.big {
+    font-size: 18px;
+    height: 38px;
+    line-height: 38px;
+    padding: 8px 16px;
+}
+button.btn.big, input.btn.big[type="button"], input.btn.big[type="submit"] {
+    height: 54px;
+    padding-bottom: 8px;
+    padding-top: 9px;
+}
+button.btn.mini, input.btn.mini[type="button"], input.btn.mini[type="submit"] {
+    height: 21px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+a.btn.big.btn-block {
+    height: 54px;
+}

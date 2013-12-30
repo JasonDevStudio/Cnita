@@ -1,0 +1,30 @@
+﻿.JasonPager{
+    text-align:right;
+    margin-right:30px;
+}
+.JasonPager a {
+    margin: 1px;
+    padding: 5px 8px 5px 8px;
+    border: thin solid #CCCCCC;
+    color: #000;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+.JasonPager a:hover { 
+    padding: 5px 8px 5px 8px;
+    margin: 1px;
+    border: thin solid #CCCCCC;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0094ff;
+}
+
+.JasonPager .active { 
+    padding: 5px 8px 5px 8px;
+    margin: 1px;
+    border: thin solid #CCCCCC;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0094ff;
+}
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Library.Models.ModelPictures>
+ 
+@if (Model != null && Model.Count() > 0)
+{
+    var indexAds = 0;
+
+
+
+
+    foreach (var item in Model)
+    {
+        if (indexAds == 0)
+        { 
+    <div id="lwc">
+        <a href="@item.Piclink" target="_blank">
+            <img src="@Url.Content("~/Uploads/Images/" + item.Picuri)"  alt="@item.Name" width="97" height="240" border="0" /></a>
+    </div>
+        }
+        else
+        { 
+    <div id="rwc">
+        <a href="@item.Piclink" target="_blank">
+            <img src="@Url.Content("~/Uploads/Images/" + item.Picuri)" alt="@item.Name"  width="97" height="240" border="0" /></a>
+    </div> 
+        }
+
+        indexAds = indexAds + 1;
+
+    }
+    
+    <input class="close" id="lwc_c" type="button" value=" "  onclick="closeCoupletAds()" />
+    <input class="close" id="rwc_c" type="button" value=" " onclick="closeCoupletAds()" /> 
+}
+ 
+ 
+

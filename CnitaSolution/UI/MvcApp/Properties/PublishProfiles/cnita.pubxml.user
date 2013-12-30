@@ -64,10 +64,10 @@
       <publishTime>12/20/2013 20:17:15</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>12/26/2013 22:38:39</publishTime>
+      <publishTime>12/30/2013 21:16:21</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>12/26/2013 22:38:39</publishTime>
+      <publishTime>12/30/2013 21:16:21</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -145,34 +145,34 @@
       <publishTime>12/20/2013 20:17:15</publishTime>
     </File>
     <File Include="bin/Library.Common.dll">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.Common.pdb">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.dll">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.pdb">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.dll">
-      <publishTime>12/26/2013 21:36:09</publishTime>
+      <publishTime>12/30/2013 18:47:52</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.pdb">
-      <publishTime>12/26/2013 21:36:09</publishTime>
+      <publishTime>12/30/2013 18:47:52</publishTime>
     </File>
     <File Include="bin/Library.Models.dll">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.Models.pdb">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.dll">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.pdb">
-      <publishTime>12/26/2013 19:51:49</publishTime>
+      <publishTime>12/30/2013 18:47:51</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Edm.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -205,10 +205,10 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="bin/MvcApp.dll">
-      <publishTime>12/26/2013 22:38:30</publishTime>
+      <publishTime>12/30/2013 21:15:59</publishTime>
     </File>
     <File Include="bin/MvcApp.pdb">
-      <publishTime>12/26/2013 22:38:30</publishTime>
+      <publishTime>12/30/2013 21:15:59</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -6901,7 +6901,10 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Content/themes/Default/css/main.css">
-      <publishTime>12/26/2013 22:19:14</publishTime>
+      <publishTime>12/30/2013 21:13:41</publishTime>
+    </File>
+    <File Include="Content/themes/Default/images/circle_blue.jpg">
+      <publishTime>12/30/2013 20:17:24</publishTime>
     </File>
     <File Include="Content/themes/Default/images/eventlist_eventlist_bottom.png">
       <publishTime>12/20/2013 20:17:13</publishTime>
@@ -6916,7 +6919,7 @@
       <publishTime>12/20/2013 20:17:13</publishTime>
     </File>
     <File Include="Content/themes/Default/images/indexforum_indexforum_top.jpg">
-      <publishTime>12/20/2013 20:17:13</publishTime>
+      <publishTime>12/30/2013 19:36:20</publishTime>
     </File>
     <File Include="Content/themes/Default/images/indexforum_indexforum_top.png">
       <publishTime>12/20/2013 20:17:13</publishTime>
@@ -7624,7 +7627,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/26/2013 22:38:37</publishTime>
+      <publishTime>12/30/2013 21:16:20</publishTime>
     </File>
     <File Include="Scripts/ad112/ad.css">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9592,175 +9595,175 @@
       <publishTime>12/14/2013 17:58:29</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/152e82cf-5082-40d3-8a32-d363d8e78ef5.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/1a6133d1-c014-45aa-a28c-a17e6ec15fd8.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/1ea02a9e-9447-4939-ba6d-c480c7456bdd.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/3d8639ab-d8ff-4934-897b-1289b6415e27.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/5b98e9e4-ce48-4e92-b127-04c06622ce1d.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/6b3121fe-2b26-43b8-8099-9d72553451cb.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/6d776fd6-c5f3-4c41-a25c-bd765fce8fe7.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/7e1bbc71-f562-4eda-bcd5-2d60ea894322.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/806115b9-1b87-4f1b-bbdb-cc3b877640ca.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/80912de1-f59f-4c9a-93b6-398f39ffddeb.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8846968a-a56a-43a6-9768-e7a8072d3c1f.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8a6589c1-b2fa-4775-824b-ffa908a72f7e.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8b1bc853-246d-4050-ba0b-387ff552f60f.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8f5599fc-748c-4d59-b2ee-7a591b18fe37.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/98796f1b-8df6-4f18-b1d7-51270b5c3d7e.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/a7c8cd64-7817-4760-9e4d-2bcee5c80fee.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/b7b9be64-3b86-415f-965a-e010fe9721d1.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/c8058d2e-b7af-4525-afcf-052021de8231.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/cd6c40d8-7b44-47dd-905a-db84aa4b157e.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/e84c699f-d679-42aa-8791-3ec4462f4a78.rar">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/e98f063e-48c1-46d5-82db-8860f865a69a.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/eaf04882-254c-496b-b07e-af078a400e7b.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/f04e8f03-d859-4645-ac0c-a12858ac3851.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/f2b18ab8-aa8d-42c5-a351-df7a389bb20e.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/2013-12-14/8c25b73e-d9e5-4f02-9708-600320aca2db.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/2013-12-14/b6874606-b8c6-41b2-8914-0de621183fd0.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312082058178390.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312082100304616.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312082103312517.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312082203322833.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312082203487246.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312091312350688.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312091326262903.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312091331245054.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312091331536660.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112150544988.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112151045772.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112153062573.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112153155919.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112215567067.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112313446704.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112324052326.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112324437293.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112345086713.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312112345322612.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312121637011171.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312122113102651.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312122115209030.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312122115520390.png">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312131534291132.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312141529036691.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312141529489839.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312141532059091.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312141538023709.gif">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312180852293905.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Uploads/Images/201312181432231869.jpg">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/26/2013 22:47:35</publishTime>
     </File>
     <File Include="Views/Article/Assoc.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:57:32</publishTime>
     </File>
     <File Include="Views/Article/AssocCates.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9778,22 +9781,22 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Article/MagazineIndex.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 21:12:19</publishTime>
     </File>
     <File Include="Views/Article/NewsList.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 21:01:17</publishTime>
     </File>
     <File Include="Views/Home/Banner.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/CategoryForum.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:33:59</publishTime>
     </File>
     <File Include="Views/Home/CategoryForumCont.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/CategoryForumContent.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:48:05</publishTime>
     </File>
     <File Include="Views/Home/CategoryForumMagazine.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9802,13 +9805,13 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/EventListForum.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:34:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/26/2013 22:12:22</publishTime>
+      <publishTime>12/30/2013 20:29:26</publishTime>
     </File>
     <File Include="Views/Home/IndexCategoryForum.cshtml">
-      <publishTime>12/26/2013 21:41:33</publishTime>
+      <publishTime>12/30/2013 20:06:15</publishTime>
     </File>
     <File Include="Views/Home/LinksForum.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9817,28 +9820,28 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/MagazineForum.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:44:36</publishTime>
     </File>
     <File Include="Views/Home/Navigation.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/SidebarCategory.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>12/30/2013 20:35:13</publishTime>
     </File>
     <File Include="Views/Home/SidebarForum.cshtml">
-      <publishTime>12/26/2013 20:45:36</publishTime>
+      <publishTime>12/30/2013 20:30:43</publishTime>
     </File>
     <File Include="Views/Home/SpeedForum.cshtml">
-      <publishTime>12/26/2013 20:54:21</publishTime>
+      <publishTime>12/30/2013 20:53:38</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/26/2013 21:59:14</publishTime>
+      <publishTime>12/30/2013 20:55:23</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutContent.cshtml">
-      <publishTime>12/26/2013 21:50:37</publishTime>
+      <publishTime>12/30/2013 20:59:49</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9850,7 +9853,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/26/2013 22:38:32</publishTime>
+      <publishTime>12/30/2013 21:16:01</publishTime>
     </File>
   </ItemGroup>
 </Project>

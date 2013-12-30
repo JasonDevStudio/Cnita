@@ -1,0 +1,50 @@
+#lwc, #rwc {
+    width: 97px;
+    height: 240px;
+    background: #ffffff;
+}
+
+#lwca, #rwca {
+    width: 97px;
+    height: 97px;
+ 
+}
+
+.close {
+    height: 13px;
+    width: 13px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    background-image: url(close.gif);
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+#lwc{
+    position: absolute;
+    top: 0px;
+    left: 5px;
+}
+
+#rwc, #rwc_c {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+#lwca, #lwc_ca {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+}
+
+#rwca, #rwc_ca, #lwc_c {
+    position: absolute;
+    top: 0px;
+    left: 95px;
+    cursor: pointer;
+}

@@ -2162,6 +2162,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\Default\css\main.css" />
+    <Content Include="Content\themes\Default\images\circle_blue.jpg" />
     <Content Include="Content\themes\Default\images\eventlist_eventlist_bottom.png" />
     <Content Include="Content\themes\Default\images\footer_footer_top.jpg" />
     <Content Include="Content\themes\Default\images\Header_logo.png" />

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Library.Models.ModelCategory>
+
+@{
+    ViewBag.Title = ViewBag.CategName;
+    Layout = "~/Views/Shared/_LayoutContent.cshtml";
+}
+
+@section SubContentNav{
+    <p>@ViewBag.CategName</p>
+}
+
+@*@section Sidebar{
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = "2", adsCategoryCode = "33" })
+    @Html.Action("SidebarCategory", "Home", new { categoryCode = "38", adsCategoryCode = "33" })
+}*@
+
+@if (Model != null && Model.Count() > 0)
+{
+    foreach (var item in Model)
+    {
+        @Html.Action("CategoryForum", "Home", new { categoryCode=item.Id,topCount="9"})
+    }
+}

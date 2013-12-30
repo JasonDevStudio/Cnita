@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "分类管理";
+    Layout = "~/Areas/Manage/Views/Shared/_manage.cshtml"; 
+}
+    
+<div class="container-fluid">
+    <!-- BEGIN PAGE HEADER-->
+    <div class="row-fluid">
+        <div class="span12">
+            <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+            <h3 class="page-title">
+                <!--Jason.Yao <small>后台管理系统</small>-->
+            </h3>
+            <ul class="breadcrumb">
+                <li><i class="icon-home"></i><a href="@Url.Action("Index","Home")">后台管理</a>                <i class="icon-angle-right"></i></li>
+                <li><a href="@Url.Action("Index", "Category")">分类管理</a></li>
+                <li class="pull-right no-text-shadow">
+                    <div id="dashboard-report-range"
+                        class="dashboard-date-range tooltips no-tooltip-on-touch-device responsive" data-tablet=""
+                        data-desktop="tooltips" data-placement="top" data-original-title="Change dashboard date range">
+                        <i class="icon-calendar"></i><span></span><i class="icon-angle-down"></i>
+                    </div>
+                </li>
+            </ul>
+            <!-- END PAGE TITLE & BREADCRUMB-->
+        </div>
+    </div>
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN PAGE CONTAINER-->
+    <div id="dashboard">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box red">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-cogs"></i>分类管理</div>
+                        <div class="tools">
+                            <a href="" class="collapse"></a><a href="" class="remove"></a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <hr />
+                        <div class="row-fluid"> 
+                            <!--列表 开始-->
+                            <div id="MainContainer" class="ztree">
+                                <iframe id="mainIframe" src="@Url.Action("Tree","Category")" marginwidth="20" frameborder="0" scrolling="auto" style="width:100%;height:600px;" ></iframe>                                
+                            </div>
+                            <!--列表 结束-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Styles{ }
+
+
+@section Scripts{
+    <script type="text/javascript">
+        function DeleteNode(id,name) {
+            Boxy.confirm("是否删除该数据[" + name + "] ？", function () {
+                if (parseInt(id) > 18) {
+                    $.ajax(
+                    {
+                        url: "@Url.Action("Delete","Category")",
+                        data: {Id:id},
+                        type: "post",
+                        success: function (data, status) {
+                            if (data.result == 1) {
+                                Boxy.alert(data.resultMsg, function () { $("#mainIframe").attr("src", "@Url.Action("Tree","Category")"); }, { title: "系统提示" });
+                            } else {
+                                Boxy.alert(data.resultMsg, null, { title: "系统提示" });
+                            }
+                        },
+                    });
+                } else {
+                    Boxy.alert("基础节点无法删除!", null, { title: "系统提示" });
+                }
+            });
+        }
+
+        function EditNode(id, name) {
+        }
+    </script>
+}
+   
+

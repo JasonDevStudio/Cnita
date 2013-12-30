@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Library.Models.ModelCategory>
+@{
+    ViewBag.Title = ViewBag.CategName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+}
+
+
+<div class="banner">
+    <div>
+        <iframe src="@Url.Action("Banner", "Home", new { categoryCode = "31", ownerCode = "", width = "1098" })", width="1100px"  height="100px" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+<div class="subcontent">
+
+    @*版块导航 开始*@
+    <div class="subcontent_nav">
+        <p>@ViewBag.CategName</p>
+    </div>
+    @*版块导航 结束*@
+    <div class="subcontent_container">
+
+        <div class="eventparentlist">
+            <div class="eventparentlist_left">
+                @*内容 开始*@
+                <div class="subcontent_content">
+                    <div class="subcontent_content subcontainer">
+                        <div class="subcontainer_top">
+                        </div>
+                        <div class="subcontainer_middle">
+                            <div class="subcontainer_middle_one">
+                                @if (Model != null && Model.Count() > 0)
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        @Html.Action("EventListForum", "Home", new { categoryCode = item.Id, adsCategoryCode = "33", isSlide = "0" ,topCount="6"})
+                                    }
+                                }
+                                
+                            </div>
+                        </div>
+                        <div class="subcontainer_bottom">
+                        </div>
+                    </div>
+
+                </div>
+                @*内容 结束*@
+            </div>
+            <div class="eventparentlist_right">
+                @*侧边栏 开始*@
+                <div class="subcontent_sidebar">
+                    @*协会公告*@
+                    @Html.Action("SidebarForum", "Home", new { categoryCode = "18", adsCategoryCode = "33", isSlide = "0"  ,topCount="6"})
+                    @*科普*@
+                    @Html.Action("SidebarForum", "Home", new { categoryCode = "54", adsCategoryCode = "33", isSlide = "0"  ,topCount="6"})
+                    @*热门文章*@
+                    @*@Html.Action("SidebarForum", "Home", new { categoryCode = "36", adsCategoryCode = "33", categoryTwoCode = "36"  ,topCount="6"})*@
+                    @*杂志*@
+                    @Html.Action("MagazineForum","Home")
+                    @*纤维原料|行情*@
+                    @Html.Action("CategoryForumContent", "Home", new { categoryCode = 63, adsCategoryCode = "33", isSlide = "0" ,topCount="6"})
+                    
+                </div>
+                @*侧边栏 结束*@
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+@section Scripts{
+}
