@@ -72,10 +72,13 @@ a:hover {color: #2d6193;text-decoration: none;}
 .sidebar_forum_middle_middle ul li a{color: #000;text-decoration: none;padding-right:12px;padding-left:0px;}
 .sidebar_forum_middle_middle ul li a:hover {color: #2d6193;text-decoration: none;}
 
+.iframeccfei{width:232px;height:140px;*height:140px !important; }
+
 .subcontainer_top{width:803px;height:10px;font-size:1px;clear:both;display:inline-block;background-image: url(../images/subcontainer_subcontainer_top.png);text-align:left; line-height:13px;}
 .subcontainer_middle{width:803px;clear:both;display:inline-block;background-image: url(../images/subcontainer_subcontainer_middle.png);  background-repeat: repeat-y;text-align:left;}
 .subcontainer_bottom{width:803px;height:10px;font-size:1px;clear:both;display:inline-block;background-image: url(../images/subcontainer_subcontainer_bottom.png);text-align:left; line-height:17px;}
 .subcontainer_middle_one{margin-left:40px;margin-top:15px;}
+
 
 .contlist{width:706px;height:24px;clear:both;text-align:left;}
 .contlist_title{width:603px;height:24px;float:left;display:inline;text-align:left;}
@@ -108,7 +111,8 @@ a:hover {color: #2d6193;text-decoration: none;}
 .indexforum_middle p{margin:0px 8px 3px 7px;}
 .indexforum_middle_top_title{margin:5px 15px 5px 15px;text-align:center;font-size:15px;font-weight:bold;}
 .indexforum_middle_top_cont{margin:0px 15px 3px 15px;}
-.indexforum_middle_middle{margin:10px 15px 5px 0px;}
+.indexforum_middle_middle{margin:9px 15px 6px 0px;*margin:5px 15px 4px 0px !important;  }
+.indexforum_middle_middleIE9{margin:9px 15px 7px 0px;  }
 .i_icon{width:15px;height:10px;clear:both;display:inline-block;/*background-image: url(../images/circle_blue.jpg);background-repeat:no-repeat;*/text-align:left;}
 .i_icon img{border-style: none;}
 
@@ -116,6 +120,11 @@ a:hover {color: #2d6193;text-decoration: none;}
 .newlist_left{width:405px;float:left;display:inline;text-align:left;}
 .newlist_left_one{padding-left:7px;}
 .newlist_right{width:405px;float:left;display:inline;text-align:left;} 
+
+.newlistIE{width:810px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.newlistIE7{width:810px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
+.newlistIE8{width:810px;margin-top:-7px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;} 
+.newlistIE9{width:810px;margin-top:0px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;} 
 
 .eventlist{width:692px;overflow:auto;overflow-y:hidden;overflow-x:hidden;clear:both;text-align:left;}
 .eventlist_top{width:692px;clear:both;display:inline-block;text-align:left;}

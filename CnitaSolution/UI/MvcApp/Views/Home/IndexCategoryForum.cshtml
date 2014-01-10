@@ -1,6 +1,17 @@
 ﻿@model IEnumerable<Library.Models.ModelArticle>
 
-
+@{
+    var indexforumCassName = "indexforum_middle_middle";
+    if (Request.Browser.Browser.Contains("IE") || Request.Browser.Browser.Contains("InternetExplorer"))
+    {        
+        var ver = decimal.Zero;
+        decimal.TryParse(Request.Browser.Version, out ver);
+       if (ver == 9)
+        {
+            indexforumCassName = "indexforum_middle_middleIE9";
+        }
+    }
+  }
 
 <div class="indexforum">
     <div class="indexforum_top">
@@ -12,7 +23,7 @@
         </div>
     </div>
     <div class="indexforum_middle">
-        @if (ViewBag.ArtTitle != null) { 
+        @if (ViewBag.IsAbstract=="1" && ViewBag.ArtTitle != null) { 
         <div class="indexforum_middle_top_title"><a href="@Url.Action("Detail", "Article", new { Id = ViewBag.ArtId }) " title="@ViewBag.ArtTitle">@Library.Common.CommonMethod.ObjSubstringByLength(ViewBag.ArtTitle,20)</a></div>
         <div class="indexforum_middle_top_cont">@Library.Common.CommonMethod.ObjSubstringByLength(ViewBag.ArtAbstract, 100)</div>
         }
@@ -20,7 +31,8 @@
         {
             foreach (var item in Model)
             {
-            <div class="indexforum_middle_middle"><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title"><i class="i_icon"><img src="@Url.Content("~/Content/themes/Default/images/circle_blue.jpg")" alt="" /></i>@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 25)</a> </div>
+                
+            <div class="@indexforumCassName"><a href="@Url.Action("Detail", "Article", new { Id = item.Id }) " title="@item.Title"><i class="i_icon"><img src="@Url.Content("~/Content/themes/Default/images/circle_blue.jpg")" alt="" /></i>@Library.Common.CommonMethod.ObjSubstringByLength(item.Title, 25)</a> </div>
             }
         }
     </div>

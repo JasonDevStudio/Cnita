@@ -45,13 +45,34 @@
             <div class="subcontent_content subcontainer">
                 <div class="subcontainer_top">
                 </div>
+                @{ 
+                    var newlistCassName = "newlist";
+                    if (Request.Browser.Browser.Contains("IE") || Request.Browser.Browser.Contains("InternetExplorer"))
+                    {
+                        newlistCassName = "newlistIE";
+                        var ver = decimal.Zero;
+                        decimal.TryParse(Request.Browser.Version,out ver);
+                        if(ver == 7){
+                            newlistCassName = "newlistIE7";
+                        }
+                        else if (ver == 8)
+                        {
+                            newlistCassName = "newlistIE8";
+                        }
+                        else if (ver == 9)
+                        {
+                            newlistCassName = "newlistIE9";
+                        }
+                    }
+                }
+
                 <div class="subcontainer_middle">
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*行业要闻*@
-                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "50", adsCategoryCode = "34", topCount = "6", isSlide = "0" })
+                                @Html.Action("IndexCategoryForum", "Home", new { categoryCode = "50", adsCategoryCode = "34", topCount = "6", isSlide = "0" ,isAbstract="1"})
                             </div>
                         </div>
                         <div class="newlist_right">
@@ -65,7 +86,7 @@
                     @*行 结束*@
 
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*调研统计*@
@@ -82,7 +103,7 @@
                     @*行 结束*@
 
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*协会动态*@
@@ -99,7 +120,7 @@
                     @*行 结束*@
 
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*新产品及技术*@
@@ -116,7 +137,7 @@
                     @*行 结束*@
 
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*行业运行与发展*@
@@ -133,7 +154,7 @@
                     @*行 结束*@
 
                     @*行 开始*@
-                    <div class="newlist">
+                    <div class="@newlistCassName">
                         <div class="newlist_left">
                             <div class="newlist_left_one">
                                 @*政策法规*@
