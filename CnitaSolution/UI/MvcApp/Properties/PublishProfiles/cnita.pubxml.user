@@ -64,10 +64,10 @@
       <publishTime>12/20/2013 20:17:15</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>12/30/2013 21:16:21</publishTime>
+      <publishTime>01/11/2014 03:00:33</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>12/30/2013 21:16:21</publishTime>
+      <publishTime>01/11/2014 03:00:33</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -145,34 +145,34 @@
       <publishTime>12/20/2013 20:17:15</publishTime>
     </File>
     <File Include="bin/Library.Common.dll">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.Common.pdb">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.dll">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.DataBaseHelper.pdb">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.dll">
-      <publishTime>12/30/2013 18:47:52</publishTime>
+      <publishTime>01/10/2014 23:48:03</publishTime>
     </File>
     <File Include="bin/Library.Logic.DAL.pdb">
-      <publishTime>12/30/2013 18:47:52</publishTime>
+      <publishTime>01/10/2014 23:48:03</publishTime>
     </File>
     <File Include="bin/Library.Models.dll">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.Models.pdb">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.dll">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Library.StringItemDict.pdb">
-      <publishTime>12/30/2013 18:47:51</publishTime>
+      <publishTime>01/10/2014 23:48:02</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Edm.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -205,10 +205,10 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="bin/MvcApp.dll">
-      <publishTime>12/30/2013 21:15:59</publishTime>
+      <publishTime>01/11/2014 03:00:09</publishTime>
     </File>
     <File Include="bin/MvcApp.pdb">
-      <publishTime>12/30/2013 21:15:59</publishTime>
+      <publishTime>01/11/2014 03:00:09</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/20/2013 20:17:15</publishTime>
@@ -6901,7 +6901,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Content/themes/Default/css/main.css">
-      <publishTime>12/30/2013 21:13:41</publishTime>
+      <publishTime>01/11/2014 02:51:36</publishTime>
     </File>
     <File Include="Content/themes/Default/images/circle_blue.jpg">
       <publishTime>12/30/2013 20:17:24</publishTime>
@@ -7627,7 +7627,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/30/2013 21:16:20</publishTime>
+      <publishTime>01/11/2014 03:00:32</publishTime>
     </File>
     <File Include="Scripts/ad112/ad.css">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -8099,6 +8099,381 @@
     </File>
     <File Include="Scripts/My97DatePicker/WdatePicker.js">
       <publishTime>12/20/2013 20:17:14</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_51xflash/play.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_51xflash/Thumbs.db">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_51xflash/tit-ar.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHB/btn-blue.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHB/btn-gray.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHB/Thumbs.db">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHC/btn-bg.png">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHC/btn-red.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_classicHC/Thumbs.db">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_games_tb/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_games_tb/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_games_tb/.svn/prop-base/ar.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_games_tb/.svn/text-base/ar.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_games_tb/ar.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/prop-base/dots.png.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/prop-base/slider-arrows.png.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/prop-base/Thumbs.db.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/text-base/dots.png.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/text-base/slider-arrows.png.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/.svn/text-base/Thumbs.db.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/dots.png">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/slider-arrows.png">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kdui/Thumbs.db">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/prop-base/ar-left.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/prop-base/ar-right.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/prop-base/Thumbs.db.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/prop-base/tit-ar.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/text-base/ar-left.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/text-base/ar-right.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/text-base/Thumbs.db.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/.svn/text-base/tit-ar.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/ar-left.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/ar-right.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/Thumbs.db">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_kiki/tit-ar.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/prop-base/btn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/prop-base/turn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/text-base/btn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/.svn/text-base/turn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/btn.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_pithy_tb/turn.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/prop-base/bg.jpg.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/prop-base/loading.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/text-base/bg.jpg.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/.svn/text-base/loading.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/bg.jpg">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_qiyi/loading.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_sohusports/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_sohusports/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_sohusports/.svn/prop-base/sh-btn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_sohusports/.svn/text-base/sh-btn.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_sohusports/sh-btn.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_taobaomall/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_taobaomall/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_taobaomall/.svn/prop-base/btn-bg2.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_taobaomall/.svn/text-base/btn-bg2.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_taobaomall/btn-bg2.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_tbhuabao/.svn/all-wcprops">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_tbhuabao/.svn/entries">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_tbhuabao/.svn/prop-base/btn-bg.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_tbhuabao/.svn/text-base/btn-bg.gif.svn-base">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/img/mF_tbhuabao/btn-bg.gif">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_51xflash.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_51xflash.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_classicHB.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_classicHB.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_classicHC.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_classicHC.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_dleung.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_dleung.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_expo2010.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_expo2010.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_fancy.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_fancy.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_fscreen_tb.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_fscreen_tb.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_games_tb.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_games_tb.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_kdui.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_kdui.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_kiki.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_kiki.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_ladyQ.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_ladyQ.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_liquid.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_liquid.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_liuzg.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_liuzg.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_luluJQ.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_luluJQ.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_pconline.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_pconline.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_peijianmall.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_peijianmall.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_pithy_tb.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_pithy_tb.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_qiyi.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_qiyi.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_quwan.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_quwan.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_rapoo.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_rapoo.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_shutters.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_shutters.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_slide3D.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_slide3D.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_sohusports.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_sohusports.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_taobao2010.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_taobao2010.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_taobaomall.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_taobaomall.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_tbhuabao.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_tbhuabao.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_YSlider.css">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/mf-pattern/mF_YSlider.js">
+      <publishTime>01/10/2014 22:30:59</publishTime>
+    </File>
+    <File Include="Scripts/myFocus/myfocus-2.0.1.min.js">
+      <publishTime>01/10/2014 22:31:51</publishTime>
     </File>
     <File Include="Scripts/myPagination/images/image1.gif">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9595,172 +9970,172 @@
       <publishTime>12/14/2013 17:58:29</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/152e82cf-5082-40d3-8a32-d363d8e78ef5.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/1a6133d1-c014-45aa-a28c-a17e6ec15fd8.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/1ea02a9e-9447-4939-ba6d-c480c7456bdd.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/3d8639ab-d8ff-4934-897b-1289b6415e27.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/5b98e9e4-ce48-4e92-b127-04c06622ce1d.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/6b3121fe-2b26-43b8-8099-9d72553451cb.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/6d776fd6-c5f3-4c41-a25c-bd765fce8fe7.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/7e1bbc71-f562-4eda-bcd5-2d60ea894322.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/806115b9-1b87-4f1b-bbdb-cc3b877640ca.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/80912de1-f59f-4c9a-93b6-398f39ffddeb.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8846968a-a56a-43a6-9768-e7a8072d3c1f.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8a6589c1-b2fa-4775-824b-ffa908a72f7e.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8b1bc853-246d-4050-ba0b-387ff552f60f.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/8f5599fc-748c-4d59-b2ee-7a591b18fe37.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/98796f1b-8df6-4f18-b1d7-51270b5c3d7e.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/a7c8cd64-7817-4760-9e4d-2bcee5c80fee.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/b7b9be64-3b86-415f-965a-e010fe9721d1.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/c8058d2e-b7af-4525-afcf-052021de8231.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/cd6c40d8-7b44-47dd-905a-db84aa4b157e.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/e84c699f-d679-42aa-8791-3ec4462f4a78.rar">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/e98f063e-48c1-46d5-82db-8860f865a69a.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/eaf04882-254c-496b-b07e-af078a400e7b.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/f04e8f03-d859-4645-ac0c-a12858ac3851.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Files/2013-12-12/f2b18ab8-aa8d-42c5-a351-df7a389bb20e.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/2013-12-14/8c25b73e-d9e5-4f02-9708-600320aca2db.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/2013-12-14/b6874606-b8c6-41b2-8914-0de621183fd0.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312082058178390.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312082100304616.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312082103312517.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312082203322833.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312082203487246.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312091312350688.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312091326262903.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312091331245054.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312091331536660.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112150544988.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112151045772.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112153062573.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112153155919.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112215567067.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112313446704.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112324052326.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112324437293.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112345086713.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312112345322612.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312121637011171.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312122113102651.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312122115209030.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312122115520390.png">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312131534291132.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312141529036691.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312141529489839.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312141532059091.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312141538023709.gif">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312180852293905.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Uploads/Images/201312181432231869.jpg">
-      <publishTime>12/26/2013 22:47:35</publishTime>
+      <publishTime>12/30/2013 21:27:06</publishTime>
     </File>
     <File Include="Views/Article/Assoc.cshtml">
       <publishTime>12/30/2013 20:57:32</publishTime>
@@ -9787,7 +10162,7 @@
       <publishTime>12/30/2013 21:01:17</publishTime>
     </File>
     <File Include="Views/Home/Banner.cshtml">
-      <publishTime>12/20/2013 20:17:14</publishTime>
+      <publishTime>01/11/2014 01:00:06</publishTime>
     </File>
     <File Include="Views/Home/CategoryForum.cshtml">
       <publishTime>12/30/2013 20:33:59</publishTime>
@@ -9796,7 +10171,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Home/CategoryForumContent.cshtml">
-      <publishTime>12/30/2013 20:48:05</publishTime>
+      <publishTime>01/11/2014 01:52:41</publishTime>
     </File>
     <File Include="Views/Home/CategoryForumMagazine.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9808,10 +10183,10 @@
       <publishTime>12/30/2013 20:34:48</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/30/2013 20:29:26</publishTime>
+      <publishTime>01/11/2014 02:40:22</publishTime>
     </File>
     <File Include="Views/Home/IndexCategoryForum.cshtml">
-      <publishTime>12/30/2013 20:06:15</publishTime>
+      <publishTime>01/11/2014 02:59:06</publishTime>
     </File>
     <File Include="Views/Home/LinksForum.cshtml">
       <publishTime>12/20/2013 20:17:14</publishTime>
@@ -9838,7 +10213,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/30/2013 20:55:23</publishTime>
+      <publishTime>01/11/2014 02:19:20</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutContent.cshtml">
       <publishTime>12/30/2013 20:59:49</publishTime>
@@ -9853,7 +10228,7 @@
       <publishTime>12/20/2013 20:17:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/30/2013 21:16:01</publishTime>
+      <publishTime>01/11/2014 03:00:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

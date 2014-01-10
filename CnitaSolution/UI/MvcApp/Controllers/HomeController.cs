@@ -167,10 +167,11 @@ namespace MvcApp.Controllers
         /// <param name="categoryTwoCode"></param>
         /// <param name="topCount"></param>
         /// <returns></returns>
-        public ActionResult IndexCategoryForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "5", string isSlide = "1")
+        public ActionResult IndexCategoryForum(string categoryCode = null, string adsCategoryCode = null, string categoryTwoCode = null, string topCount = "5", string isSlide = "1", string isAbstract="0")
         {
             var list = GetForumData(categoryCode, adsCategoryCode, categoryTwoCode, topCount);
             ViewBag.IsSlide = isSlide;
+            ViewBag.IsAbstract = isAbstract;
             return PartialView(list);
         }
 
