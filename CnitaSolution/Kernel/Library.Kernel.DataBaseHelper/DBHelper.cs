@@ -20,7 +20,7 @@ namespace Library.Kernel.DataBaseHelper
         {
             get
             {
-                if (DateTime.Now < DateTime.Parse("2014-01-20"))
+                if (DateTime.Now < DateTime.Parse("2014-01-31"))
                     return ConfigurationManager.AppSettings["DataAccess"].ToString();
                 else
                     return string.Empty;
